@@ -1,0 +1,18 @@
+import css3 from "../public/assets/css3.webp"
+import git from "../public/assets/git.webp"
+import github from "../public/assets/github.webp"
+import html5 from "../public/assets/html5.webp"
+import imagen1 from "../public/assets/imagen.png"
+import javascript from "../public/assets/javascript.webp"
+import linux from "../public/assets/linux.png"
+import mysql from "../public/assets/mysql.svg"
+
+import nodejs from "../public/assets/nodejs.webp"
+import pato from "../public/assets/pato.jpg"
+import react from "../public/assets/react.webp"
+import reactRouter from "../public/assets/reactRouter.png"
+import sass from "../public/assets/sass.webp"
+
+
+
+
