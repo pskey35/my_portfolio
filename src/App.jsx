@@ -165,15 +165,14 @@ function Header({ apareceFooter }) {
     }
   }, [openMenu]);
 
-
-  const clickScrollInto = (place,event)=>{
-    const elementCoordenadas = event.target
-    console.log(elementCoordenadas.offsetTop)
+  const clickScrollInto = (place, event) => {
+    const elementCoordenadas = event.target;
+    console.log(elementCoordenadas.offsetTop);
     document.body.scrollTo({
-      top:"500px",
-      behavior:"smooth"
-    })
-  }
+      top: "500px",
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="header">
       <div className="patoContainer">
@@ -181,7 +180,7 @@ function Header({ apareceFooter }) {
       </div>
       <div className="nav">
         <ul>
-          <li onClick={(event)=>clickScrollInto("home",event)}>
+          <li onClick={(event) => clickScrollInto("home", event)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +195,7 @@ function Header({ apareceFooter }) {
             </span>
             <a href="#home">Home</a>
           </li>
-          <li onClick={(event)=>clickScrollInto("about",event)}>
+          <li onClick={(event) => clickScrollInto("about", event)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +210,7 @@ function Header({ apareceFooter }) {
             </span>
             <a href="#about">About</a>
           </li>
-          <li onClick={(event)=>clickScrollInto("skills",event)}>
+          <li onClick={(event) => clickScrollInto("skills", event)}>
             <span>
               <svg
                 width="800px"
@@ -227,7 +226,7 @@ function Header({ apareceFooter }) {
             </span>
             <a href="#skills">Skills</a>
           </li>
-          <li onClick={(event)=>clickScrollInto("portfolio" ,event)}>
+          <li onClick={(event) => clickScrollInto("portfolio", event)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +241,7 @@ function Header({ apareceFooter }) {
             </span>
             <a href="#portfolio">Portfolio</a>
           </li>
-          <li onClick={(event)=>clickScrollInto("contact",event)}>
+          <li onClick={(event) => clickScrollInto("contact", event)}>
             <span>
               <svg
                 fill="lightgray"
@@ -275,10 +274,28 @@ function Header({ apareceFooter }) {
 }
 
 function Home() {
+  const goTo = (numPosicion) => {
+    if (numPosicion == 1) {
+      const a = document.querySelector(
+        "#home > div.left > div:nth-child(1) > a"
+      );
+      a.click();
+    } else if (numPosicion == 2) {
+      const a = document.querySelector(
+        "#home > div.left > div:nth-child(2) > a"
+      );
+      a.click();
+    } else if (numPosicion == 3) {
+      const a = document.querySelector(
+        "#home > div.left > div:nth-child(3) > a"
+      );
+      a.click();
+    }
+  };
   return (
     <div className="home" id="home">
       <div className="left">
-        <div>
+        <div onClick={() => goTo(1)}>
           <a href="https://github.com/pskey35" target="_blank">
             <svg
               stroke="currentColor"
@@ -293,7 +310,7 @@ function Home() {
             </svg>
           </a>
         </div>
-        <div>
+        <div onClick={() => goTo(2)}>
           <a
             href="https://www.linkedin.com/in/jayme-ln-7597a6268/"
             target="_blank"
@@ -309,7 +326,7 @@ function Home() {
             </svg>
           </a>
         </div>
-        <div>
+        <div onClick={() => goTo(3)}>
           <a href="https://wa.me/51906090587" target="_blank">
             <svg
               version="1.1"
@@ -439,6 +456,11 @@ function Home() {
 }
 
 function About() {
+  const { cvOpen, setCvOpen } = useContext(ContextGlobal);
+  const clickMyCv = () => {
+    setCvOpen(!cvOpen);
+  };
+
   return (
     <div className="about" id="about">
       <div className="titulo">
@@ -448,17 +470,11 @@ function About() {
       <div className="about-container">
         <div className="container-left">
           <div className="about-image">
-            <img src="/images/linux.png" alt="" />
+            <img src="/perfil.jpg" alt="" />
           </div>
-
-          <div className="about-circle">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <path
-                fill="#9EF0F0"
-                d="M39.4,-41.8C50.8,-37.4,59.6,-24.7,62.5,-10.7C65.4,3.4,62.4,18.8,54.8,31.4C47.3,43.9,35.1,53.5,21.8,57.2C8.4,61,-6.1,58.8,-22.2,55.4C-38.3,52,-56,47.3,-63.5,35.9C-71,24.5,-68.2,6.5,-59.8,-5.2C-51.4,-17,-37.4,-22.4,-26.5,-26.9C-15.6,-31.4,-7.8,-34.9,3.1,-38.6C14,-42.3,28,-46.2,39.4,-41.8Z"
-                transform="translate(100 85)"
-              />
-            </svg>
+          <div className="me">
+            <p>Jayme Ln</p>
+            <p>Full stack Developer</p>
           </div>
         </div>
         <div className="container-right">
@@ -523,13 +539,10 @@ function About() {
             learning new technologies. with de goal of being o creative
             developer viewCV
           </div>
-          <a className="cv" download href="./jaymeCV.pdf">
+          <a className="cv" onClick={clickMyCv}>
             <div className="right-boton">
               <span className="botonDownload">Download CV</span>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                id="file-download-alt"
                 fill="white"
                 style={{
                   position: "absolute",
@@ -539,11 +552,20 @@ function About() {
                   margin: "auto",
                 }}
                 width="30px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill="#undefined"
-                  d="M8,8a1,1,0,0,0,0,2H9A1,1,0,0,0,9,8Zm5,12H6a1,1,0,0,1-1-1V5A1,1,0,0,1,6,4h5V7a3,3,0,0,0,3,3h3v2a1,1,0,0,0,2,0V9s0,0,0-.06a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19.29.29,0,0,0-.1,0A1.1,1.1,0,0,0,12.06,2H6A3,3,0,0,0,3,5V19a3,3,0,0,0,3,3h7a1,1,0,0,0,0-2ZM13,5.41,15.59,8H14a1,1,0,0,1-1-1ZM14,12H8a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Zm6.71,6.29a1,1,0,0,0-1.42,0l-.29.3V16a1,1,0,0,0-2,0v2.59l-.29-.3a1,1,0,0,0-1.42,1.42l2,2a1,1,0,0,0,.33.21.94.94,0,0,0,.76,0,1,1,0,0,0,.33-.21l2-2A1,1,0,0,0,20.71,18.29ZM12,18a1,1,0,0,0,0-2H8a1,1,0,0,0,0,2Z"
-                ></path>
+                  opacity="0.5"
+                  d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z"
+                  stroke="#1C274C"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                  stroke="#1C274C"
+                  stroke-width="1.5"
+                />
               </svg>
             </div>
           </a>
@@ -558,7 +580,7 @@ mysql*/
 function Skills() {
   useEffect(() => {
     const container = ".container";
-    const text = ["", "", "", "", "", "", "", "", "", "",""];
+    const text = ["", "", "", "", "", "", "", "", "", "", ""];
 
     const options = {
       radius: 250,
@@ -1453,11 +1475,84 @@ function HeaderMenu() {
   );
 }
 
+function CvModal() {
+
+  const clickPrint=()=>{
+    console.log(window)
+  }
+
+  return (
+    <div className="cv-caja">
+      <div className="cv-content">
+        <div className="image">
+          <img src="myCV.png"></img>
+          <div className="front-image">
+            <img src="myCV.png"></img>
+          </div>
+          <div>salir</div>
+        </div>
+        <div className="botones">
+          <div className="print" onClick={clickPrint}>
+            <svg
+              viewBox="0 -2 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>print</title>
+              <desc>Created with Sketch Beta.</desc>
+              <defs></defs>
+              <g id="Page-1">
+                <g
+                  id="Icon-Set"
+                  sketch:type="MSLayerGroup"
+                  transform="translate(-100.000000, -205.000000)"
+                  fill="white"
+                >
+                  <path
+                    d="M130,226 C130,227.104 129.104,228 128,228 L125.858,228 C125.413,226.278 123.862,225 122,225 L110,225 C108.138,225 106.587,226.278 106.142,228 L104,228 C102.896,228 102,227.104 102,226 L102,224 C102,222.896 102.896,222 104,222 L128,222 C129.104,222 130,222.896 130,224 L130,226 L130,226 Z M122,231 L110,231 C108.896,231 108,230.104 108,229 C108,227.896 108.896,227 110,227 L122,227 C123.104,227 124,227.896 124,229 C124,230.104 123.104,231 122,231 L122,231 Z M108,209 C108,207.896 108.896,207 110,207 L122,207 C123.104,207 124,207.896 124,209 L124,220 L108,220 L108,209 L108,209 Z M128,220 L126,220 L126,209 C126,206.791 124.209,205 122,205 L110,205 C107.791,205 106,206.791 106,209 L106,220 L104,220 C101.791,220 100,221.791 100,224 L100,226 C100,228.209 101.791,230 104,230 L106.142,230 C106.587,231.723 108.138,233 110,233 L122,233 C123.862,233 125.413,231.723 125.858,230 L128,230 C130.209,230 132,228.209 132,226 L132,224 C132,221.791 130.209,220 128,220 L128,220 Z"
+                    id="print"
+                    sketch:type="MSShapeGroup"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div className="download">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.5"
+                d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="white"
+              />
+              <path
+                d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Ventana({ boleano }) {
   //aqui se activa si se da click en el icono y se muestra el menu
   const [menu, setMenu] = useState(false);
 
-  const { borrarVentana, setBorrarVentana } = useContext(ContextGlobal);
+  const { borrarVentana, setBorrarVentana, cvOpen, setCvOpen } =
+    useContext(ContextGlobal);
 
   const funcionMenu = () => {
     setMenu(!menu);
@@ -1877,6 +1972,7 @@ export function Ventana({ boleano }) {
       <Portfolio></Portfolio>
       <Contact></Contact>
       <Footer></Footer>
+      {cvOpen ? <CvModal></CvModal> : ""}
       {/*menu ? <FooterMenu></FooterMenu> : ""*/}
     </div>
   );
@@ -1894,8 +1990,26 @@ export default function App() {
 
   const [openMenu, setOpenMenu] = useState(false);
 
-  const value = { borrarVentana, setBorrarVentana, openMenu, setOpenMenu };
+  //esto es para el modal del cv
+  const [cvOpen, setCvOpen] = useState(false);
 
+  const value = {
+    borrarVentana,
+    setBorrarVentana,
+    openMenu,
+    setOpenMenu,
+    cvOpen,
+    setCvOpen,
+  };
+
+  useEffect(() => {
+    const body = document.body;
+    if (cvOpen) {
+      body.style.cssText = "overflow:hidden";
+    } else {
+      body.style.cssText = "overflow:auto";
+    }
+  }, [cvOpen]);
   //-------activo esto y se activa la seguridad en mi web--------
   /*
   useEffect(() => {

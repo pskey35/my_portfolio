@@ -67,13 +67,13 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgba(4, 12, 17, 0.315);
   color: white;
   margin: auto;
-  padding: 10px 20px;
-  z-index: 2000;
+  padding: 10px 3vw;
+  z-index: 1000;
   position: fixed;
   width: 100%;
   opacity: 0;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgb(21, 43, 65);
+  border-bottom: 2px solid rgb(51 51 51 / 70%);
   align-items: center;
 }
 
@@ -99,7 +99,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 20%;
   background: rgb(28 28 28);
   border-radius: 10px;
-  border: 2px solid #515151;
+  border: 2px solid #2e2e2e;
   color: white;
   padding: 3px 0;
   display: flex;
@@ -149,6 +149,43 @@ body::-webkit-scrollbar-thumb:hover {
   visibility: hidden;
   width: min-content;
   height: min-content;
+
+  @media (max-width: 900px) {
+    visibility: visible;
+    position: relative;
+
+    .botonReal {
+      display: flex;
+      justify-content: space-between;
+      width: 40px;
+      height: 35px;
+      align-items: center;
+      position: relative;
+
+      & > span {
+        background: #f3f3f3;
+        width: 13px;
+        height: 13px;
+        border-radius: 999px;
+        display: inline-block;
+        position: relative;
+        transition: all 190ms ease;
+      }
+
+      & > span:nth-child(1) {
+        top: calc(100% - 22px);
+        //11 + su mitad 5.5
+      }
+
+      & > span:nth-child(2) {
+        top: calc(0% - 11px);
+      }
+
+      & > span:nth-child(3) {
+        top: calc(100% - 22px);
+      }
+    }
+  }
 }
 
 .patoContainer {
@@ -162,7 +199,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 100%;
   border-radius: 50px;
   border: 2px solid #000000;
-  outline: 4px solid #2a9dff;
+  outline: 3px solid #2a9dff;
 }
 
 /*-----------------HOME-----------------------*/
@@ -183,8 +220,41 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .home .left div {
-  padding: 10px 0;
   opacity: 0;
+  background: #0d0d0d;
+  margin: 10px 0;
+  border-radius: 999px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  outline: 2px solid #1b1b1b;
+  transition: all 100ms ease;
+
+  & > a {
+    width: 23px;
+    display: grid;
+    place-items: center;
+    height: 23px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.home .left div:nth-child(3) {
+  a {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.home .left div:hover {
+  outline: 2px solid #3d3d3d;
+  background: #00142d;
+  cursor: pointer;
 }
 
 .home .right {
@@ -530,6 +600,10 @@ div.about-container > div.container-right > .cv {
 
 .about .titulo p {
   opacity: 0;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .about-container {
@@ -538,30 +612,67 @@ div.about-container > div.container-right > .cv {
   justify-content: center;
   align-items: center;
   gap: 100px;
-  margin-top: 40px;
+  margin-top: 70px;
+  position: relative;
+  z-index: 100;
+  width: 80%;
 }
 
 .about .container-left {
   position: relative;
   width: 200px;
-  height: 250px;
   opacity: 0;
+  margin-bottom: 40px;
+
+  & > .me {
+    display: none;
+
+    p {
+      text-transform: capitalize;
+    }
+
+    p:nth-child(1) {
+      font-size: 22px;
+    }
+
+    p:nth-child(2) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 900px) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .about .about-container .about-image {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin: auto;
   z-index: 10;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 5px solid rgb(29, 153, 224);
+
+  @media (max-width: 900px) {
+    border-radius: 999px;
+    height: 120px;
+    width: 120px;
+    box-shadow: 0 0 100px 3px #157eff;
+    border: 7px solid black;
+    outline: 6px solid #0b83ff;
+    margin-bottom: 10px;
+  }
 }
 .about .about-container .about-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .about .about-container .about-circle {
@@ -858,7 +969,7 @@ div.about-container > div.container-right > .cv {
   background-image: url("../public/svg/css3.svg");
 }
 .circulo .items:nth-child(3) {
-  background-image: url("../public/svg/nextjs.svg");
+  background-image: url("../public/svg/nextjs-icon.svg");
 }
 
 .circulo .items:nth-child(4) {
@@ -903,12 +1014,17 @@ div.about-container > div.container-right > .cv {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+
+  grid-gap: 10px;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 }
 
 .container-right .iconos > div {
   background: #192130;
   border: 1px solid #1b232f;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 10px;
   margin: 0 10px;
   display: flex;
@@ -916,6 +1032,8 @@ div.about-container > div.container-right > .cv {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  flex: 1;
+  background: #0d182b;
 }
 
 div.iconos > div:nth-child(3) > p:nth-child(3) {
@@ -938,6 +1056,9 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   overflow: hidden;
   background: rgb(37, 44, 48);
   cursor: pointer;
+  & > svg {
+    fill: white;
+  }
 }
 
 .container-right .right-boton .botonDownload {
@@ -957,7 +1078,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   height: 180px;
   width: 30px;
   background: linear-gradient(lightblue, white);
-  animation: bordes 4s ease-in infinite;
+  animation: bordes 8s ease infinite;
   z-index: 1;
 }
 
@@ -1660,47 +1781,6 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
     gap: 0px !important;
   }
 
-  .about .about-container .about-image {
-    height: 200px;
-    width: 150px;
-  }
-
-  .header .botonHeader {
-    visibility: visible;
-    position: relative;
-
-    .botonReal {
-      display: flex;
-      justify-content: space-between;
-      width: 40px;
-      height: 35px;
-      align-items: center;
-      position: relative;
-
-      & > span {
-        background: #f3f3f3;
-        width: 13px;
-        height: 13px;
-        border-radius: 999px;
-        display: inline-block;
-        position: relative;
-        transition: all 190ms ease;
-      }
-
-      & > span:nth-child(1) {
-        top: calc(100% - 22px);
-        //11 + su mitad 5.5
-      }
-
-      & > span:nth-child(2) {
-        top: calc(0% - 11px);
-      }
-
-      & > span:nth-child(3) {
-        top: calc(100% - 22px);
-      }
-    }
-  }
   .header .nav ul {
     display: none;
   }
@@ -1756,6 +1836,82 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   .portfolio .caja .caja-image {
     /*width: 100px;*/
     height: 180px;
+  }
+}
+
+.cv-caja {
+  width: 100vw;
+  height: 100vh;
+  background: #00000066;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+
+  .cv-content {
+    width: 90%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 600px;
+    position:relative;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+      }
+
+      .front-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        z-index: 20;
+        backdrop-filter: blur(30px);
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .botones {
+      position: absolute;
+      top: 20px;
+      right: -20px;
+      transform:translateX(100%);
+   
+
+      & > div {
+        width: 45px;
+        height: 45px;
+        margin-bottom:10px;
+        border-radius: 5px;
+        border:2px solid #373737;
+        cursor:pointer;
+        padding:7px;
+      }
+
+    }
   }
 }
 
