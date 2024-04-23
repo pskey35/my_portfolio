@@ -5,12 +5,27 @@ body,
 #root {
   width: 100%;
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  background: rgb(16, 17, 19);
+}
+
+#root {
+  max-height: 100%;
+}
+
+#jaymePortfolio {
+  height: 100%;
 }
 
 .ventana {
   background: rgb(16, 17, 19);
   width: 100%;
   position: relative;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -53,7 +68,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .vista1 {
-  height: 100vh;
+  height: 100%;
+  //height: 100vh;
   position: relative;
   background: rgb(209, 192, 192);
   overflow: hidden;
@@ -67,7 +83,7 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgba(4, 12, 17, 0.315);
   color: white;
   margin: auto;
-  padding: 10px 3vw;
+  padding: 10px 5vw;
   z-index: 1000;
   position: fixed;
   width: 100%;
@@ -194,6 +210,19 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 
+//esto de aqui cuando esta scroleando hacia abajo, tiene que ir hacia arriba el perfil
+@keyframes goUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
 .patoContainer img {
   width: 100%;
   height: 100%;
@@ -215,7 +244,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .home .left {
   margin-right: 80px;
-  margin-left: 20px;
+  margin-left: 15px;
   height: min-content;
 }
 
@@ -584,8 +613,8 @@ div.about-container > div.container-right > .cv {
   flex-direction: column;
   text-align: center;
   background: rgb(16, 17, 19);
-  padding: 100px 0;
-  margin-top: 100px;
+  margin-top: calc(20vh + 100px);
+  margin-bottom: 45vh;
 }
 
 .about .titulo {
@@ -615,12 +644,12 @@ div.about-container > div.container-right > .cv {
   margin-top: 70px;
   position: relative;
   z-index: 100;
-  width: 80%;
+  width: 100%;
 }
 
 .about .container-left {
   position: relative;
-  width: 200px;
+  width: 260px;
   opacity: 0;
   margin-bottom: 40px;
 
@@ -636,7 +665,7 @@ div.about-container > div.container-right > .cv {
     }
 
     p:nth-child(2) {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     @media (max-width: 900px) {
@@ -651,14 +680,33 @@ div.about-container > div.container-right > .cv {
 }
 
 .about .about-container .about-image {
-  width: 100%;
-  height: 100%;
+  //  width: 100%;
+  // height: 100%;
+  width: 360px;
+  height: 480px;
   margin: auto;
   z-index: 10;
   border-radius: 10px;
   overflow: hidden;
-  border: 5px solid rgb(29, 153, 224);
+  //box-shadow: 0 0 40px 1px rgb(0 99 170);
 
+  .prueba {
+    font-family: "Poppins", sans-serif;
+    line-height: 14px;
+    background: url("/perfil.jpg");
+    -webkit-background-clip: text;
+    //background-attachment: absolute;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    letter-spacing: -3px;
+    word-break: break-all;
+    line-height: 6px;
+  }
   @media (max-width: 900px) {
     border-radius: 999px;
     height: 120px;
@@ -669,6 +717,7 @@ div.about-container > div.container-right > .cv {
     margin-bottom: 10px;
   }
 }
+
 .about .about-container .about-image img {
   width: 100%;
   height: 100%;
@@ -694,11 +743,21 @@ div.about-container > div.container-right > .cv {
 
 .about-container .iconos {
   display: flex;
+  div {
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+
+    p:nth-child(2) {
+      font-size: 13px;
+    }
+  }
 }
 
 .skills {
-  padding-top: 150px;
-  padding-bottom: 50px;
+  margin-top: 25vh;
+  margin-bottom: 30vh;
 }
 
 .skills .container-texto {
@@ -1006,7 +1065,13 @@ div.about-container > div.container-right > .cv {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 350px;
+  max-width: 580px;
+  width: 90%;
+  margin-left: 50px;
+
+  @media (max-width: 900px) {
+    margin-left: 0;
+  }
 }
 
 .container-right .iconos {
@@ -1045,6 +1110,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   text-align: start;
   margin-bottom: 20px;
   opacity: 0;
+  font-size: 14px;
 }
 
 .container-right .right-boton {
@@ -1077,7 +1143,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   right: 0;
   height: 180px;
   width: 30px;
-  background: linear-gradient(lightblue, white);
+  background: linear-gradient(#335375, #0095ff);
   animation: bordes 8s ease infinite;
   z-index: 1;
 }
@@ -1768,8 +1834,8 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
 
   .patoContainer {
     left: 0;
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
 
     & > img {
       border: 2px solid #000000;
@@ -1815,6 +1881,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
 
   .container-right .iconos > div {
     margin: 0 3px;
+    min-width: 40%;
   }
 }
 
@@ -1840,8 +1907,8 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
 }
 
 .cv-caja {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: #00000066;
   position: fixed;
   top: 0;
@@ -1856,7 +1923,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
     max-width: 450px;
     height: 95%;
     max-height: 600px;
-    position:relative;
+    position: relative;
 
     .image {
       width: 100%;
@@ -1892,27 +1959,126 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
           object-fit: contain;
         }
       }
+
+      @media (max-width: 900px) {
+        border-radius: 0;
+      }
     }
 
     .botones {
       position: absolute;
       top: 20px;
       right: -20px;
-      transform:translateX(100%);
-   
+      transform: translateX(100%);
 
       & > div {
         width: 45px;
         height: 45px;
-        margin-bottom:10px;
+        margin-bottom: 10px;
         border-radius: 5px;
-        border:2px solid #373737;
-        cursor:pointer;
-        padding:7px;
+        border: 2px solid #373737;
+        cursor: pointer;
+        padding: 7px;
       }
 
+      //print boton
+      div:nth-child(1) {
+        display: none;
+      }
+
+      div:nth-child(2) {
+        span {
+          font-size: 9px;
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          color: #e5e5e5;
+        }
+      }
+    }
+
+
+    .exit-desk{
+      width: 40px;
+      height: 40px;
+      background: #414141;
+      border: 1px solid #4090e3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform:translateX(-110%) translateY(-30%);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+    }
+
+    //esto solo se ve en mobile
+    .exit-mbl {
+      display: none;
+
+      @media (max-width: 900px) {
+        display:block;
+        height: 50px;
+        width: 50px;
+        border-radius: 999px;
+        position: absolute;
+        top: 0;
+        top: 0;
+        margin-top: 2vh;
+        margin-left: 2%;
+        z-index: 100;
+        padding:7px;
+        border: 1px solid #414141;
+        background: #afafaf;
+    
+      }
+    }
+
+    .btnDownload-mbl {
+      display: none;
+      @media (max-width: 900px) {
+        width: 80%;
+        border-radius: 10px;
+        border: 2px solid gray;
+        padding: 5px 0;
+        z-index: 100;
+        position: absolute;
+        bottom: 25px;
+        background:#212327;
+        display: flex;
+        justify-content: space-around;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        font-weight:700;
+        
+
+        span {
+          font-size: 17px;
+          display:grid;
+          place-items:center;
+   
+        }
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      width: 100%;
+      //max-width: 450px;
+      height: 100%;
+      position: relative;
+      max-height: max-content;
     }
   }
+
 }
 
 /*----segundo portafolio---------*/
