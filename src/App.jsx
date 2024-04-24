@@ -9,6 +9,8 @@ desde el back convertir los archivos del servidor en base64 enviarlos por json y
 el front convertirlos en blobs esto para poder enviar muchos archivos en un solo endpoint
 */
 import "./portafolio.scss";
+import { addListener, launch } from "devtools-detector";
+
 import { useEffect, useRef, useState, useContext, createContext } from "react";
 /*tagcloud sirve para hacer una esfera 3d rotando*/
 import TagCloud from "TagCloud";
@@ -166,13 +168,20 @@ function Header({ apareceFooter }) {
   }, [openMenu]);
 
   const clickScrollInto = (place, event) => {
-    const elementCoordenadas = event.target;
-    console.log(elementCoordenadas.offsetTop);
-    document.body.scrollTo({
-      top: "500px",
+    const element_a = document.querySelector(`#${place}`);
+    element_a.click();
+    //no usare esto tengo algunos problemas
+    /*const elementCoordenadas = document.querySelector(`${place}`).getBoundingClientRect()
+
+
+    console.log(elementCoordenadas)
+    window.scrollTo({
+      top: elementCoordenadas.top,
       behavior: "smooth",
-    });
+    });*/
   };
+
+  const clickRedirect = () => {};
   return (
     <div className="header">
       <div className="patoContainer">
@@ -180,7 +189,7 @@ function Header({ apareceFooter }) {
       </div>
       <div className="nav">
         <ul>
-          <li onClick={(event) => clickScrollInto("home", event)}>
+          <li onClick={(event) => clickScrollInto("home-a", event)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,9 +202,11 @@ function Header({ apareceFooter }) {
                 ></path>
               </svg>
             </span>
-            <a href="#home">Home</a>
+            <a href="#home" id="home-a">
+              Home
+            </a>
           </li>
-          <li onClick={(event) => clickScrollInto("about", event)}>
+          <li onClick={(event) => clickScrollInto("about-a", event)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -208,9 +219,11 @@ function Header({ apareceFooter }) {
                 ></path>
               </svg>
             </span>
-            <a href="#about">About</a>
+            <a href="#about" id="about-a">
+              About
+            </a>
           </li>
-          <li onClick={(event) => clickScrollInto("skills", event)}>
+          <li onClick={(event) => clickScrollInto("skills-a", event)}>
             <span>
               <svg
                 width="800px"
@@ -224,9 +237,11 @@ function Header({ apareceFooter }) {
                 />
               </svg>
             </span>
-            <a href="#skills">Skills</a>
+            <a href="#skills" id="skills-a">
+              Skills
+            </a>
           </li>
-          <li onClick={(event) => clickScrollInto("portfolio", event)}>
+          <li onClick={(event) => clickScrollInto("portfolio-a", event)}>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -239,9 +254,11 @@ function Header({ apareceFooter }) {
                 ></path>
               </svg>
             </span>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio" id="portfolio-a">
+              Portfolio
+            </a>
           </li>
-          <li onClick={(event) => clickScrollInto("contact", event)}>
+          <li onClick={(event) => clickScrollInto("contact-a", event)}>
             <span>
               <svg
                 fill="lightgray"
@@ -257,7 +274,9 @@ function Header({ apareceFooter }) {
                 ></path>
               </svg>
             </span>
-            <a href="#contact">Contact</a>
+            <a href="#contact" id="contact-a">
+              Contact
+            </a>
           </li>
         </ul>
       </div>
@@ -460,14 +479,16 @@ function About() {
 
   //esto abre el modal del CV
   const clickMyCv = () => {
+    //ocultamos el scroll
+    document.body.style.cssText = "overflow:hidden";
     const cv_caja = document.querySelector(".cv-caja");
 
     const cv_contentElement = document.querySelector(".cv-content");
 
     //primero tenemos que terminar la animacion y luego desaparecemos la caja
 
-    cv_caja.style.cssText = "visibility:visible";
-    cv_contentElement.style.cssText = "animation:fadeCV 100ms ease forwards";
+    cv_caja.style.cssText = "visibility:visible;opacity:1";
+    cv_contentElement.style.cssText = "animation:fadeCV 50ms linear forwards";
     /*cv_contentElement.addEventListener("animationend", () => {
       cv_caja.style.cssText = "visibility:visible";
     });*/
@@ -580,7 +601,7 @@ function About() {
           </div>
           <a className="cv" onClick={clickMyCv}>
             <div className="right-boton">
-              <span className="botonDownload">Download CV</span>
+              <span className="botonDownload">view CV</span>
               <svg
                 fill="white"
                 style={{
@@ -1477,16 +1498,15 @@ function HeaderMenu() {
           <a href="#skills">
             <span>
               <svg
-                fill="white"
-                height="25px"
                 width="25px"
+                height="25px"
+                viewBox="0 0 512 512"
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                id="file-alt"
+                style={{ position: "relative", left: "3px" }}
               >
                 <path
-                  fill="#undefined"
-                  d="M9,10h1a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Zm0,2a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2ZM20,8.94a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19.32.32,0,0,0-.09,0A.88.88,0,0,0,13.05,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V9S20,9,20,8.94ZM14,5.41,16.59,8H15a1,1,0,0,1-1-1ZM18,19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4h5V7a3,3,0,0,0,3,3h3Zm-3-3H9a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z"
+                  fill="lightgray"
+                  d="M458.949 16.902c-21.23 45.511-62.196 13.713-94.89 12.604-92.464-.8-95.254 47.352-141.296 77.017-9.189-10.02-23.774-16.38-46.738-15.117-15.928.876-30.343 6.34-40.974 15.895-12.34 10.738-21.335 25.549-21.942 39.84 21.03-5.316 41.304-4.385 45.871 5.46 11.508 24.813-21.37 15.961-44.745 23.397-1.248.396-2.472.81-3.684 1.225-2.757 7.733-6.024 15.131-6.024 20.482 0 16.945 13.686 6.16 19.648 20.88.85 2.099 3.778 8.625 12.238 16.833 1.367 1.328 46-35.114 47.487-33.9-14.835 31.6-38.787 42.74-41.127 43.975-21.237 11.202-46.726 20.42-55.691 38.13l-.522-.168s-27.58 65.425-33.509 97.908c.575 16.747 25.672 12.545 25.672 12.545l39.527-11.785 4.686 16.94 119.482-150.627c-26.122-15.67-18.045-38.588-21.927-58.778 13.787-22.475 21.9-34.062 14.597-56.68 7.122-7.318 16.216-14.785 26.61-16.779 21.267-4.08 60.016 16.198 80.997 16.47 27.78.362 42.716-14.296 54.352-31.905-10.666 3.502-14.712 3.5-8.703-15.065-14.177 5.175-23.315 22.6-48.998 18.526-23.87-3.787-60.077-11.021-80.065-4.354 33.926-17.423 60.548-35.253 96.777-39.463 42.453 3.026 80.56 32.916 102.89-17.031zM340.169 153.78l-39.003 49.065 16.54 11.713 39.008-49.067zm-205.509 1.657c-5.303 0-10.607 1.195-10.607 3.584 2.163 2.943 9.788 5.337 13.459 5.42 5.858 0 7.755-.644 7.755-5.42 0-2.389-5.304-3.584-10.607-3.584zm140.864 47.156l-11.702 14.172L312.9 250.85l11.701-14.172zm-4.423 35.984L100.574 453.551s-10.247 8.425-.05 16.773c10.47 8.57 18.622-3.654 18.622-3.654L289.67 251.695zm18.932 41.914s-20.687 26.845-31.22 40.12c-42.147 53.119-125.718 156.698-127.942 158.156l.068 16.332H240.24l15.365-115.264 44.661 9.677s17.915 1.914 17.186-13.823c-4.626-21.768-19.228-74.864-27.42-95.198zm-22.714 48.874l8.746 21.61-14.493-3.73z"
                 ></path>
               </svg>
             </span>
@@ -1497,16 +1517,14 @@ function HeaderMenu() {
           <a href="#portfolio">
             <span>
               <svg
-                fill="white"
-                height="25px"
-                width="25px"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                id="image"
+                id="bag-alt"
+                style={{ width: "25px", height: "25px" }}
               >
                 <path
-                  fill="#undefined"
-                  d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4ZM5,18a1,1,0,0,1-1-1V14.58l3.3-3.29a1,1,0,0,1,1.4,0L15.41,18Zm15-1a1,1,0,0,1-1,1h-.77l-3.81-3.83.88-.88a1,1,0,0,1,1.4,0L20,16.58Zm0-3.24-1.88-1.87a3.06,3.06,0,0,0-4.24,0l-.88.88L10.12,9.89a3.06,3.06,0,0,0-4.24,0L4,11.76V7A1,1,0,0,1,5,6H19a1,1,0,0,1,1,1Z"
+                  fill="lightgray"
+                  d="M19,6.5H16v-1a3,3,0,0,0-3-3H11a3,3,0,0,0-3,3v1H5a3,3,0,0,0-3,3v9a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3v-9A3,3,0,0,0,19,6.5Zm-9-1a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1v1H10Zm10,13a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V13a21.71,21.71,0,0,0,8,1.53A21.75,21.75,0,0,0,20,13Zm0-7.69a19.89,19.89,0,0,1-16,0V9.5a1,1,0,0,1,1-1H19a1,1,0,0,1,1,1Z"
                 ></path>
               </svg>
             </span>
@@ -1545,20 +1563,18 @@ function CvModal() {
     console.log(window);
   };
 
-
-
-  
-
   const clickExitDesk = () => {
+    //ocultamos el scroll
+    document.body.style.cssText = "overflow:auto";
     const cv_contentElement = document.querySelector(".cv-content");
     //hace la animacion y una ves animado se borra
     cv_contentElement.style.cssText = "animation:exitCV 100ms ease forwards";
 
     const animFunction = (event) => {
       const cv_caja = document.querySelector(".cv-caja");
-  
-      cv_caja.style.cssText = "opacity:0";
-  
+
+      cv_caja.style.cssText = "opacity:0;visibility:hidden";
+
       event.target.removeEventListener("animationend", animFunction);
     };
 
@@ -1631,7 +1647,20 @@ function CvModal() {
           </div>
         </div>
 
-        <div className="exit-mbl">a</div>
+        <div className="exit-mbl" onClick={clickExitDesk}>
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              style={{ fill: "#f7f7f7" }}
+              d="M7.68473 7.33186C8.07526 6.94134 8.07526 6.30817 7.68473 5.91765C7.29421 5.52712 6.66105 5.52712 6.27052 5.91765L1.60492 10.5832C0.823873 11.3643 0.823872 12.6306 1.60492 13.4117L6.27336 18.0801C6.66388 18.4706 7.29705 18.4706 7.68757 18.0801C8.0781 17.6896 8.0781 17.0564 7.68757 16.6659L4.02154 12.9998L22 12.9998C22.5523 12.9998 23 12.5521 23 11.9998C23 11.4476 22.5523 10.9998 22 10.9998L4.01675 10.9998L7.68473 7.33186Z"
+              fill="#0F0F0F"
+            />
+          </svg>
+        </div>
         <div className="btnDownload-mbl">
           <span>Download CV</span>
           <svg>
@@ -1701,7 +1730,7 @@ export function Ventana({ boleano }) {
       "abajo 500ms ease-in 800ms forwards"
     );
     anim(
-      "#home > div.right > div.right-texto > a > div.texto-boton",
+      "#home > div.right > div.right-texto > a ",
       "aparecer 400ms ease-in 900ms forwards"
     );
   }, []);
@@ -2060,6 +2089,13 @@ export function Ventana({ boleano }) {
       const bodyHeight = window.innerWidth
       console.log(bodyHeight)
     },3000);*/
+
+  useEffect(() => {
+    //esto detecta si se abre el devtools
+    addListener((isOpen) => alert("ho"));
+    //launch();
+  }, []);
+
   return (
     <div className="ventana" id={boleano}>
       <div className="vista1">
@@ -2193,12 +2229,12 @@ export default function App() {
       const bodyHeight = window.innerWidth
       console.log(bodyHeight)
     },3000);
-
-
+//----
   }, []);
 */
   //no puedo aplicar lo de la ventana "div.foot" tapando toda la pantalla no se pueden dar click en input ni en botones
   //de momento solo generar blobsURLs
+
   return (
     <ContextGlobal.Provider value={value}>
       <div id="jaymePortfolio">
