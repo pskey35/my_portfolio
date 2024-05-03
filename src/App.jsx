@@ -14,12 +14,6 @@ import { addListener, launch } from "devtools-detector";
 import { useEffect, useRef, useState, useContext, createContext } from "react";
 /*tagcloud sirve para hacer una esfera 3d rotando*/
 import TagCloud from "TagCloud";
-import css3 from "../public/assets/css3.webp";
-import git from "../public/assets/git.webp";
-import github from "../public/assets/github.webp";
-import html5 from "../public/assets/html5.webp";
-//import linux from "../public/assets/linux.png";
-
 import perfil from "../public/perfil.png";
 
 function anim(elemento, estilo) {
@@ -1592,7 +1586,12 @@ function CvModal() {
           <div>salir</div>
         </div>
         <div className="exit-desk" onClick={clickExitDesk}>
-          exit
+          <svg width="60%" stroke="white" height="60%" viewBox="0 0 24 24">
+            <path
+              d="M7.68473 7.33186C8.07526 6.94134 8.07526 6.30817 7.68473 5.91765C7.29421 5.52712 6.66105 5.52712 6.27052 5.91765L1.60492 10.5832C0.823873 11.3643 0.823872 12.6306 1.60492 13.4117L6.27336 18.0801C6.66388 18.4706 7.29705 18.4706 7.68757 18.0801C8.0781 17.6896 8.0781 17.0564 7.68757 16.6659L4.02154 12.9998L22 12.9998C22.5523 12.9998 23 12.5521 23 11.9998C23 11.4476 22.5523 10.9998 22 10.9998L4.01675 10.9998L7.68473 7.33186Z"
+              fill="white"
+            ></path>
+          </svg>
         </div>
         <div className="botones">
           <div className="print" onClick={clickPrint}>
@@ -2044,6 +2043,7 @@ export function Ventana({ boleano }) {
     async function fetchData() {
       //si existe en sessionStorage las imagenes, no hacer el fetch
       //eso lo hago luego ya,ahora NO
+      //https://back-portfolio-xi.vercel.app/assets
       const data = await fetch("https://back-portfolio-xi.vercel.app/assets");
       const bo = await data.json();
       //console.log(data)
@@ -2090,12 +2090,6 @@ export function Ventana({ boleano }) {
       console.log(bodyHeight)
     },3000);*/
 
-  useEffect(() => {
-    //esto detecta si se abre el devtools
-    addListener((isOpen) => alert("ho"));
-    //launch();
-  }, []);
-
   return (
     <div className="ventana" id={boleano}>
       <div className="vista1">
@@ -2126,12 +2120,15 @@ export function Ventana({ boleano }) {
       <Contact></Contact>
       <Footer></Footer>
       <CvModal></CvModal>
-      {/*menu ? <FooterMenu></FooterMenu> : ""*/}
     </div>
   );
 }
 
 const ContextGlobal = createContext();
+
+function BlockContainer() {
+  return <div className="what_are_you_doing"></div>;
+}
 
 export default function App() {
   //aqui lo que hize fue que cuando detecte que el clientHeight a cambiado se hara ese borrado de ventana para que
@@ -2156,45 +2153,43 @@ export default function App() {
   };
 
   //-------activo esto y se activa la seguridad en mi web--------
-  /*
-  useEffect(() => {
 
+  const [showBlockContainer, setShowBlockContainer] = useState(false);
+
+  useEffect(() => {
     //aqui si existe un valor en sessionStorage bota un string y si no hay bota un null.
     //null se considera un valor falso cuando se evalua en contexto boleano.entonces !null es true
-    if(!sessionStorage.getItem("mbl")){
+    if (!sessionStorage.getItem("mbl")) {
       //este if se corre si no hay nada en el sessionStorage osea si es la primera vez que visita la web
-      
+
       //-------en sessionStorage se guardaran si es Mobile(boleano) y las imagenes en base64 para luego convertirlos en Blob Url--------
-     const userAgent = navigator.userAgent;
+      const userAgent = navigator.userAgent;
 
       //esto de aqui abajo si es true es telefono y si  es false es porque es PC
       const isMobile = /(iPhone|iPad|Android|Windows Phone)/i.test(userAgent);
-      
-      //mbl = mobile
-      sessionStorage.setItem("mbl",isMobile) //true si es mobile, False si es computadora
-      
-    
-      sessionStorage.setItem("wdt",window.innerWidth) //esto guardara la anchura del window
-      setInterval(()=>{
-       // console.log(window.innerWidth, sessionStorage.getItem("wdt"))
-        if(window.innerWidth.toString() !== sessionStorage.getItem("wdt")){
-          setBorrarVentana(true)
-        }else{
-          setBorrarVentana(false)
-        }
-      },5000)
-    }else{
-      setInterval(()=>{
-       // console.log(window.innerWidth, sessionStorage.getItem("wdt"))
-        if(window.innerWidth.toString() !== sessionStorage.getItem("wdt")){
-          setBorrarVentana(true)
-        }else{
-          setBorrarVentana(false)
-        }
-      },5000)
-    }
-    
 
+      //mbl = mobile
+      sessionStorage.setItem("mbl", isMobile); //true si es mobile, False si es computadora
+
+      sessionStorage.setItem("wdt", window.innerWidth); //esto guardara la anchura del window
+      setInterval(() => {
+        // console.log(window.innerWidth, sessionStorage.getItem("wdt"))
+        if (window.innerWidth.toString() !== sessionStorage.getItem("wdt")) {
+          setBorrarVentana(true);
+        } else {
+          setBorrarVentana(false);
+        }
+      }, 5000);
+    } else {
+      setInterval(() => {
+        // console.log(window.innerWidth, sessionStorage.getItem("wdt"))
+        if (window.innerWidth.toString() !== sessionStorage.getItem("wdt")) {
+          setBorrarVentana(true);
+        } else {
+          setBorrarVentana(false);
+        }
+      }, 5000);
+    }
 
     //esto desactiva el click derecho del mouse
     document.addEventListener("contextmenu", function (event) {
@@ -2203,19 +2198,22 @@ export default function App() {
     });
 
     //tenemos que capturar el userAgent del usuario y luego calcular el window.innerHeight
-    //lo guardamos en session storage y luego calculamos si 
-    
+    //lo guardamos en session storage y luego calculamos si
+
     //const x = document.querySelector(".ventana");
     //setTimeout(()=>{
     //  setBorrarVentana(true)
-      //esto de aqui es en caso de que detectemos si estan usando la consola de chrome
-   // },3000)
+    //esto de aqui es en caso de que detectemos si estan usando la consola de chrome
+    // },3000)
 
     //esto de aca verifica cada 3 segundos si hubo un cambio de pantalla
     //si es asi es porque seguro a abierto la consola de chrome devs
-    
 
-
+    //esto detecta si se abre el devtools
+    addListener((isOpen) => {
+      setShowBlockContainer(isOpen);
+    });
+    launch();
 
     //esto de aqui abajo no vale
     /*setInterval(() => {
@@ -2229,9 +2227,9 @@ export default function App() {
       const bodyHeight = window.innerWidth
       console.log(bodyHeight)
     },3000);
-//----
+//----*/
   }, []);
-*/
+
   //no puedo aplicar lo de la ventana "div.foot" tapando toda la pantalla no se pueden dar click en input ni en botones
   //de momento solo generar blobsURLs
 
@@ -2239,6 +2237,7 @@ export default function App() {
     <ContextGlobal.Provider value={value}>
       <div id="jaymePortfolio">
         <Ventana></Ventana>
+        {showBlockContainer ? <BlockContainer></BlockContainer> : ""}
       </div>
     </ContextGlobal.Provider>
   );

@@ -1043,7 +1043,7 @@ div.about-container > div.container-right > .cv {
 }
 
 .circulo .items:nth-child(1) {
-  background-image: url("../public/svg/mysql-icon.svg");
+  background-image: url("../public/svg/mysql.svg");
 }
 
 .circulo .items:nth-child(2) {
@@ -1627,6 +1627,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
 
 .contact-right .botonEnviar:hover {
   background: black;
+  border:2px solid #252525
 }
 
 .footer {
@@ -2026,7 +2027,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
     opacity: 0;
     transform: scale(0.5);
     border-radius: 15px;
-    overflow: hidden;
+    // overflow: hidden;
 
     .image {
       width: 100%;
@@ -2063,8 +2064,8 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
         }
       }
 
-      @media (max-width: 900px) {
-        border-radius: 0px;
+      @media (max-width: 500px) {
+        border-radius: inherit;
       }
     }
 
@@ -2084,6 +2085,10 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
         padding: 7px;
       }
 
+      &:hover {
+        background: #002c71;
+      }
+
       //print boton
       div:nth-child(1) {
         display: none;
@@ -2101,13 +2106,17 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
           color: #e5e5e5;
         }
       }
+
+      @media (max-width: 500px) {
+        display: none;
+      }
     }
 
     .exit-desk {
       width: 40px;
       height: 40px;
-      background: #414141;
-      border: 1px solid #4090e3;
+      background: #101010;
+      border: 2px solid #373737;
       position: absolute;
       top: 0;
       left: 0;
@@ -2115,13 +2124,22 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
       border-radius: 999px;
       display: grid;
       place-items: center;
+      cursor:pointer;
+
+      &:hover {
+        background: #6d1212bd;
+      }
+
+      @media (max-width: 500px) {
+        display: none;
+      }
     }
 
     //esto solo se ve en mobile
     .exit-mbl {
       display: none;
 
-      @media (max-width: 900px) {
+      @media (max-width: 500px) {
         display: block;
         height: 50px;
         width: 50px;
@@ -2140,7 +2158,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
 
     .btnDownload-mbl {
       display: none;
-      @media (max-width: 900px) {
+      @media (max-width: 500px) {
         width: 80%;
         border-radius: 10px;
         border: 2px solid gray;
@@ -2169,13 +2187,13 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
       }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 500px) {
       width: 100%;
       //max-width: 450px;
       height: 100%;
       position: relative;
       max-height: max-content;
-      border-radius: 0px;
+      border-radius: 0;
     }
   }
 }
@@ -2185,14 +2203,14 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
     opacity: 0;
     transform: scale(0.5);
     // border-radius: 15px;
-    overflow: hidden;
+    //   overflow: hidden;
   }
 
   100% {
     opacity: 1;
     transform: scale(1);
     //   border-radius: 15px;
-    overflow: hidden;
+    // overflow: hidden;
   }
 }
 
@@ -2214,4 +2232,25 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
 
 #otro .header {
   opacity: 1;
+}
+
+
+
+
+::selection{
+  background: #0072ff;
+  color: #ececec
+}
+
+
+
+//esto bloquea todo la ventana en caso de que abra
+//la devtools de google
+.what_are_you_doing{
+  z-index:99999;
+  position:fixed;
+  height:100vh;
+  width:100vw;
+  top:0;
+  left:0;
 }
