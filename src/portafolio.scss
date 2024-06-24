@@ -356,6 +356,7 @@ div.about-container > div.container-right > .cv {
   transition: background-color 0.3s;
   position: relative;
   overflow: hidden;
+
 }
 /*
 .right-texto .texto-boton::before {
@@ -371,7 +372,7 @@ div.about-container > div.container-right > .cv {
   background: linear-gradient(lightblue, white);
   animation: bordes 4s ease-in infinite;
   z-index: 1;
-}
+}*/
 
 .right-texto .texto-boton::after {
   content: "";
@@ -382,7 +383,7 @@ div.about-container > div.container-right > .cv {
   inset: 3px;
   border-radius: 5px;
 }
-*/
+
 @keyframes bordes {
   0% {
     transform: rotate(0deg);
@@ -1156,6 +1157,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   right: 10px;
 }
 
+/*
 .container-right .right-boton::before {
   content: "";
   position: absolute;
@@ -1174,7 +1176,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   animation: bordes 8s ease infinite;
   z-index: 1;
 }
-
+*/
 .container-right .right-boton::after {
   content: "";
   position: absolute;
@@ -1231,11 +1233,11 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
     z-index: 200;
     padding: 10px;
   }
-
+/*
   &:hover::before {
     opacity: 1;
-  }
-
+  }*/
+/*
   &::before,
   &::after {
     border-radius: inherit;
@@ -1265,7 +1267,7 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
       transparent 40%
     );
     z-index: 100;
-  }
+  }*/
 }
 
 .portfolio .caja .caja-lin {
@@ -1306,6 +1308,11 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   & > div {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
+  }
+
+  & > a{
+    position:relative;
+    z-index:10000;
   }
 }
 
