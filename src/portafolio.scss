@@ -1157,6 +1157,27 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
   right: 10px;
 }
 
+
+.botones{
+  padding:4px;
+  border-radius:8px;
+  height:60px;
+}
+
+.download {
+  padding:3px;
+  border-radius:5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
+  span{
+    font-size:12px;
+  }
+}
+
 /*
 .container-right .right-boton::before {
   content: "";

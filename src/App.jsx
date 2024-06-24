@@ -220,10 +220,12 @@ function CvModal() {
               </g>
             </svg>
           </div>
-          <div className="download">
+          <a className="download" href="jaymeCV.pdf" download="jaymeCV.pdf">
             <svg
               viewBox="0 0 24 24"
               fill="none"
+              width="30px"
+              height="30px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -244,7 +246,7 @@ function CvModal() {
               />
             </svg>
             <span>Download</span>
-          </div>
+          </a>
         </div>
 
         <div className="exit-mbl" onClick={clickExitDesk}>
@@ -261,7 +263,7 @@ function CvModal() {
             />
           </svg>
         </div>
-        <div className="btnDownload-mbl">
+        <a className="btnDownload-mbl" href="/jaymeCV.pdf" download="jaymeCV.pdf">
           <span>Download CV</span>
           <svg>
             <svg
@@ -287,7 +289,7 @@ function CvModal() {
               ></path>
             </svg>
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   );
@@ -618,7 +620,7 @@ export function Ventana({ boleano }) {
 
 
  //ESTO FUNCIONA!!! esto sirve para borrar y agregar
-    
+    /*
      const x = document.querySelector(".ventana")
       setInterval(() => {
         const caja = document.querySelector("#jaymePortfolio");
@@ -629,7 +631,7 @@ export function Ventana({ boleano }) {
         const bodyHeight = window.innerWidth
         console.log(bodyHeight)
       }, 3000);
-
+*/
 
     } else if (borrarVentana == false) {
       window.addEventListener("scroll", scrollVentana);
@@ -782,7 +784,7 @@ export default function App() {
     addListener((isOpen) => {
       setShowBlockContainer(isOpen);
     });
-    launch();
+  //  launch();
     //esto desactiva el click derecho del mouse
     document.addEventListener("contextmenu", function (event) {
       //lo desactivare de momento
