@@ -198,7 +198,7 @@ export default function Contact() {
                 }, 3000);*/
 
                 //en local poner fetch("localhost:8000/data")
-                fetch(`${import.meta.env.VITE_api}/data`,{
+                fetch(`${import.meta.env.VITE_API}/data`,{
                         method: "POST",
                         headers: { "Content-type": "application/json" },
                         //credentials: "include",
