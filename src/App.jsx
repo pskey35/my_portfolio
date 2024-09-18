@@ -650,7 +650,7 @@ export function Ventana({ boleano }) {
       //si existe en sessionStorage las imagenes, no hacer el fetch
       //eso lo hago luego ya,ahora NO
       //https://back-portfolio-xi.vercel.app/assets
-      const data = await fetch("https://back-portfolio-xi.vercel.app/assets");
+      const data = await fetch(`${import.meta.env.VITE_API}/assets`);
       const bo = await data.json();
       //console.log(data)
       const b64 = `data:image/svg+xml;base64,${bo.ondas}`;

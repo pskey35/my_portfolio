@@ -1,6 +1,6 @@
-import {useRef,useState} from "react"
+import { useRef, useState } from "react"
 
-const Alerta = () => {
+const Alerta = ({ notificacion, setBoleanoAlerta }) => {
     return (
         <div className="container-alerta">
             <div className="alerta">
@@ -56,7 +56,7 @@ C316.426,196.043,380.533,141.939,412.861,78.976z"
                     </div>
                 </div>
                 <p style={{ color: "gray" }}>
-                    solo puedes enviar 3 mensajes por dia espera hasta mañana {alerta}
+                    solo puedes enviar 3 mensajes por dia espera hasta mañana {notificacion}
                 </p>
             </div>
         </div>
@@ -198,16 +198,16 @@ export default function Contact() {
                 }, 3000);*/
 
                 //en local poner fetch("localhost:8000/data")
-                fetch("/data", {
-                    method: "POST",
-                    headers: { "Content-type": "application/json" },
-                    //credentials: "include",
-                    //comenta el credentials solo sirve en local,en vercel No
-                    body: JSON.stringify({
-                        correo: input1,
-                        mensaje: input2,
-                    }),
-                })
+                fetch(`${import.meta.env.VITE_api}/data`,{
+                        method: "POST",
+                        headers: { "Content-type": "application/json" },
+                        //credentials: "include",
+                        //comenta el credentials solo sirve en local,en vercel No
+                        body: JSON.stringify({
+                            correo: input1,
+                            mensaje: input2,
+                        }),
+                    })
                     .then((e) => e.json())
                     .then((e) => {
                         //console.log(e);
@@ -218,12 +218,15 @@ export default function Contact() {
                         } else {
                             setMensaje(<ErrorEnvio />);
                             setEnviado("incorrecto");
+                            console.log(e)
                         }
                         setTimeout(() => {
                             setMensaje("");
                             setEnviado("");
                         }, 5000);
-                    });
+                    }).catch(e => {
+                        console.log(e)
+                    })
             }
             /*
               //esto es igual que arriba?
@@ -451,7 +454,7 @@ export default function Contact() {
                 </div>
             </div>
             {/*aqui se pone la alerta de que si ya alcanzo los 4 envios de correo*/}
-            {boleanoAlerta ? <Alerta /> : ""}
+            {boleanoAlerta ? <Alerta notificacion={alerta} setBoleanoAlerta={setBoleanoAlerta} /> : ""}
         </div>
     );
 }
