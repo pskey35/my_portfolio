@@ -250,6 +250,10 @@ export default function Portfolio() {
               visual content, and discover new trends through
               a friendly and interactive interface.
 
+              With social interaction features like comments,
+              reactions and the option to follow other users, Galy
+              encourages connection and visual exchange.
+
 
             </div>
           </div>
