@@ -1332,6 +1332,35 @@ div.iconos > div:nth-child(3) > p:nth-child(3) {
     position:relative;
     z-index:10000;
   }
+
+  .dev{
+
+    background: #186f18;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: .9;
+    border: 1px solid #06c506;
+
+  
+    .text-working{
+      font-size: 12px;
+    }
+
+    .point{
+      display: inline-block;
+      height: 5px;
+      width: 5px;
+      border-radius: 999px;
+      margin-left: 5px;
+      background: #13ff13;
+      position: relative;
+      top: -4px;
+
+
+    }
+
+
+  }
 }
 
 .caja {

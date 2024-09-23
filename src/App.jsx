@@ -335,6 +335,9 @@ export function Ventana({ boleano }) {
       "#home > div.right > div.right-texto > a ",
       "aparecer 400ms ease-in 900ms forwards"
     );
+
+
+
   }, []);
 
   //no borrar esto funciona correctamente
@@ -396,6 +399,9 @@ export function Ventana({ boleano }) {
         "#portfolio > div > div:nth-child(4)",
         "aparecer 500ms ease 800ms forwards"
       );
+      anim("#portfolio > div > div:nth-child(5)","aparecer 500ms ease 1000ms forwards")
+
+
       anim("#contact h1", "abajo 500ms ease forwards");
       anim("#contact h6", "abajo 500ms ease 300ms forwards");
       anim(
@@ -551,12 +557,17 @@ export function Ventana({ boleano }) {
       const caja4 = document.querySelector(
         "#portfolio > div > div:nth-child(4)"
       );
+      const caja5 = document.querySelector(
+        "#portfolio > div > div:nth-child(5)"
+      );
+
 
       portfolioTitulo.style = "opacity:1";
       caja1.style = "opacity:1";
       caja2.style = "opacity:1";
       caja3.style = "opacity:1";
       caja4.style = "opacity:1";
+      caja5.style = "opacity:1"
 
       //----------------Contact me----------------------
       const contactTitulo = document.querySelector("#contact > h1");
@@ -783,8 +794,12 @@ export default function App() {
     //esto detecta si se abre el devtools--- mira la linea de codigo 618
     addListener((isOpen) => {
       setShowBlockContainer(isOpen);
+    
     });
-  //  launch();
+    //launch();
+
+   
+  // 
     //esto desactiva el click derecho del mouse
     document.addEventListener("contextmenu", function (event) {
       //lo desactivare de momento
