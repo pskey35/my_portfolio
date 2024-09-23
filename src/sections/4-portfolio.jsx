@@ -233,7 +233,7 @@ export default function Portfolio() {
           <div className="caja-content">
             <span className="caja-lin"></span>
             <div className="caja-image">
-              <a href="https://galy.vercel.app">
+              <a href="https://galy.vercel.app" target="_blank">
                 <img src="./galy.png" alt="error" />
               </a>
             </div>
