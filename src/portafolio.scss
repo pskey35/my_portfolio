@@ -1548,7 +1548,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 .contact-right .textarea-input {
   position: relative;
   opacity: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .contact-right .textarea-input span {
@@ -1571,6 +1571,14 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   background: rgb(17 17 17);
   border: 2px solid rgb(0 82 150);
 }
+
+.message_5-contact{
+  height:20px;
+  width:100%;
+  text-align:center;
+  margin-bottom:10px;
+}
+
 
 .contact-right .botonEnviar {
   /*padding: 15px 40px;*/
