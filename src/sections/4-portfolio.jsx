@@ -105,7 +105,7 @@ export default function Portfolio() {
               Leaft is your online destination for purchasing electronics, accessories, etc. We focus on offering high quality products at competitive prices, with a fast, safe and simple purchasing experience.
               For this application I have used Next js as a development environment
               <p style={{ color: "gray", marginTop: "10px" }}>
-                para esta aplicacion he usado Next js como entorno de desarrollo
+              For this application I have used Next js as a development environment
               </p>
             </div>
           </div>
