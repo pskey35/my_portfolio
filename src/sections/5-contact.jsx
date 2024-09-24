@@ -56,7 +56,7 @@ C316.426,196.043,380.533,141.939,412.861,78.976z"
                     </div>
                 </div>
                 <p style={{ color: "gray" }}>
-                    solo puedes enviar 3 mensajes por dia espera hasta mañana {notificacion}
+                You can only send 3 messages per day wait until tomorrow{notificacion}
                 </p>
             </div>
         </div>
@@ -150,19 +150,20 @@ export default function Contact() {
     };
 
     const meses = [
-        "enero",
-        "febrero",
-        "marzo",
-        "abril",
-        "mayo",
-        "junio",
-        "julio",
-        "agosto",
-        "septiembre",
-        "octubre",
-        "noviembre",
-        "diciembre",
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december",
     ];
+    
 
     const envio = () => {
         //validamos si el correo es valido para un mejor user experience
@@ -183,6 +184,7 @@ export default function Contact() {
                 color: "red",
                 text: "Enter more characters in your message"
             })
+            return;
         }
 
 
