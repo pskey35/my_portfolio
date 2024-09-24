@@ -287,7 +287,7 @@ export default function Contact() {
             <h6>get in touch</h6>
             <div className="contact">
                 <div className="contact-left">
-                    <p>talk to me</p>
+                    <p>Talk to me</p>
                     <div className="email" style={{ padding: "15px 80px" }}>
                         <div className="email-image">
                             <svg
@@ -401,9 +401,9 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="contact-right">
-                    <p>write me your project</p>
+                    <p>Write me your project</p>
                     <div className="mail-input">
-                        <span>Mail</span>
+                        <span>Email</span>
                         <input placeholder="insert your email" ref={input1}></input>
                     </div>
                     <div className="textarea-input">
