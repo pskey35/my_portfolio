@@ -103,6 +103,11 @@ export default function Contact() {
     //en alerta se le pone el tiempo "espera 5 horas para volver a enviar mensajes"
     const [alerta, setAlerta] = useState("");
 
+    const [message, setMessage] = useState({
+        color: "orange",
+        text: ""
+    })
+
     const ErrorEnvio = () => {
         return (
             <>
@@ -160,10 +165,35 @@ export default function Contact() {
     ];
 
     const envio = () => {
+        //validamos si el correo es valido para un mejor user experience
+
+
+        //input1.current.value
+
+        if (!/@.*\./g.test(input1.current.value.trim())) {
+            //si el email no es valido entra aqui y deja de ejecutar lo de abajo con return
+            setMessage({
+                color: "red",
+                text: "This email is not valid"
+            })
+
+            return;
+        } else if (input2.current.value.trim() <= 3) {
+            setMessage({
+                color: "red",
+                text: "Enter more characters in your message"
+            })
+        }
+
+
         if (cont < 3) {
             const input1valor = input1.current.value.trim();
             const input2valor = input2.current.value.trim();
             if (input1valor.length > 3 && input2valor.length > 3) {
+                setMessage({
+                    color: "transparent",
+                    text: ""
+                })
                 //setCont(cont => cont+1); esto de aqui no funciona
                 setCont((cont) => {
                     cont = cont + 1;
@@ -183,6 +213,7 @@ export default function Contact() {
                 });
                 //alert("verificado");
                 const input1 = input1valor.replace(/\s+/g, " ");
+                alert(input1)
                 const input2 = input2valor.replace(/\s+/g, " ");
                 setLoad(true);
 
@@ -198,16 +229,16 @@ export default function Contact() {
                 }, 3000);*/
 
                 //en local poner fetch("localhost:8000/data")
-                fetch(`${import.meta.env.VITE_API}/data`,{
-                        method: "POST",
-                        headers: { "Content-type": "application/json" },
-                        //credentials: "include",
-                        //comenta el credentials solo sirve en local,en vercel No
-                        body: JSON.stringify({
-                            correo: input1,
-                            mensaje: input2,
-                        }),
-                    })
+                fetch(`${import.meta.env.VITE_API}/data`, {
+                    method: "POST",
+                    headers: { "Content-type": "application/json" },
+                    //credentials: "include",
+                    //comenta el credentials solo sirve en local,en vercel No
+                    body: JSON.stringify({
+                        correo: input1,
+                        mensaje: input2,
+                    }),
+                })
                     .then((e) => e.json())
                     .then((e) => {
                         //console.log(e);
@@ -227,6 +258,16 @@ export default function Contact() {
                     }).catch(e => {
                         console.log(e)
                     })
+            } else if (input1valor.length <= 3) {
+                setMessage({
+                    color: "red",
+                    text: "Enter more characters to your email"
+                })
+            } else if (input2valor.length > 3) {
+                setMessage({
+                    color: "red",
+                    text: "Enter more characters to your message"
+                })
             }
             /*
               //esto es igual que arriba?
@@ -254,6 +295,9 @@ export default function Contact() {
             //alert("tienes mas de 3 envios no puedes enviar mas");
             setAlerta(cook.cookieExpiracion + " de " + meses[fech.getMonth()]);
         }
+
+
+
     };
 
     //esto valida una clase
@@ -418,6 +462,7 @@ export default function Contact() {
                             ref={input2}
                         ></textarea>
                     </div>
+                    <span style={{ color: message.color }} className="message_5-contact">{message.text}</span>
                     <div
                         className={`botonEnviar ${load ? "disabled" : ""} ${claseEnvio(
                             enviado
