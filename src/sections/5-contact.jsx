@@ -215,7 +215,7 @@ export default function Contact() {
                 });
                 //alert("verificado");
                 const input1 = input1valor.replace(/\s+/g, " ");
-                alert(input1)
+                
                 const input2 = input2valor.replace(/\s+/g, " ");
                 setLoad(true);
 
