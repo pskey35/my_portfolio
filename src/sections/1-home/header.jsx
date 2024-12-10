@@ -1,6 +1,6 @@
 import {useState,useContext,useEffect} from "react"
 import {ContextGlobal} from "../../App.jsx"
-
+import "./header.scss"
 
 function Header({ apareceFooter }) {
     //aqui falta arreglar el LI para poner el textshadow

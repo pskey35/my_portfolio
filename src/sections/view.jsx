@@ -1,14 +1,14 @@
 import { useState, useContext,useEffect} from "react"
 import { ContextGlobal } from "../App.jsx";
-import Home from "./1-home/home.jsx"
+import Home from "./1-home/home_Page.jsx"
 import {anim} from "./1-home/animacion.jsx"
-import About from "./2-about/about.jsx"
+import About from "./2-about/about_Page.jsx"
 import CvModal from "./2-about/CV-modal.jsx"
 
-import Skills from "./3-skills/skills.jsx"
-import Portfolio from "./4-portfolio/portfolio.jsx";
-import Contact from "./5-contact/contact";
-import Footer from "./6-footer/footer.jsx"
+import Skills from "./3-skills/skills_Page.jsx"
+import Portfolio from "./4-portfolio/portfolio_Page.jsx";
+import Contact from "./5-contact/contact_Page.jsx";
+import Footer from "./6-footer/footer_Page.jsx"
 
 
 
