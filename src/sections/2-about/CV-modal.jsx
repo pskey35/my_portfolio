@@ -1,6 +1,6 @@
 //import { ContextGlobal } from "../../App";
 
-function CvModal() {
+export default function CvModal() {
   //const { cvOpen, setCvOpen } = useContext(ContextGlobal);
 
   const clickPrint = () => {

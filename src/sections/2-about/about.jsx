@@ -1,4 +1,4 @@
-import { ContextGlobal } from "../App";
+import { ContextGlobal } from "../../App";
 import {useContext,useEffect} from "react"
 
 export default function About() {

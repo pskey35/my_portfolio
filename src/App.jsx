@@ -1,12 +1,7 @@
 import "./portafolio.scss";
 import { addListener, launch } from "devtools-detector";
 import { useEffect, useState, useContext, createContext } from "react";
-import Home from "./sections/1-home/home.jsx"
-import About from "./sections/2-about.jsx"
-import Skills from "./sections/3-skills/skills.jsx"
-import Portfolio from "./sections/4-portfolio/portfolio.jsx"
-import Contact from "./sections/5-contact/contact.jsx"
-import {anim} from "./sections/1-home/animacion.jsx"
+import Ventana from "./sections/view.jsx"
 
 
 export const ContextGlobal = createContext();

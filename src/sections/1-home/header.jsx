@@ -1,6 +1,6 @@
 import {useState,useContext,useEffect} from "react"
-import {ContextGlobal} from "./App.jsx"
-import perfil from "../public/perfil.png";
+import {ContextGlobal} from "../../App.jsx"
+
 
 function Header({ apareceFooter }) {
     //aqui falta arreglar el LI para poner el textshadow
@@ -152,7 +152,7 @@ function Header({ apareceFooter }) {
     return (
         <div className="header">
             <div className="patoContainer">
-                <img src={perfil} alt="error" className="pato"></img>
+                <img src="/perfil.jpg" alt="error" className="pato"></img>
             </div>
             <div className="nav">
                 <ul>

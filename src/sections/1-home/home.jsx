@@ -24,7 +24,7 @@ function OndasCircles() {
   )
 }
 
-function Home() {
+function HomeContent() {
   const goTo = (numPosicion) => {
     if (numPosicion == 1) {
       const a = document.querySelector(
@@ -212,7 +212,7 @@ export default function Home() {
   return (
     <>
       <Header apareceFooter={funcionMenu}></Header>
-      <Home></Home>
+      <HomeContent></HomeContent>
       <OndasCircles></OndasCircles>
     </>
   );
