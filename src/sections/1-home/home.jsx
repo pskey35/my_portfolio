@@ -1,3 +1,4 @@
+import {useState} from "react";
 import Header from "./header.jsx"
 function OndasCircles() {
   return (
@@ -208,6 +209,13 @@ function HomeContent() {
 
 
 export default function Home() {
+  //aqui se activa si se da click en el icono y se muestra el menu
+  const [menu, setMenu] = useState(false);
+
+
+  const funcionMenu = () => {
+    setMenu(!menu);
+  };
 
   return (
     <>

@@ -106,7 +106,7 @@ export default function Portfolio() {
         {dataCardsPortfolio && dataCardsPortfolio.map((dataUnidad, index) => {
 
           return (
-            <div className="caja" onMouseMove={hoverEffect}>
+            <div className="caja" onMouseMove={hoverEffect} key={dataUnidad.id}>
               <div className="caja-content">
                 <span className="caja-lin"></span>
                 <div className="caja-image">

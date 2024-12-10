@@ -1,6 +1,7 @@
 import { useState, useContext,useEffect} from "react"
 import { ContextGlobal } from "../App.jsx";
 import Home from "./1-home/home.jsx"
+import {anim} from "./1-home/animacion.jsx"
 import About from "./2-about/about.jsx"
 import CvModal from "./2-about/CV-modal.jsx"
 
