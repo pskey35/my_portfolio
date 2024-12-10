@@ -232,15 +232,15 @@ function CvModal() {
                 opacity="0.5"
                 d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokewidth="1.5"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 fill="white"
               />
               <path
                 d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokewidth="1.5"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 stroke="white"
               />
@@ -275,15 +275,15 @@ function CvModal() {
                 opacity="0.5"
                 d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
                 stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 fill="white"
               ></path>
               <path
                 d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeidth="1.5"
+                strokeLinecap="round"
                 stroke-linejoin="round"
                 stroke="white"
               ></path>
@@ -544,6 +544,7 @@ export function Ventana({ boleano }) {
       imagenesItems.style = "opacity:1";
 
       //-------------------portfolio---------------
+      
       const portfolioTitulo = document.querySelector("#portfolio > h1");
       const caja1 = document.querySelector(
         "#portfolio > div > div:nth-child(1)"
@@ -560,7 +561,9 @@ export function Ventana({ boleano }) {
       const caja5 = document.querySelector(
         "#portfolio > div > div:nth-child(5)"
       );
-
+      const caja6 = document.querySelector(
+        "#portfolio > div > div:nth-child(6)"
+      );
 
       portfolioTitulo.style = "opacity:1";
       caja1.style = "opacity:1";
@@ -568,6 +571,8 @@ export function Ventana({ boleano }) {
       caja3.style = "opacity:1";
       caja4.style = "opacity:1";
       caja5.style = "opacity:1"
+      caja6.style = "opacity:1"
+
 
       //----------------Contact me----------------------
       const contactTitulo = document.querySelector("#contact > h1");
@@ -657,6 +662,7 @@ export function Ventana({ boleano }) {
   }, [borrarVentana]);
 
   useEffect(() => {
+
     async function fetchData() {
       //si existe en sessionStorage las imagenes, no hacer el fetch
       //eso lo hago luego ya,ahora NO
@@ -673,10 +679,11 @@ export function Ventana({ boleano }) {
       const imgBlob = document.querySelector(".img-waza");
       imgBlob.src = createUrl;
     }
+
     fetchData();
   }, []);
+
   //enbes de usar resize mejor es cada 3 segundos detectar si el body.clientHeight a cambiado
- 
   return (
     <div className="ventana" id={boleano}>
       <div className="vista1">
