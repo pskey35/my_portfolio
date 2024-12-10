@@ -23,16 +23,16 @@ export default function About() {
 
     useEffect(() => {
         const tituloElement = document.querySelector(".about");
-        const patoContainer = document.querySelector(".patoContainer");
+        const perfilContainer = document.querySelector(".perfilContainer");
 
         const observador = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        patoContainer.style.cssText = "animation:goUp 140ms ease forwards";
+                        perfilContainer.style.cssText = "animation:goUp 140ms ease forwards";
                     } else {
                         //no entiendo porque  no funciona
-                        patoContainer.style.cssText = "opacity:1";
+                        perfilContainer.style.cssText = "opacity:1";
                     }
                 });
             },

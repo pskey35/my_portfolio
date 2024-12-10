@@ -209,7 +209,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.patoContainer {
+.perfilContainer {
   height: 42px;
   width: 42px;
   position: relative;
@@ -228,7 +228,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-.patoContainer img {
+.perfilContainer img {
   width: 100%;
   height: 100%;
   border-radius: 50px;
@@ -1190,7 +1190,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   }
 }
 
-/*
+
 .container-right .right-boton::before {
   content: "";
   position: absolute;
@@ -1209,7 +1209,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   animation: bordes 8s ease infinite;
   z-index: 1;
 }
-*/
+
 .container-right .right-boton::after {
   content: "";
   position: absolute;
@@ -1267,11 +1267,11 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     padding: 10px;
   }
 
-  /*
+  
   &:hover::before {
     opacity: 1;
-  }*/
-  /*
+  }
+  
   &::before,
   &::after {
     border-radius: inherit;
@@ -1301,7 +1301,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
       transparent 40%
     );
     z-index: 100;
-  }*/
+  }
 }
 
 .portfolio .caja .caja-lin {
@@ -2019,7 +2019,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     height: 150px;
   }
 
-  .patoContainer {
+  .perfilContainer {
     left: 0;
     height: 35px;
     width: 35px;

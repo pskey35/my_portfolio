@@ -1,15 +1,26 @@
 
 export default function Portfolio() {
 
-  const hoverEffect = (event) => {
-    for (const card of document.getElementsByClassName("caja")) {
-      const rect = card.getBoundingClientRect(),
-        x = event.clientX - rect.left,
-        y = event.clientY - rect.top;
+      /*  for (const card of document.getElementsByClassName("caja")) {
+        const rect = card.getBoundingClientRect(),
+          x = event.clientX - rect.left,
+          y = event.clientY - rect.top;
+  
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      }*/
 
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    }
+  const hoverEffect = (event) => {
+    const card = event.currentTarget
+
+    const rect = card.getBoundingClientRect(),
+      x = event.clientX - rect.left,
+      y = event.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+
+
   };
 
   const dataCardsPortfolio = [
@@ -86,7 +97,7 @@ export default function Portfolio() {
       id: "card-6",
       linkWeb: "https://landing-airbnb.vercel.app/",
       title: "Airbnb landing",
-      github:null,
+      github: null,
       image: "https://firebasestorage.googleapis.com/v0/b/prueba-62d11.appspot.com/o/airbnbCapture.png?alt=media&token=dd170a9d-4826-48c0-b661-1e74e042418e",
       description: "I designed and developed a landing page inspired by Airbnb's style, focused on promoting affordable hotels and providing a user-friendly experience"
 
@@ -99,6 +110,9 @@ export default function Portfolio() {
   // este es mi antiguo eccomerce
   // href="https://ecommerce-nine-psi-92.vercel.app/"
 
+
+  //antes estaba asi
+  //   <div className="caja" onMouseMove={hoverEffect} key={dataUnidad.id}>
   return (
     <div className="portfolio-container" id="portfolio">
       <h1>Portfolio</h1>

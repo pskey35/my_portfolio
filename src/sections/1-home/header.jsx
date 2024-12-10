@@ -151,7 +151,7 @@ function Header({ apareceFooter }) {
     const clickRedirect = () => { };
     return (
         <div className="header">
-            <div className="patoContainer">
+            <div className="perfilContainer">
                 <img src="/perfil.jpg" alt="error" className="pato"></img>
             </div>
             <div className="nav">
