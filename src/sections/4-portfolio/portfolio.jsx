@@ -1,7 +1,6 @@
 
 export default function Portfolio() {
 
-
   const hoverEffect = (event) => {
     for (const card of document.getElementsByClassName("caja")) {
       const rect = card.getBoundingClientRect(),
@@ -12,11 +11,6 @@ export default function Portfolio() {
       card.style.setProperty("--mouse-y", `${y}px`);
     }
   };
-
-
-
-
-
 
   const dataCardsPortfolio = [
     {
