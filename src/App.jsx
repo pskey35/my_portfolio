@@ -562,7 +562,7 @@ export function Ventana({ boleano }) {
         "#portfolio > div > div:nth-child(5)"
       );
       const caja6 = document.querySelector(
-        "#portfolio > div > div:nth-child(6)"
+        "#portfolio > div > div:nth-child(5)"
       );
 
       portfolioTitulo.style = "opacity:1";
