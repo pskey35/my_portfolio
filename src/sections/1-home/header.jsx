@@ -152,7 +152,7 @@ function Header({ apareceFooter }) {
     return (
         <div className="header">
             <div className="perfilContainer">
-                <img src="/perfil.jpg" alt="error" className="pato"></img>
+                <img src="/images/new_perfil.jpeg" alt="error" className="pato"></img>
             </div>
             <div className="nav">
                 <ul>

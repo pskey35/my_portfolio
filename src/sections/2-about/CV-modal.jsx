@@ -29,9 +29,9 @@ export default function CvModal() {
     <div className="cv-caja">
       <div className="cv-content">
         <div className="image">
-          <img src="myCV.png"></img>
+          <img src="/my_new_CV.png"></img>
           <div className="front-image">
-            <img src="myCV.png"></img>
+            <img src="/my_new_CV.png"></img>
           </div>
           <div>salir</div>
         </div>
@@ -69,7 +69,7 @@ export default function CvModal() {
               </g>
             </svg>
           </div>
-          <a className="download" href="jaymeCV.pdf" download="jaymeCV.pdf">
+          <a className="download" href="jayme_new_CV.pdf" download="jayme_new_CV.pdf">
             <svg
               viewBox="0 0 24 24"
               fill="none"

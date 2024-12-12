@@ -275,7 +275,7 @@ export default function View({ boleano }) {
         "#portfolio > div > div:nth-child(5)"
       );
       const caja6 = document.querySelector(
-        "#portfolio > div > div:nth-child(5)"
+        "#portfolio > div > div:nth-child(6)"
       );
 
       portfolioTitulo.style = "opacity:1";
