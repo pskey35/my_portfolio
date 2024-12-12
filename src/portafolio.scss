@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-
+//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Sofadi+One&display=swap');
 html,
 body,
 #root {
@@ -65,10 +65,11 @@ body::-webkit-scrollbar-thumb:hover {
   border: none;
   box-sizing: border-box;
   outline: none;
-  // font-family: "Ubuntu", sans-serif;
   color: white;
   font-family: "Sofadi One", system-ui;
-  font-weight: 400;
+ // font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -504,10 +505,10 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   justify-content: center;
   flex-wrap: wrap;
   grid-gap: 50px;
-
+/*
   &:hover>.caja::after {
     opacity: 1;
-  }
+  }*/
 }
 
 .portfolio .caja {
@@ -536,7 +537,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     padding: 10px;
   }
 
-  
+  /*
   &:hover::before {
     opacity: 1;
   }
@@ -570,7 +571,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
       transparent 40%
     );
     z-index: 100;
-  }
+  }*/
 }
 
 .portfolio .caja .caja-lin {
