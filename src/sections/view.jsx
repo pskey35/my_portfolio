@@ -22,6 +22,10 @@ export default function View({ boleano }) {
   //aqui solo se muestra la vista 1
   useEffect(() => {
     //console.log(borrarVentana);
+
+ 
+    anim("#home > div.right > div.right-texto > a","abajo .5s ease-in forwards")
+
     anim(".header", "abajo 400ms ease-in forwards");
     anim(".right-texto > .texto-nombre", "abajo .5s ease-in forwards");
     anim(
@@ -59,6 +63,8 @@ export default function View({ boleano }) {
     function scrollVentana() {
       //console.log(borrarVentana);
       // console.log("scroll")
+      
+
       anim("#about > div.titulo > h3", "abajo 500ms ease-in forwards");
       anim("#about > div.titulo > p", "abajo 800ms forwards");
       anim(
