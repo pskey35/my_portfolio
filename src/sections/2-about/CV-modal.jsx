@@ -112,7 +112,7 @@ export default function CvModal() {
             />
           </svg>
         </div>
-        <a className="btnDownload-mbl" href="/jaymeCV.pdf" download="jaymeCV.pdf">
+        <a className="btnDownload-mbl" href="/jayme_new_CV.pdf" download="jayme_new_CV.pdf">
           <span>Download CV</span>
           <svg>
             <svg
