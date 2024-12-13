@@ -113,7 +113,8 @@ export default function View({ boleano }) {
         "aparecer 500ms ease 800ms forwards"
       );
       anim("#portfolio > div > div:nth-child(5)", "aparecer 500ms ease 1000ms forwards")
-
+     
+      anim("#portfolio > div > div:nth-child(6)", "aparecer 500ms ease 1000ms forwards")
 
       anim("#contact h1", "abajo 500ms ease forwards");
       anim("#contact h6", "abajo 500ms ease 300ms forwards");
@@ -283,7 +284,7 @@ export default function View({ boleano }) {
       caja2.style = "opacity:1";
       caja3.style = "opacity:1";
       caja4.style = "opacity:1";
-      caja5.style = "opacity:1"
+      caja5.style = "opacity:1";
       caja6.style = "opacity:1"
 
 
