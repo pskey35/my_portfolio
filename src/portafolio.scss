@@ -364,6 +364,15 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: url("../public/svg/reactRouter-icon.svg");
 }
 
+.circulo .items:nth-child(11){
+  background-image:url("../public/svg/tailwindcss-color.svg")
+}
+
+.circulo .items:nth-child(12){
+  background-image:url("../public/svg/graphql-color.svg")
+}
+
+
 .container-right {
   display: flex;
   flex-direction: column;

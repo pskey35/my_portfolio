@@ -7,7 +7,7 @@ import { useEffect } from "react"
 export default function Skills() {
   useEffect(() => {
     const container = ".container";
-    const text = ["", "", "", "", "", "", "", "", "", ""];
+    const text = ["", "", "", "", "", "", "", "", "", "","",""];
 
     const options = {
       radius: 200,
@@ -25,14 +25,6 @@ export default function Skills() {
   }, []);
   return (
     <div className="skills" id="skills">
-
-      {
-        /*
-      <div className="estr"></div>
-      <div className="estr2"></div>
-      <div className="estr3"></div>
-*/
-      }
       <span className="container">
         <div className="container-texto">Skills</div>
         <div className="sol"></div>
