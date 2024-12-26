@@ -7,7 +7,7 @@ import { useEffect } from "react"
 export default function Skills() {
   useEffect(() => {
     const container = ".container";
-    const text = ["", "", "", "", "", "", "", "", "", "","",""];
+    const text = ["", "", "", "", "", "", "", "", "", "","","",""];
 
     const options = {
       radius: 200,

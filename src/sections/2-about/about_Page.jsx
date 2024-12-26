@@ -1,5 +1,5 @@
 import { ContextGlobal } from "../../App";
-import {useContext,useEffect} from "react"
+import { useContext, useEffect } from "react"
 
 export default function About() {
     const { cvOpen, setCvOpen } = useContext(ContextGlobal);
@@ -98,7 +98,7 @@ export default function About() {
                                 />
                             </svg>
                             <p style={{ color: "white" }}>Completed</p>
-                            <p style={{ color: "gray", fontSize: "14px" }}>some few</p>
+                            <p style={{ color: "gray", fontSize: "14px" }}>80%</p>
                         </div>
                         <div>
                             <svg
@@ -122,8 +122,8 @@ export default function About() {
                         </div>
                     </div>
                     <div className="right-texto">
-                        i am full stack developer. intersted in design web development and
-                        learning new technologies. with de goal of being o creative
+                        I am a front-end developer with 1 year of experience in various web agencies. Interested in design, web development and
+                        learning new technologies. with the aim of being creative
                         developer viewCV
                     </div>
                     <a className="cv" onClick={clickMyCv}>
