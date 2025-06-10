@@ -37,7 +37,7 @@ export default function Portfolio() {
 
     },
 
-    {
+   /* {
       id: "card-2",
       linkWeb: "https://calculadora-steel-zeta.vercel.app",
       title: "Calculator",
@@ -49,6 +49,19 @@ export default function Portfolio() {
         offers an intuitive and easy-to-use interface. Users will be
          able to perform basic math operations,such as adding, 
          subtracting, multiplying and dividing, with just a few clicks.`
+    },*/
+
+    {
+      id: "card-2",
+      linkWeb: "https://lebasi-client.vercel.app/",
+      title: "Lebasi suplementos",
+      image: "./lebasi.png",
+      github: "https://github.com/pskey35/lebasi.git",
+      description: `Lebasi is a website that offers a wide variety of
+      nutritional supplements, including proteins, vitamins, minerals,
+      amino acids, and more. The site is designed to provide users with
+      an easy and convenient way to purchase high-quality supplements
+      `
     },
 
     {
