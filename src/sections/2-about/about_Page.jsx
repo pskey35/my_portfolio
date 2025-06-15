@@ -81,7 +81,7 @@ export default function About() {
                                 />
                             </svg>
                             <p style={{ color: "white" }}>Experience</p>
-                            <p style={{ color: "gray", fontSize: "14px" }}>1 year</p>
+                            <p style={{ color: "gray", fontSize: "14px" }}>3 years</p>
                         </div>
                         <div>
                             <svg
