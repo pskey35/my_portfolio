@@ -3,7 +3,8 @@ import "./assets/styles/app.scss"
 import WhatsappBox from "./assets/components/whatsappBox.jsx"
 import Alerta from "./assets/components/alert.jsx"
 import Input_Email from "./assets/components/inputEmail.jsx"
-
+import Textarea from "./assets/components/textarea.jsx"
+import Email_Icon from "./assets/svg/email.jsx"
 
 export const ContactContext = createContext();
 
@@ -280,20 +281,7 @@ function Contact() {
                         <p>Talk to me</p>
                         <div className="email" style={{ padding: "15px 80px" }}>
                             <div className="email-image">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    data-name="Layer 1"
-                                    viewBox="0 0 24 24"
-                                    id="fast-mail"
-                                    fill="white"
-                                    height="45px"
-                                    width="45px"
-                                >
-                                    <path
-                                        fill="#undefined"
-                                        d="M4.79,10.5h-2a1,1,0,1,0,0,2h2a1,1,0,0,0,0-2ZM21.57,7.66l0-.06,0,0h0A3,3,0,0,0,19.2,6.5H11.27a3,3,0,0,0-2,.74h0v0A2.93,2.93,0,0,0,8.31,9l-.88,5a3,3,0,0,0,.66,2.45,3,3,0,0,0,2.29,1.07h7.94a3,3,0,0,0,3-2.48l.88-5A3,3,0,0,0,21.57,7.66Zm-2.74.84-3.4,2.76a1,1,0,0,1-1.38-.12L11.72,8.5Zm.48,6.17a1,1,0,0,1-1,.83H10.38a1,1,0,0,1-.76-.36,1,1,0,0,1-.22-.81l.8-4.53,2.35,2.66a3,3,0,0,0,4.14.35L20.13,10ZM5.79,6.5h-3a1,1,0,1,0,0,2h3a1,1,0,0,0,0-2Z"
-                                    ></path>
-                                </svg>
+                               <Email_Icon></Email_Icon>
                             </div>
                             <p>Email</p>
                             <p className="correo">jayme35371@gmail.com</p>
@@ -327,18 +315,7 @@ function Contact() {
                     <div className="contact-right">
                         <p>Write me your project</p>
                         <Input_Email></Input_Email>
-                        <div className="textarea-input">
-                            <span>Message</span>
-                            <textarea
-                                minlegth="10"
-                                required
-                                cols="30"
-                                rows="10"
-                                placeholder="Write your message"
-                                className="email-textarea"
-                                ref={input2}
-                            ></textarea>
-                        </div>
+                        <Textarea></Textarea>
                         <span style={{ color: message.color }} className="message_5-contact">{message.text}</span>
                         <div
                             className={`botonEnviar ${load ? "disabled" : ""} ${claseEnvio(
@@ -375,6 +352,9 @@ function Contact() {
                         </div>
                     </div>
                 </div>
+
+
+
                 {/*aqui se pone la alerta de que si ya alcanzo los 4 envios de correo*/}
                 {boleanoAlerta ? <Alerta notificacion={alerta} setBoleanoAlerta={setBoleanoAlerta} /> : ""}
             </div>
