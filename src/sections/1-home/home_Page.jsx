@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Header from "./header.jsx"
+import Header from "./assets/components/header.jsx"
 import "./circles.scss"
 import "./home.scss"
 
@@ -217,7 +217,9 @@ function HomeContent() {
           </a>
         </div>
 
-        <div className="right-image"></div>
+        <div className="right-image">
+          
+        </div>
       </div>
     </div>
   )

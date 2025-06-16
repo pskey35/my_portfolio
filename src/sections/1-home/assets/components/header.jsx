@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
-import { ContextGlobal } from "../../App.jsx"
+import { ContextGlobal } from "../../../../App.jsx"
 import "./header.scss"
-
+import perfilImage from "../images/jaymeAlejoLino.jpeg"
 
 
 
@@ -324,7 +324,9 @@ function Header() {
     return (
         <div className="header">
             <div className="perfilContainer">
-                <img src="/sections/home/perfil.jpeg" alt="error" className="perfil"></img>
+                <img 
+                src={perfilImage}
+                alt="error" className="perfil"></img>
             </div>
             <div className="nav">
                 <ul>
