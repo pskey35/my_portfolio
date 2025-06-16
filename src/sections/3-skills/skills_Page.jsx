@@ -20,7 +20,7 @@ export default function Skills() {
 
     if (window.matchMedia("(min-width: 768px) and (max-width: 1279px)").matches) {
       options = {
-        radius: 350,
+        radius: 450,
         maxSpeed: "slow",
         initSpeed: "slow",
         keep: true,
@@ -30,7 +30,7 @@ export default function Skills() {
 
     } else if (window.matchMedia("(min-width: 1280px)").matches) {
       options = {
-        radius: 420,
+        radius: 520,
         maxSpeed: "slow",
         initSpeed: "slow",
         keep: true,
