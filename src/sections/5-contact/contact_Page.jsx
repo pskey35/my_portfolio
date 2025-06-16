@@ -1,123 +1,14 @@
-import { useRef, useState,useContext,createContext} from "react"
+import { useRef, useState, useContext, createContext } from "react"
 import "./assets/styles/app.scss"
-import {WhatsApp_Icon} from "./assets/svg/whatsapp.jsx"
+import WhatsappBox from "./assets/components/whatsappBox.jsx"
+import Alerta from "./assets/components/alert.jsx"
+import Input_Email from "./assets/components/inputEmail.jsx"
 
 
-const ContactContext = createContext();
-
-
-const Alerta = ({ notificacion, setBoleanoAlerta }) => {
-    return (
-        <div className="container-alerta">
-            <div className="alerta">
-                <div className="top">
-                    <svg
-                        fill="red"
-                        viewBox="0 0 16 16"
-                        height="20px"
-                        width="20px"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                            d="M8.00016 1.8335C4.59441 1.8335 1.8335 4.59441 1.8335 8.00016C1.8335 11.4059 4.59441 14.1668 8.00016 14.1668C11.4059 14.1668 14.1668 11.4059 14.1668 8.00016C14.1668 4.59441 11.4059 1.8335 8.00016 1.8335ZM0.833496 8.00016C0.833496 4.04212 4.04212 0.833496 8.00016 0.833496C11.9582 0.833496 15.1668 4.04212 15.1668 8.00016C15.1668 11.9582 11.9582 15.1668 8.00016 15.1668C4.04212 15.1668 0.833496 11.9582 0.833496 8.00016ZM8.00016 4.16683C8.27631 4.16683 8.50016 4.39069 8.50016 4.66683V8.00016C8.50016 8.27631 8.27631 8.50016 8.00016 8.50016C7.72402 8.50016 7.50016 8.27631 7.50016 8.00016V4.66683C7.50016 4.39069 7.72402 4.16683 8.00016 4.16683ZM8.00016 10.0002C8.2763 10.0002 8.50016 10.224 8.50016 10.5002L8.50016 10.5835C8.50017 10.8596 8.27631 11.0835 8.00017 11.0835C7.72403 11.0835 7.50017 10.8596 7.50016 10.5835L7.50016 10.5002C7.50016 10.224 7.72402 10.0002 8.00016 10.0002Z"
-                        ></path>
-                    </svg>
-                    <div className="salir" onClick={() => setBoleanoAlerta(false)}>
-                        <svg
-                            className="ekis"
-                            viewBox="0 0 415.188 415.188"
-                            width="20"
-                            height="20"
-                            fill="red"
-                        >
-                            <path
-                                d="M412.861,78.976c3.404-6.636,2.831-14.159-0.15-20.404c0.84-7.106-1.02-14.321-7.746-19.855
-c-6.262-5.151-12.523-10.305-18.781-15.457c-11.005-9.055-28.237-11.913-38.941,0c-48.619,54.103-99.461,105.856-152.167,155.725
-c-39.185-36.605-78.846-72.713-118.223-108.868c-13.82-12.693-33.824-8.71-42.519,6.411c-12.665,6.286-22.931,14.481-31.42,28.468
-c-4.042,6.664-3.727,15.076,0,21.764c25.421,45.578,74.557,85.651,114.957,122.529c-5.406,4.839-10.772,9.724-16.287,14.461
-c-54.43,46.742-91.144,76.399-23.029,124.325c0.919,0.647,1.856,0.504,2.789,0.882c1.305,0.602,2.557,1.026,4.004,1.264
-c0.45,0.017,0.87,0.093,1.313,0.058c1.402,0.114,2.774,0.471,4.195,0.192c36.621-7.18,70.677-35.878,101.576-67.48
-c30.1,29.669,62.151,58.013,97.395,74.831c8.391,4.005,18.395,1.671,24.855-3.931c10.832,0.818,20.708-5.913,25.665-15.586
-c0.734-0.454,1.207-0.713,2.002-1.21c15.748-9.838,17.187-29.431,5.534-42.936c-26.313-30.492-54.284-59.478-82.798-87.95
-C316.426,196.043,380.533,141.939,412.861,78.976z"
-                            ></path>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                        </svg>
-                    </div>
-                </div>
-                <p style={{ color: "gray" }}>
-                    You can only send 3 messages per day wait until tomorrow{notificacion}
-                </p>
-            </div>
-        </div>
-    );
-};
-
-
-const WhatsappBox = () => {
-
-    const Text_WaMe = () => {
-
-        return (
-            <a
-                href="https://wa.me/51906090587"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-            >
-                <span>wa me</span>
-                <svg
-                    fill="white"
-                    className="flecha"
-                    height="20px"
-                    width="20px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    data-name="Layer 1"
-                    viewBox="0 0 24 24"
-                    id="arrow-right"
-                >
-                    <path
-                        fill="#undefined"
-                        d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"
-                    />
-                </svg>
-            </a>
-        )
-
-
-    }
-
-    return (
-        <div className="whatsapp">
-            <div className="whatsapp-image">
-             <WhatsApp_Icon />
-            </div>
-            <p>WhatsApp</p>
-            <p>+51 906 090 587</p>
-
-            <Text_WaMe></Text_WaMe>
-        </div>
-    )
-}
-
+export const ContactContext = createContext();
 
 function Contact() {
-    const input1 = useRef();
+
     const input2 = useRef();
     //esto sirve para contar clicks hechos en el boton "enviar"
     //const [contador,setContador] = useState({document.cookie.valor})
@@ -142,8 +33,7 @@ function Contact() {
     const [cont, setCont] = useState(
         cook.conteo !== undefined ? parseInt(cook.conteo) : 0
     );
-    //console.log(cont);
-    // console.log("-------arriba---------");
+
 
     //esto de aqui es el load del boton "enviando..."
     const [load, setLoad] = useState(false);
@@ -381,115 +271,114 @@ function Contact() {
 
 
     return (
-        <div className="contact-container" id="contact">
-            <h1>Contact me</h1>
-            <h6>get in touch</h6>
-            <div className="contact">
-                <div className="contact-left">
-                    <p>Talk to me</p>
-                    <div className="email" style={{ padding: "15px 80px" }}>
-                        <div className="email-image">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                data-name="Layer 1"
-                                viewBox="0 0 24 24"
-                                id="fast-mail"
-                                fill="white"
-                                height="45px"
-                                width="45px"
-                            >
-                                <path
-                                    fill="#undefined"
-                                    d="M4.79,10.5h-2a1,1,0,1,0,0,2h2a1,1,0,0,0,0-2ZM21.57,7.66l0-.06,0,0h0A3,3,0,0,0,19.2,6.5H11.27a3,3,0,0,0-2,.74h0v0A2.93,2.93,0,0,0,8.31,9l-.88,5a3,3,0,0,0,.66,2.45,3,3,0,0,0,2.29,1.07h7.94a3,3,0,0,0,3-2.48l.88-5A3,3,0,0,0,21.57,7.66Zm-2.74.84-3.4,2.76a1,1,0,0,1-1.38-.12L11.72,8.5Zm.48,6.17a1,1,0,0,1-1,.83H10.38a1,1,0,0,1-.76-.36,1,1,0,0,1-.22-.81l.8-4.53,2.35,2.66a3,3,0,0,0,4.14.35L20.13,10ZM5.79,6.5h-3a1,1,0,1,0,0,2h3a1,1,0,0,0,0-2Z"
-                                ></path>
-                            </svg>
-                        </div>
-                        <p>Email</p>
-                        <p className="correo">jayme35371@gmail.com</p>
-                        <a
-                            href="mailto:jayme35371@gmail.com"
-                            target="_blank"
-                            style={{ textDecoration: "none" }}
-                        >
-                            <p>
-                                <span>write me</span>
+        <ContactContext.Provider value={{setBoleanoAlerta }}>
+            <div className="contact-container" id="contact">
+                <h1>Contact me</h1>
+                <h6>get in touch</h6>
+                <div className="contact">
+                    <div className="contact-left">
+                        <p>Talk to me</p>
+                        <div className="email" style={{ padding: "15px 80px" }}>
+                            <div className="email-image">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="flecha"
                                     data-name="Layer 1"
                                     viewBox="0 0 24 24"
-                                    id="arrow-right"
-                                    width="20px"
-                                    height="20px"
+                                    id="fast-mail"
                                     fill="white"
+                                    height="45px"
+                                    width="45px"
                                 >
                                     <path
                                         fill="#undefined"
-                                        d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"
-                                    />
+                                        d="M4.79,10.5h-2a1,1,0,1,0,0,2h2a1,1,0,0,0,0-2ZM21.57,7.66l0-.06,0,0h0A3,3,0,0,0,19.2,6.5H11.27a3,3,0,0,0-2,.74h0v0A2.93,2.93,0,0,0,8.31,9l-.88,5a3,3,0,0,0,.66,2.45,3,3,0,0,0,2.29,1.07h7.94a3,3,0,0,0,3-2.48l.88-5A3,3,0,0,0,21.57,7.66Zm-2.74.84-3.4,2.76a1,1,0,0,1-1.38-.12L11.72,8.5Zm.48,6.17a1,1,0,0,1-1,.83H10.38a1,1,0,0,1-.76-.36,1,1,0,0,1-.22-.81l.8-4.53,2.35,2.66a3,3,0,0,0,4.14.35L20.13,10ZM5.79,6.5h-3a1,1,0,1,0,0,2h3a1,1,0,0,0,0-2Z"
+                                    ></path>
                                 </svg>
-                            </p>
-                        </a>
-                    </div>
-                    <WhatsappBox></WhatsappBox>
-                </div>
-                <div className="contact-right">
-                    <p>Write me your project</p>
-                    <div className="mail-input">
-                        <span>Email</span>
-                        <input placeholder="insert your email" ref={input1}></input>
-                    </div>
-                    <div className="textarea-input">
-                        <span>Message</span>
-                        <textarea
-                            minlegth="10"
-                            required
-                            cols="30"
-                            rows="10"
-                            placeholder="Write your message"
-                            className="email-textarea"
-                            ref={input2}
-                        ></textarea>
-                    </div>
-                    <span style={{ color: message.color }} className="message_5-contact">{message.text}</span>
-                    <div
-                        className={`botonEnviar ${load ? "disabled" : ""} ${claseEnvio(
-                            enviado
-                        )}`}
-                        onClick={envio}
-                    >
-                        {load ? (
-                            <Sending />
-                        ) : (
-                            mensaje || (
-                                <>
-                                    <span>send Message</span>
+                            </div>
+                            <p>Email</p>
+                            <p className="correo">jayme35371@gmail.com</p>
+                            <a
+                                href="mailto:jayme35371@gmail.com"
+                                target="_blank"
+                                style={{ textDecoration: "none" }}
+                            >
+                                <p>
+                                    <span>write me</span>
                                     <svg
-                                        className="button__icon"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
+                                        className="flecha"
+                                        data-name="Layer 1"
                                         viewBox="0 0 24 24"
+                                        id="arrow-right"
+                                        width="20px"
+                                        height="20px"
                                         fill="white"
                                     >
                                         <path
-                                            d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
-                                            fill="var(--container-color)"
-                                        ></path>
-                                        <path
-                                            d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
-                                            fill="var(--container-color)"
-                                        ></path>
+                                            fill="#undefined"
+                                            d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"
+                                        />
                                     </svg>
-                                </>
-                            )
-                        )}
+                                </p>
+                            </a>
+                        </div>
+                        <WhatsappBox></WhatsappBox>
+                    </div>
+                    <div className="contact-right">
+                        <p>Write me your project</p>
+                        <Input_Email></Input_Email>
+                        <div className="textarea-input">
+                            <span>Message</span>
+                            <textarea
+                                minlegth="10"
+                                required
+                                cols="30"
+                                rows="10"
+                                placeholder="Write your message"
+                                className="email-textarea"
+                                ref={input2}
+                            ></textarea>
+                        </div>
+                        <span style={{ color: message.color }} className="message_5-contact">{message.text}</span>
+                        <div
+                            className={`botonEnviar ${load ? "disabled" : ""} ${claseEnvio(
+                                enviado
+                            )}`}
+                            onClick={envio}
+                        >
+                            {load ? (
+                                <Sending />
+                            ) : (
+                                mensaje || (
+                                    <>
+                                        <span>send Message</span>
+                                        <svg
+                                            className="button__icon"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="white"
+                                        >
+                                            <path
+                                                d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
+                                                fill="var(--container-color)"
+                                            ></path>
+                                            <path
+                                                d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
+                                                fill="var(--container-color)"
+                                            ></path>
+                                        </svg>
+                                    </>
+                                )
+                            )}
+                        </div>
                     </div>
                 </div>
+                {/*aqui se pone la alerta de que si ya alcanzo los 4 envios de correo*/}
+                {boleanoAlerta ? <Alerta notificacion={alerta} setBoleanoAlerta={setBoleanoAlerta} /> : ""}
             </div>
-            {/*aqui se pone la alerta de que si ya alcanzo los 4 envios de correo*/}
-            {boleanoAlerta ? <Alerta notificacion={alerta} setBoleanoAlerta={setBoleanoAlerta} /> : ""}
-        </div>
+        </ContactContext.Provider>
     );
 }
 
