@@ -1,18 +1,31 @@
-#skills>span>div.sol {
-    @media (min-width: 768px) {
-        width: 570px;
-        height: 570px;
-        background: radial-gradient(circle at center, rgb(0, 0, 0) 0%, rgba(27, 27, 27, 0.137) 40%, rgb(219, 210, 255) 100%)
-    }
+$images: (
+    image1: url('../images/css3.svg'),
+    image2: url('../images/flask.png'),
+    image3: url('../images/github.svg'),
+    image4: url('../images/graphql.svg'),
+    image5: url('../images/js.svg'),
+    image6: url('../images/mysql.svg'),
+    image7: url('../images/nextjs.svg'),
+    image8: url('../images/react.svg'),
+    image9: url('../images/sass.svg'),
+    image10: url('../images/shopify.png'),
+    image11:url("../images/tailwind.svg"), 
+    image12:url("../images/AWS.png"),
+    image13:url("../images/Kubernetes.png"),
+    image14:url("../images/v8.png")   
+);
 
-
-}
 
 #skills>span>div.circulo>span {
+    @for $i from 1 through length($images) {
+        $key: image#{$i}; // genera image1, image2...
+        background-image: null; // previene fallback
 
-    &:nth-child(1) {
-
+        &:nth-child(#{$i}) {
+            background-image: map-get($images, $key);
+        }
     }
+
 
 
     @media (min-width: 768px) {
@@ -27,6 +40,18 @@
         border-radius: 20%;
     }
 }
+
+#skills>span>div.sol {
+    @media (min-width: 768px) {
+        width: 570px;
+        height: 570px;
+        background: radial-gradient(circle at center, rgb(0, 0, 0) 0%, rgba(27, 27, 27, 0.137) 40%, rgb(219, 210, 255) 100%)
+    }
+
+
+}
+
+
 
 #skills>span>div.circulo {
 
