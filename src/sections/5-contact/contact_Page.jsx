@@ -1,5 +1,10 @@
-import { useRef, useState } from "react"
+import { useRef, useState,useContext,createContext} from "react"
 import "./assets/styles/app.scss"
+import {WhatsApp_Icon} from "./assets/svg/whatsapp.jsx"
+
+
+const ContactContext = createContext();
+
 
 const Alerta = ({ notificacion, setBoleanoAlerta }) => {
     return (
@@ -57,14 +62,61 @@ C316.426,196.043,380.533,141.939,412.861,78.976z"
                     </div>
                 </div>
                 <p style={{ color: "gray" }}>
-                You can only send 3 messages per day wait until tomorrow{notificacion}
+                    You can only send 3 messages per day wait until tomorrow{notificacion}
                 </p>
             </div>
         </div>
     );
 };
 
-export default function Contact() {
+
+const WhatsappBox = () => {
+
+    const Text_WaMe = () => {
+
+        return (
+            <a
+                href="https://wa.me/51906090587"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+            >
+                <span>wa me</span>
+                <svg
+                    fill="white"
+                    className="flecha"
+                    height="20px"
+                    width="20px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-name="Layer 1"
+                    viewBox="0 0 24 24"
+                    id="arrow-right"
+                >
+                    <path
+                        fill="#undefined"
+                        d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"
+                    />
+                </svg>
+            </a>
+        )
+
+
+    }
+
+    return (
+        <div className="whatsapp">
+            <div className="whatsapp-image">
+             <WhatsApp_Icon />
+            </div>
+            <p>WhatsApp</p>
+            <p>+51 906 090 587</p>
+
+            <Text_WaMe></Text_WaMe>
+        </div>
+    )
+}
+
+
+function Contact() {
     const input1 = useRef();
     const input2 = useRef();
     //esto sirve para contar clicks hechos en el boton "enviar"
@@ -164,7 +216,7 @@ export default function Contact() {
         "november",
         "december",
     ];
-    
+
 
     const envio = () => {
         //validamos si el correo es valido para un mejor user experience
@@ -216,7 +268,7 @@ export default function Contact() {
                 });
                 //alert("verificado");
                 const input1 = input1valor.replace(/\s+/g, " ");
-                
+
                 const input2 = input2valor.replace(/\s+/g, " ");
                 setLoad(true);
 
@@ -379,73 +431,7 @@ export default function Contact() {
                             </p>
                         </a>
                     </div>
-                    <div className="whatsapp">
-                        <div className="whatsapp-image">
-                            <svg
-                                version="1.1"
-                                fill="white"
-                                width="28px"
-                                height="28px"
-                                viewBox="0 0 90 90"
-                            >
-                                <g>
-                                    <path
-                                        id="WhatsApp"
-                                        d="M90,43.841c0,24.213-19.779,43.841-44.182,43.841c-7.747,0-15.025-1.98-21.357-5.455L0,90l7.975-23.522
-          c-4.023-6.606-6.34-14.354-6.34-22.637C1.635,19.628,21.416,0,45.818,0C70.223,0,90,19.628,90,43.841z M45.818,6.982
-          c-20.484,0-37.146,16.535-37.146,36.859c0,8.065,2.629,15.534,7.076,21.61L11.107,79.14l14.275-4.537
-          c5.865,3.851,12.891,6.097,20.437,6.097c20.481,0,37.146-16.533,37.146-36.857S66.301,6.982,45.818,6.982z M68.129,53.938
-          c-0.273-0.447-0.994-0.717-2.076-1.254c-1.084-0.537-6.41-3.138-7.4-3.495c-0.993-0.358-1.717-0.538-2.438,0.537
-          c-0.721,1.076-2.797,3.495-3.43,4.212c-0.632,0.719-1.263,0.809-2.347,0.271c-1.082-0.537-4.571-1.673-8.708-5.333
-          c-3.219-2.848-5.393-6.364-6.025-7.441c-0.631-1.075-0.066-1.656,0.475-2.191c0.488-0.482,1.084-1.255,1.625-1.882
-          c0.543-0.628,0.723-1.075,1.082-1.793c0.363-0.717,0.182-1.344-0.09-1.883c-0.27-0.537-2.438-5.825-3.34-7.977
-          c-0.902-2.15-1.803-1.792-2.436-1.792c-0.631,0-1.354-0.09-2.076-0.09c-0.722,0-1.896,0.269-2.889,1.344
-          c-0.992,1.076-3.789,3.676-3.789,8.963c0,5.288,3.879,10.397,4.422,11.113c0.541,0.716,7.49,11.92,18.5,16.223
-          C58.2,65.771,58.2,64.336,60.186,64.156c1.984-0.179,6.406-2.599,7.312-5.107C68.398,56.537,68.398,54.386,68.129,53.938z"
-                                    />
-                                </g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                            </svg>
-                        </div>
-                        <p>WhatsApp</p>
-                        <p>+51 906 090 587</p>
-                        <a
-                            href="https://wa.me/51906090587"
-                            target="_blank"
-                            style={{ textDecoration: "none" }}
-                        >
-                            <span>wa me</span>
-                            <svg
-                                fill="white"
-                                className="flecha"
-                                height="20px"
-                                width="20px"
-                                xmlns="http://www.w3.org/2000/svg"
-                                data-name="Layer 1"
-                                viewBox="0 0 24 24"
-                                id="arrow-right"
-                            >
-                                <path
-                                    fill="#undefined"
-                                    d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"
-                                />
-                            </svg>
-                        </a>
-                    </div>
+                    <WhatsappBox></WhatsappBox>
                 </div>
                 <div className="contact-right">
                     <p>Write me your project</p>
@@ -506,3 +492,8 @@ export default function Contact() {
         </div>
     );
 }
+
+
+
+
+export default Contact
