@@ -1,8 +1,8 @@
 #skills>span>div.sol {
     @media (min-width: 768px) {
         width: 570px;
-        height: 570px; 
-        background:radial-gradient(circle at center, rgb(0, 0, 0) 0%, rgba(27, 27, 27, 0.137) 40%, rgb(219, 210, 255) 100%)
+        height: 570px;
+        background: radial-gradient(circle at center, rgb(0, 0, 0) 0%, rgba(27, 27, 27, 0.137) 40%, rgb(219, 210, 255) 100%)
     }
 
 
@@ -20,6 +20,28 @@
         height: 90px;
         border-radius: 20%;
     }
+}
+
+#skills>span>div.circulo {
+
+    @media (min-width:768px) {
+        background: radial-gradient(circle at center, #437fd9a1 0%,
+                /* Núcleo morado profundo */
+                #a73ab329 30%,
+                /* Fusión morado claro */
+                #6d00ff59 55%,
+                /* Iones violeta */
+                #00ffff1f 75%,
+                /* Iones azul */
+                rgba(255, 255, 255, 0.1) 95%
+                /* Espejismo neblinoso */
+            );
+        circle-path: circle(50% at 50% 50%);
+        border-radius: 50%;
+        width: 170px !important;
+        height: 180px !important;
+    }
+
 }
 
 
