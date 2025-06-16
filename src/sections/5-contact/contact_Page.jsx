@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+import "./assets/styles/app.scss"
 
 const Alerta = ({ notificacion, setBoleanoAlerta }) => {
     return (
