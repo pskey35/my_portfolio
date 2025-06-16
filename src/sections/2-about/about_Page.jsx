@@ -1,7 +1,7 @@
 
 import {useEffect } from "react"
 import { IconSettings, IconWork, IconExperience } from "./assets/icons.jsx";
-
+import perfilImage from "./assets/image/jaymeAlejoLino.jpg"
 //3-components
 function CarryBlock() {
 
@@ -43,7 +43,7 @@ function ExperienceBlock() {
         <div>
             <IconExperience width="18px" height="18px" fill="white"></IconExperience>
             <p style={{ color: "white" }}>Experience</p>
-            <p style={{ color: "gray", fontSize: "14px" }}>3 years</p>
+            <p style={{ color: "gray", fontSize: "14px" }}>6 years</p>
         </div>
     )
 }
@@ -147,11 +147,8 @@ function About() {
             <div className="about-container">
                 <div className="container-left">
                     <div className="about-image">
-                        {/*   <div className="prueba">
-              #######
-              </div>*/}
-
-                        {<img src="/perfil.jpg" alt="" />}
+                    
+                        <img src={perfilImage} alt="" />
                     </div>
                     <div className="me">
                         <p>Jayme Ln</p>
