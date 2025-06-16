@@ -26,7 +26,7 @@ const ButtonSend = () => {
     //aqui verificamos si existe la cookie conteo
     //si existe que inicie con su valor guardado sino con el valor 0
     const [cont, setCont] = useState(
-        cook.conteo !== undefined ? parseInt(cook.conteo) : 0
+         getCookiesAsObject().conteo !== undefined ? parseInt( getCookiesAsObject().conteo) : 0
     );
     const envio = () => {
         //validamos si el correo es valido para un mejor user experience
