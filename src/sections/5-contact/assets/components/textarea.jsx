@@ -1,8 +1,8 @@
-import { useRef } from 'react';
-
+import { useContext } from 'react';
+import { ContactContext } from '../../contact_Page';
 
 function Textarea() {
-    const input2 = useRef(null);
+    const { input2 } = useContext(ContactContext);
     return (
         <div className="textarea-input">
             <span>Message</span>

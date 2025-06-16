@@ -1,7 +1,9 @@
-import { useRef } from 'react';
+import {useContext} from 'react';
+import { ContactContext } from '../../contact_Page';
+
 
 function Input_Email() {
-    const input1 = useRef(null);
+    const { input1} = useContext(ContactContext);
 
     return (
         <div className="mail-input">
