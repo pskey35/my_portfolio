@@ -381,27 +381,7 @@ export default function View({ boleano }) {
     };
   }, [borrarVentana]);
 
-  useEffect(() => {
 
-    async function fetchData() {
-      //si existe en sessionStorage las imagenes, no hacer el fetch
-      //eso lo hago luego ya,ahora NO
-      //https://back-portfolio-xi.vercel.app/assets
-      const data = await fetch(`${import.meta.env.VITE_API}/assets`);
-      const bo = await data.json();
-      //console.log(data)
-      const b64 = `data:image/svg+xml;base64,${bo.ondas}`;
-
-      const fetchBlob = await fetch(b64);
-      const dataBlob = await fetchBlob.blob();
-      const createUrl = URL.createObjectURL(dataBlob);
-
-      const imgBlob = document.querySelector(".img-waza");
-      imgBlob.src = createUrl;
-    }
-
-    fetchData();
-  }, []);
 
   //enbes de usar resize mejor es cada 3 segundos detectar si el body.clientHeight a cambiado
   return (
