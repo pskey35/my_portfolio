@@ -9,15 +9,21 @@
 }
 
 #skills>span>div.circulo>span {
+
+    &:nth-child(1) {
+
+    }
+
+
     @media (min-width: 768px) {
-        width: 90px;
-        height: 90px;
+        width: 85px;
+        height: 80px;
         border-radius: 20%;
     }
 
     @media (min-width: 1280px) {
-        width: 90px;
-        height: 90px;
+        width: 105px;
+        height: 125px;
         border-radius: 20%;
     }
 }

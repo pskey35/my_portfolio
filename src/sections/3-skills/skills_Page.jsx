@@ -1,7 +1,7 @@
 /*tagcloud sirve para hacer una esfera 3d rotando*/
 import TagCloud from "TagCloud";
 import { useEffect } from "react"
-import "./assets/app.scss";
+import "./assets/styles/app.scss";
 
 
 export default function Skills() {
