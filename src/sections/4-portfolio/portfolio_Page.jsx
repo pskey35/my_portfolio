@@ -3,6 +3,8 @@ import Lebasi from "./assets/images/lebasi.png";
 import Youtube from "./assets/images/youtube.png";
 import Laliz from "./assets/images/laliz.png";
 import Galy from "./assets/images/galy.png";
+
+
 const dataCardsPortfolio = [
   {
     id: "card-1",
