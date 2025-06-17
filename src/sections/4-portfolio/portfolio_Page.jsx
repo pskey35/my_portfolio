@@ -1,10 +1,14 @@
-
+import Eccomerce from "./assets/images/eccomerce.png";
+import Lebasi from "./assets/images/lebasi.png";
+import Youtube from "./assets/images/youtube.png";
+import Laliz from "./assets/images/laliz.png";
+import Galy from "./assets/images/galy.png";
 const dataCardsPortfolio = [
   {
     id: "card-1",
     linkWeb: "https://eccomerce-jayme.vercel.app",
     title: "Ecommerce Leaf",
-    image: "./eccomerce.png",
+    image: Eccomerce,
     github: null,
     description: `Leaft is your online destination for purchasing electronics,
        accessories, etc. We focus on offering high quality products at competitive 
@@ -18,7 +22,7 @@ const dataCardsPortfolio = [
     id: "card-2",
     linkWeb: "https://lebasi-client.vercel.app/",
     title: "Lebasi suplementos",
-    image: "./lebasi.png",
+    image:Lebasi,
     github: "https://github.com/pskey35/lebasi.git",
     description: `Lebasi is a website that offers a wide variety of
       nutritional supplements, including proteins, vitamins, minerals,
@@ -31,7 +35,7 @@ const dataCardsPortfolio = [
     id: "card-3",
     linkWeb: "https://youtube-clone-ruddy-iota.vercel.app",
     title: "Youtube Clone",
-    image: "./youtube.PNG",
+    image: Youtube,
     github: "https://github.com/pskey35/youtubeClone",
     description: `It's an incredible platform that will allow you to 
       enjoy your favorite videos, discover new content, and connect with 
@@ -44,7 +48,7 @@ const dataCardsPortfolio = [
     id: "card-4",
     linkWeb: "https://galy.vercel.app/",
     title: "Galy social media",
-    image: "./galy.png",
+    image: Galy,
     github: null,
     description: `This website simulates the experience of being a 
       real hacker, where each letter you type executes commands as if 
@@ -57,17 +61,17 @@ const dataCardsPortfolio = [
 
   {
     id: "card-5",
-    linkWeb: "https://hacker-simulator.vercel.app",
-    title: "Hacker simulator",
-    image: "/dog.PNG",
+    linkWeb: "https://www.muebleslaliz.com/",
+    title: "Laliz muebles",
+    image: Laliz,
     github: "https://github.com/pskey35/hacker-simulator",
-    description: `This website simulates the experience of being a 
-      real hacker, where each letter you type executes commands as if 
-      you were in a terminal. On this website, users will be able to
-       immerse themselves in the exciting world of computer hacking safely
-        and legally. The interface has been designed 
-        to simulate a command line terminal, with a retro style and 
-        visual elements that evoke the atmosphere of a hacker environment`
+    description: `The goal was to reflect each client's unique style by
+     integrating tools that enable smooth navigation, visually appealing
+      product displays, and personalized
+       attention — all to ensure a seamless and 
+       satisfying shopping experience.
+
+`
   },
   {
     id: "card-6",
