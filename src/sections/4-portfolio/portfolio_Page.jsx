@@ -75,6 +75,8 @@ const dataCardsPortfolio = [
 
 `
   },
+
+  
   {
     id: "card-6",
     linkWeb: "https://landing-airbnb.vercel.app/",
