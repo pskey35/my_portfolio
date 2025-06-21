@@ -43,4 +43,14 @@ C58.2,65.771,58.2,64.336,60.186,64.156c1.984-0.179,6.406-2.599,7.312-5.107C68.39
 }
 
 
-export default IconWhatsapp;
+const Button_WhatsApp = () => {
+  return (
+    <div>
+      <a href="https://api.whatsapp.com/send?phone=5491131234567" target="_blank">
+        <IconWhatsapp></IconWhatsapp>
+      </a>
+    </div>
+  )
+}
+
+export default Button_WhatsApp;

@@ -3,43 +3,20 @@ import Header from "./assets/components/header.jsx"
 import "./circles.scss"
 import "./home.scss"
 import OndasCircles from "./assets/icons/ondas.jsx";
-import IconGithub from "./assets/icons/github.jsx";
-import IconLinkedin from "./assets/icons/linkedin.jsx";
-import IconWhatsapp from "./assets/icons/whatsapp.jsx";
+import Button_Github from "./assets/Buttons/Button_github.jsx";
+import Button_Linkedin from "./assets/Buttons/Button_linkedin.jsx";
+import Button_Whatsapp from "./assets/Buttons/Button_whatsapp.jsx";
+
 import IconKnowMore from "./assets/icons/know_more.jsx";
 import IconSaludo from "./assets/icons/saludo.jsx";
 
 
 
 
-const BotonGithub = () => {
-  return (
-    <div >
-      <a href="https://github.com/pskey35" target="_blank">
-        <IconGithub></IconGithub>
-      </a>
-    </div>
-  )
-}
 
-const BotonLinkedin = () => {
-  return (
-    <div>
-      <a href="https://www.linkedin.com/in/jayme-ln-7597a6268/" target="_blank">
-        <IconLinkedin></IconLinkedin>
-      </a>
-    </div>
-  )
-}
-const BotonWhatsapp = () => {
-  return (
-    <div>
-      <a href="https://api.whatsapp.com/send?phone=5491131234567" target="_blank">
-        <IconWhatsapp></IconWhatsapp>
-      </a>
-    </div>
-  )
-}
+
+
+
 
 const Button_Redirecto_to_About = () => {
 
@@ -61,9 +38,10 @@ function HomeContent() {
     <div className="home" id="home">
       <div className="left">
 
-        <BotonGithub></BotonGithub>
-        <BotonLinkedin></BotonLinkedin>
-        <BotonWhatsapp></BotonWhatsapp>
+        <Button_Github></Button_Github>
+        <Button_Linkedin></Button_Linkedin>
+        <Button_Whatsapp></Button_Whatsapp>
+     
 
 
 

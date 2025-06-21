@@ -1,4 +1,5 @@
 
+
 const IconLinkedin = () => {
   return (
     <svg
@@ -13,4 +14,16 @@ const IconLinkedin = () => {
   )
 }
 
-export default IconLinkedin;
+
+
+const ButtonLinkedin = () => {
+  return (
+    <div>
+      <a href="https://www.linkedin.com/in/jayme-ln-7597a6268/" target="_blank">
+        <IconLinkedin></IconLinkedin>
+      </a>
+    </div>
+  )
+}
+
+export default ButtonLinkedin;
