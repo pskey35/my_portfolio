@@ -29,9 +29,9 @@ export default function CvModal() {
     <div className="cv-caja">
       <div className="cv-content">
         <div className="image">
-          <img src="/my_new_CV.png"></img>
+          <img src="/CV_jaymeLn.png"></img>
           <div className="front-image">
-            <img src="/my_new_CV.png"></img>
+            <img src="/CV_jaymeLn.png"></img>
           </div>
           <div>salir</div>
         </div>
