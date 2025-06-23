@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./assets/components/header.jsx"
-import "./circles.scss"
-import "./home.scss"
+import "./assets/styles/circles.scss"
+import "./assets/styles/home.scss";
 import OndasCircles from "./assets/icons/ondas.jsx";
 import Button_Github from "./assets/Buttons/Button_github.jsx";
 import Button_Linkedin from "./assets/Buttons/Button_linkedin.jsx";
