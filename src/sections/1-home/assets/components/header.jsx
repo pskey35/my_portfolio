@@ -150,9 +150,9 @@ function Header() {
 
             setTimeout(() => {
                 //aqui animamos cada 0.x segundos su span osea las bolitas de hamburger
-                const itemMenu1 = document.querySelector(
+             /*   const itemMenu1 = document.querySelector(
                     "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(1) > a > span"
-                );
+                );*/
                 const itemMenu2 = document.querySelector(
                     "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(2) > a > span"
                 );
@@ -168,8 +168,8 @@ function Header() {
                     "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(5) > a > span"
                 );
 
-                itemMenu1.style.cssText =
-                    "animation:fade-li 900ms cubic-bezier(.39,.11,.18,1.51) forwards reverse";
+            /*    itemMenu1.style.cssText =
+                    "animation:fade-li 900ms cubic-bezier(.39,.11,.18,1.51) forwards reverse";*/
 
                 itemMenu2.style.cssText =
                     "animation:fade-li 900ms 180ms cubic-bezier(.39,.11,.18,1.51) forwards";
