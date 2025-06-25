@@ -38,9 +38,26 @@ function HomeContent() {
     <div className="home" id="home">
       <div className="left">
 
-        <Button_Github></Button_Github>
-        <Button_Linkedin></Button_Linkedin>
-        <Button_Whatsapp></Button_Whatsapp>
+        <Button_Github height="30px" width="30px" 
+        to="https://github.com/pskey35"
+        stroke="currentColor"
+        fill="currentColor"/>
+
+
+        <Button_Linkedin
+        width="30px"
+        height="30px"
+        to="https://www.linkedin.com/in/jayme-alejo-lino-7597a6268/"
+        fill="white"
+        />
+
+
+       
+        <Button_Whatsapp
+        width="30px"
+        height="30px"
+        fill="currentColor"
+        />
      
 
 
