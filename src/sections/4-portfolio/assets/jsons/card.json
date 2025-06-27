@@ -34,8 +34,8 @@
   {
     "id": "card-5",
     "linkWeb": "https://hacker-simulator.vercel.app",
-    "title": "Hacker simulator",
-    "image": "/images-portfolio/dog.PNG",
+    "title": "Hacker parody",
+    "image": "/images-portfolio/dog-parody.png",
     "github": "https://github.com/pskey35/hacker-simulator",
     "description": "This website simulates the experience of being a real hacker, where each letter you type executes commands as if you were in a terminal. On this website, users will be able to immerse themselves in the exciting world of computer hacking safely and legally. The interface has been designed to simulate a command line terminal, with a retro style and visual elements that evoke the atmosphere of a hacker environment"
   },

@@ -43,7 +43,7 @@ function ExperienceBlock() {
         <div>
             <IconExperience width="18px" height="18px" fill="white"></IconExperience>
             <p style={{ color: "white" }}>Experience</p>
-            <p style={{ color: "gray", fontSize: "14px" }}>6 years</p>
+            <p style={{ color: "gray", fontSize: "14px" }}>4 years</p>
         </div>
     )
 }
@@ -174,7 +174,7 @@ function About() {
 
                     {/*rightTExto*/}
                     <div className="right-texto">
-                        I am a front-end developer with 1 year of experience in various web agencies. Interested in design, web development and
+                        I am a front-end developer with 3 year of experience in various web agencies. Interested in design, web development and
                         learning new technologies. with the aim of being creative
                         developer viewCV
                     </div>
