@@ -49,7 +49,7 @@ function ClickButtonToMyCv() {
     if (cv_contentElement) cv_contentElement.style.cssText = "animation:fadeCV 50ms linear forwards";
   };
 
-  return (
+  return ( 
     <a className="cv" onClick={clickMyCv}>
       <div className="right-boton">
         <span className="botonDownload">view CV</span>
