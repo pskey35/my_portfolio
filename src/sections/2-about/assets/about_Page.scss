@@ -1,0 +1,96 @@
+.container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  width: 90%;
+  margin-left: 50px;
+
+  @media (max-width: 900px) {
+    max-width: 590px;
+    margin: 0 auto;
+  }
+
+  .iconos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+    }
+
+    > div {
+      background: #0d182b;
+      border: 1px solid #1b232f;
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      flex: 1;
+
+      @media (min-width: 1100px) {
+        height: 14vw;
+        width: 14vw;
+        font-size: 20px;
+
+        // Iconos de About Me
+        > svg {
+          width: 2em;
+          height: 2em;
+        }
+      }
+    }
+  }
+
+  .right-texto {
+    max-width: 500px;
+    text-align: start;
+    margin-bottom: 20px;
+    opacity: 0;
+    font-size: 14px;
+
+    @media (max-width: 900px) {
+      margin-left:4%;
+      margin-right:2%; 
+    }
+  }
+
+  .right-boton {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 6px;
+    position: relative;
+    inset: 3px;
+    overflow: hidden;
+    background: rgb(37, 44, 48);
+    cursor: pointer;
+    min-width: 235px;
+
+    > svg {
+      fill: white;
+    }
+
+    .botonDownload {
+      z-index: 10;
+      position: relative;
+      right: 10px;
+    }
+  }
+}
+
+.icon-carry {
+  height: 14vw;
+  width: 14vw;
+
+  @media (max-width: 900px) {
+    height: 18px;
+    width: 18px;
+  }
+}

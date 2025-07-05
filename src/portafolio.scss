@@ -223,11 +223,9 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
 
   div {
-    svg {
-      height: 18px;
-      width: 18px;
-    }
+   
 
+    //aboutPage.scss
     p:nth-child(2) {
       font-size: 13px;
     }
@@ -281,15 +279,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sol {
-  /*
-  background: yellow;
-  height: 100px;
-  width: 100px;
-  border-radius: 100px;
-  margin: auto;
-
-  box-shadow: 0 0 60px #fdcba3, 0 0 40px #b8a01a;
-  opacity: 0;*/
+  
 
   width: 300px;
   height: 300px;
@@ -377,79 +367,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 
-.container-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 580px;
-  width: 90%;
-  margin-left: 50px;
 
-  @media (max-width: 900px) {
-    margin-left: 0;
-  }
-}
 
-.container-right .iconos {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
 
-  grid-gap: 10px;
-
-  @media (max-width: 900px) {
-    flex-wrap: wrap;
-  }
-}
-
-.container-right .iconos>div {
-  background: #192130;
-  border: 1px solid #1b232f;
-  padding: 5px 20px;
-  border-radius: 10px;
-  margin: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  flex: 1;
-  background: #0d182b;
-}
 
 div.iconos>div:nth-child(3)>p:nth-child(3) {
   width: max-content;
-}
-
-.container-right .right-texto {
-  max-width: 500px;
-  text-align: start;
-  margin-bottom: 20px;
-  opacity: 0;
-  font-size: 14px;
-}
-
-.container-right .right-boton {
-  display: inline-block;
-  padding: 20px 40px;
-  border-radius: 6px;
-  position: relative;
-  inset: 3px;
-  overflow: hidden;
-  background: rgb(37, 44, 48);
-  cursor: pointer;
-  min-width: 235px;
-
-  &>svg {
-    fill: white;
-  }
-}
-
-.container-right .right-boton .botonDownload {
-  z-index: 10;
-  position: relative;
-  right: 10px;
 }
 
 
