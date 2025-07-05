@@ -41,10 +41,10 @@
   },
   {
     "id": "card-6",
-    "linkWeb": "https://landing-airbnb.vercel.app/",
-    "title": "Airbnb landing",
-    "github": "https://github.com/pskey35/landing-airbnb",
-    "image": "https://firebasestorage.googleapis.com/v0/b/prueba-62d11.appspot.com/o/airbnbCapture.png?alt=media&token=dd170a9d-4826-48c0-b661-1e74e042418e",
-    "description": "I designed and developed a visually appealing and responsive landing page inspired by Airbnb's sleek and modern style. The page is specifically tailored to promote affordable hotels, ensuring a user-friendly experience for visitors. It features a clean layout, intuitive navigation, and compelling visuals to engage users and encourage them to explore accommodation options"
+    "linkWeb": "https://www.muebleslaliz.com/",
+    "title": "Laliz web",
+    "github": "https://www.muebleslaliz.com/",
+    "image": "/images-portfolio/laliz-muebles.png",
+    "description": "I designed and developed a modern online store for Muebles LaLiz, focused on delivering a visually appealing and highly functional user experience. The goal was to create an intuitive platform where customers could easily discover and purchase high-quality furniture The website stands out for its clean design, strategic use of color, bold typography, and a well-structured layout."
   }
 ]
