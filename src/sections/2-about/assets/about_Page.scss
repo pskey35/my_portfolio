@@ -1,3 +1,129 @@
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 70px;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height:31em;
+}
+
+.about .container-left {
+  position: relative;
+  width: 365px;
+  opacity: 0;
+  margin-bottom: 40px;
+
+  &>.me {
+    display: none;
+
+    p {
+      text-transform: capitalize;
+    }
+
+    p:nth-child(1) {
+      font-size: 22px;
+    }
+
+    p:nth-child(2) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.about .about-container .about-image {
+  //  width: 100%;
+  // height: 100%;
+  width: 360px;
+  height: 480px;
+  margin: auto;
+  z-index: 10;
+  border-radius: 10px;
+  overflow: hidden;
+  //box-shadow: 0 0 40px 1px rgb(0 99 170);
+
+  .prueba {
+    font-family: "Poppins", sans-serif;
+    line-height: 14px;
+    background: url("/perfil.jpg");
+    -webkit-background-clip: text;
+    //background-attachment: absolute;
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    letter-spacing: -3px;
+    word-break: break-all;
+    line-height: 6px;
+  }
+
+  @media (max-width: 900px) {
+    border-radius: 999px;
+    height: 120px;
+    width: 120px;
+    box-shadow: 0 0 100px 3px #157eff;
+    border: 7px solid black;
+    outline: 6px solid #0b83ff;
+    margin-bottom: 10px;
+  }
+}
+
+.about .about-container .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .about-container .about-circle {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about .about-container .about-circle svg {
+  fill: rgb(119, 150, 119);
+  display: block;
+  width: 200px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.about-container .iconos {
+  display: flex;
+
+  div {
+   
+
+    //aboutPage.scss
+    p:nth-child(2) {
+      font-size: 13px;
+    }
+  }
+}
+
+
+
+
+
 .container-right {
   display: flex;
   flex-direction: column;
@@ -5,7 +131,7 @@
   max-width: 700px;
   width: 90%;
   margin-left: 50px;
-
+  flex:1;
   @media (max-width: 900px) {
     max-width: 590px;
     margin: 0 auto;
@@ -17,9 +143,12 @@
     justify-content: center;
     margin-bottom: 20px;
     gap: 10px;
+    
+  
 
     @media (max-width: 900px) {
       flex-wrap: wrap;
+    
     }
 
     > div {
@@ -34,12 +163,13 @@
       justify-content: center;
       opacity: 0;
       flex: 1;
+      
 
       @media (min-width: 1100px) {
         height: 14vw;
         width: 14vw;
         font-size: 20px;
-
+      
         // Iconos de About Me
         > svg {
           width: 2em;
@@ -55,11 +185,14 @@
     margin-bottom: 20px;
     opacity: 0;
     font-size: 14px;
+    display:none;
 
     @media (max-width: 900px) {
-      margin-left:4%;
-      margin-right:2%; 
+      margin-left: 4%;
+      margin-right: 2%;
+      display:block;
     }
+
   }
 
   .right-boton {
@@ -92,5 +225,19 @@
   @media (max-width: 900px) {
     height: 18px;
     width: 18px;
+  }
+}
+
+//esto bloque solo se ve en desktop
+
+
+.about_Page-repBlock{
+  display: block;
+    font-size:0.5em;
+    color:#c7e0ff7d;
+
+  @media (max-width: 900px) {
+    display: none;
+  
   }
 }

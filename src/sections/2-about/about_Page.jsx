@@ -10,6 +10,10 @@ function ExperienceBlock() {
       <IconExperience width="18px" height="18px" fill="white" />
       <p style={{ color: "white" }}>Experience</p>
       <p style={{ color: "gray", fontSize: "14px" }}>4 years</p>
+
+      <div className="about_Page-repBlock  info-block-experience_desktop">
+       I went from working as a freelancer to holding senior positions at major companies in my country.
+      </div>
     </div>
   );
 }
@@ -21,6 +25,9 @@ function WorkBlock() {
       <IconWork width="18px" height="18px" fill="white" />
       <p style={{ color: "white" }}>Completed</p>
       <p style={{ color: "gray", fontSize: "14px" }}>99%</p>
+      <div className="about_Page-repBlock ">
+        I have worked on many projects, which you can review on my GitHub.
+      </div>
     </div>
   );
 }
@@ -34,6 +41,10 @@ function CarryBlock() {
       </div>
       <p style={{ color: "white" }}>Support</p>
       <p style={{ color: "gray", fontSize: "14px" }}>i'm carry</p>
+      <div className="about_Page-repBlock ">
+         from design to development and
+        deployment. No intermediaries, everything goes through me.  
+      </div>
     </div>
   );
 }
@@ -46,10 +57,11 @@ function ClickButtonToMyCv() {
     const cv_caja = document.querySelector(".cv-caja");
     const cv_contentElement = document.querySelector(".cv-content");
     if (cv_caja) cv_caja.style.cssText = "visibility:visible;opacity:1";
-    if (cv_contentElement) cv_contentElement.style.cssText = "animation:fadeCV 50ms linear forwards";
+    if (cv_contentElement)
+      cv_contentElement.style.cssText = "animation:fadeCV 50ms linear forwards";
   };
 
-  return ( 
+  return (
     <a className="cv" onClick={clickMyCv}>
       <div className="right-boton">
         <span className="botonDownload">view CV</span>
@@ -92,7 +104,8 @@ function About() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            perfilContainer.style.cssText = "animation:goUp 140ms ease forwards";
+            perfilContainer.style.cssText =
+              "animation:goUp 140ms ease forwards";
           } else {
             perfilContainer.style.cssText = "opacity:1";
           }
@@ -130,9 +143,9 @@ function About() {
           </div>
           {/* Texto de presentación */}
           <div className="right-texto">
-            I am a front-end developer with 3 year of experience in various web agencies. Interested in design, web development and
-            learning new technologies. with the aim of being creative
-            developer viewCV
+            I am a front-end developer with 3 year of experience in various web
+            agencies. Interested in design, web development and learning new
+            technologies. with the aim of being creative developer viewCV
           </div>
           {/* Botón para ver el CV */}
           <ClickButtonToMyCv />
