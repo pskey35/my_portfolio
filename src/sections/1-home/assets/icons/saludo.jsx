@@ -1,3 +1,8 @@
-const IconSaludo =() => <span class="inline-block ml-2 animate-wave">👋</span>
+import "./icons-styles.scss";
 
-export default IconSaludo
+const IconSaludo = () => {
+  return(
+  <span className="iconHand">👋</span>)
+};
+
+export default IconSaludo;

@@ -210,7 +210,12 @@ div.about-container>div.container-right>.cv {
   width: 100%;
   transform: rotate(180deg);
   display: block;
-  height: 150px;
+  height: 270px;
+
+  @media(max-width:900px){
+    height:150px;
+
+  }
 }
 
 

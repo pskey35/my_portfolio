@@ -1,0 +1,15 @@
+
+.iconHand {
+  display: inline-block;
+  animation: icon-hand-wave 805ms infinite cubic-bezier(.36,.07,.19,.97) alternate;
+  transform-origin: 70% 80%;
+}
+@keyframes icon-hand-wave {
+  0% {
+    transform: rotate(-0deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
