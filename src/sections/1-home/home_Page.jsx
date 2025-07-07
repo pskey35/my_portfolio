@@ -2,11 +2,13 @@ import { useState } from "react";
 import Header from "./assets/components/header.jsx"
 import "./assets/styles/circles.scss"
 import "./assets/styles/home.scss";
+
+
+//icons - buttons
 import OndasCircles from "./assets/icons/ondas.jsx";
 import Button_Github from "./assets/Buttons/Button_github.jsx";
 import Button_Linkedin from "./assets/Buttons/Button_linkedin.jsx";
 import Button_Whatsapp from "./assets/Buttons/Button_whatsapp.jsx";
-
 import IconKnowMore from "./assets/icons/know_more.jsx";
 import IconSaludo from "./assets/icons/saludo.jsx";
 
@@ -31,6 +33,9 @@ const Button_Redirecto_to_About = () => {
     </a>
   )
 }
+
+
+
 
 function HomeContent() {
 
