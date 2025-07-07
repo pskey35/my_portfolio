@@ -1,156 +1,157 @@
-
 /*-------------HEADER---------------------*/
 .header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    background: rgba(4, 12, 17, 0.315);
-    color: white;
-    margin: auto;
-    padding: 10px 5vw;
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-    opacity: 0;
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgb(51 51 51 / 70%);
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background: rgba(4, 12, 17, 0.315);
+  color: white;
+  margin: auto;
+  padding: 10px 5vw;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgb(51 51 51 / 70%);
+  align-items: center;
+}
+
+.header .nav {
+  width: 70%;
+  margin-left: auto;
+  min-width: 500px;
+
+  @media (max-width: 900px) {
+    display: none;
   }
-  
-  .header .nav {
-    width: 70%;
-    margin-left: auto;
-    min-width: 500px;
-  
-    @media (max-width: 900px) {
-      display: none;
-    }
-  }
-  
-  .header .nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .header .nav ul>li {
-    transition: background-color 100ms ease, border 300ms ease;
-    width: 20%;
-    background: rgb(28 28 28);
-    border-radius: 10px;
-    border: 2px solid #2e2e2e;
-    color: white;
-    padding: 3px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-  
-    justify-content: center;
-  
-    &>span {
-      width: 25px;
-      height: 25px;
-      display: inline-block;
-  
-      svg {
-        height: 100%;
-        width: 100%;
-        transition: all 100ms ease;
-  
-        path {
-          transition: all 100ms ease;
-        }
-      }
-    }
-  
-    &:hover>span svg {
-      fill: rgb(3, 142, 255);
-    }
-  
-    &:hover>span svg path {
-      fill: rgb(3, 142, 255);
-    }
-  }
-  
-  .header .nav ul>li:hover {
-    background: rgb(18 18 18);
-    border: 2px solid #23598f;
-  }
-  
-  .header .nav ul li a {
-    text-decoration: none;
-    font-size: 10px;
-    color: rgb(155, 155, 155);
-  }
-  
-  .header .botonHeader {
-    visibility: hidden;
-    width: min-content;
-    height: min-content;
-  
-    @media (max-width: 900px) {
-      visibility: visible;
-      position: relative;
-  
-      .botonReal {
-        display: flex;
-        justify-content: space-between;
-        width: 40px;
-        height: 35px;
-        align-items: center;
-        position: relative;
-  
-        &>span {
-          background: #f3f3f3;
-          width: 13px;
-          height: 13px;
-          border-radius: 999px;
-          display: inline-block;
-          position: relative;
-          transition: all 190ms ease;
-        }
-  
-        &>span:nth-child(1) {
-          top: calc(100% - 22px);
-          //11 + su mitad 5.5
-        }
-  
-        &>span:nth-child(2) {
-          top: calc(0% - 11px);
-        }
-  
-        &>span:nth-child(3) {
-          top: calc(100% - 22px);
-        }
-      }
-    }
-  }
-  
-  .perfilContainer {
-    height: 42px;
-    width: 42px;
+}
+
+.header .nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.header .nav ul>li:hover {
+  background: rgb(18 18 18);
+  border: 2px solid #23598f;
+}
+
+.header .nav ul li a {
+  text-decoration: none;
+  font-size: 10px;
+  color: rgb(155, 155, 155);
+}
+
+.header .botonHeader {
+  visibility: hidden;
+  width: min-content;
+  height: min-content;
+
+  @media (max-width: 900px) {
+    visibility: visible;
     position: relative;
-  }
-  
-  //esto de aqui cuando esta scroleando hacia abajo, tiene que ir hacia arriba el perfil
-  @keyframes goUp {
-    0% {
-      transform: translateY(0%);
-      opacity: 1;
+
+    .botonReal {
+      display: flex;
+      justify-content: space-between;
+      width: 40px;
+      height: 35px;
+      align-items: center;
+      position: relative;
+
+      &>span {
+        background: #f3f3f3;
+        width: 13px;
+        height: 13px;
+        border-radius: 999px;
+        display: inline-block;
+        position: relative;
+        transition: all 190ms ease;
+      }
+
+      &>span:nth-child(1) {
+        top: calc(100% - 22px);
+      }
+
+      &>span:nth-child(2) {
+        top: calc(0% - 11px);
+      }
+
+      &>span:nth-child(3) {
+        top: calc(100% - 22px);
+      }
     }
-  
-    100% {
-      transform: translateY(-100%);
-      opacity: 0;
+  }
+}
+
+.perfilContainer {
+  height: 42px;
+  width: 42px;
+  position: relative;
+}
+
+//esto de aqui cuando esta scroleando hacia abajo, tiene que ir hacia arriba el perfil
+@keyframes goUp {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.perfilContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid #000000;
+  outline: 3px solid #2a9dff;
+}
+
+.icon-headerDesktop_header {
+  transition: background-color 100ms ease, border 300ms ease;
+  width: 20%;
+  background: rgb(28 28 28);
+  border-radius: 10px;
+  border: 2px solid #2e2e2e;
+  color: white;
+  padding: 3px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  gap: 10px;
+  justify-content: center;
+
+  @media(max-width: 900px) {}
+
+  &>span {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      transition: all 100ms ease;
+
+      path {
+        transition: all 100ms ease;
+      }
     }
   }
-  
-  .perfilContainer img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    border: 2px solid #000000;
-    outline: 3px solid #2a9dff;
+
+  &:hover>span svg {
+    fill: rgb(3, 142, 255);
   }
+
+  &:hover>span svg path {
+    fill: rgb(3, 142, 255);
+  }
+}

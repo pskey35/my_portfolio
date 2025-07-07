@@ -332,7 +332,7 @@ function Header() {
                 <ul>
                     {items.map((item, index) => {
                         return (
-                            <li key={index} onClick={(event) => clickScrollInto(item.id, event)}>
+                            <li key={index} onClick={(event) => clickScrollInto(item.id, event)} className="icon-headerDesktop_header">
                                 <span>
                                     {item.icon}
                                 </span>
