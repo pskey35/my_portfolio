@@ -941,10 +941,6 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     display: none;
   }
 
-  .home .right .right-image {
-    width: 300px;
-    height: 300px;
-  }
 }
 
 @media screen and (max-width: 650px) {
@@ -952,10 +948,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     padding-top: 20vh;
   }
 
-  .home .right .right-image {
-    width: 150px;
-    height: 150px;
-  }
+
 
   .perfilContainer {
     left: 0;

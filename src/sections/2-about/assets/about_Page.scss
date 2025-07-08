@@ -1,4 +1,3 @@
-
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +8,7 @@
   position: relative;
   z-index: 100;
   width: 100%;
-  height:31em;
+  height: 31em;
 }
 
 .about .container-left {
@@ -45,15 +44,12 @@
 }
 
 .about .about-container .about-image {
-  //  width: 100%;
-  // height: 100%;
   width: 360px;
   height: 480px;
   margin: auto;
   z-index: 10;
   border-radius: 10px;
   overflow: hidden;
-  //box-shadow: 0 0 40px 1px rgb(0 99 170);
 
   .prueba {
     font-family: "Poppins", sans-serif;
@@ -85,9 +81,36 @@
 }
 
 .about .about-container .about-image img {
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  outline: 6px solid #0b83ff;
+  border: 30px solid black;
+  margin: auto;
+  border: 7px solid black;
+  box-shadow: #0b83ff 0 0 100px 3px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    box-shadow: 0 0 100px 3px #157eff;
+    outline: none;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    border: 0px;
+
+  }
 }
 
 .about .about-container .about-circle {
@@ -111,7 +134,7 @@
   display: flex;
 
   div {
-   
+
 
     //aboutPage.scss
     p:nth-child(2) {
@@ -131,7 +154,8 @@
   max-width: 700px;
   width: 90%;
   margin-left: 50px;
-  flex:1;
+  flex: 1;
+
   @media (max-width: 900px) {
     max-width: 590px;
     margin: 0 auto;
@@ -143,15 +167,15 @@
     justify-content: center;
     margin-bottom: 20px;
     gap: 10px;
-    
-  
+
+
 
     @media (max-width: 900px) {
       flex-wrap: wrap;
-    
+
     }
 
-    > div {
+    >div {
       background: #0d182b;
       border: 1px solid #1b232f;
       padding: 5px 20px;
@@ -163,15 +187,15 @@
       justify-content: center;
       opacity: 0;
       flex: 1;
-      
+
 
       @media (min-width: 1100px) {
         height: 14vw;
         width: 14vw;
         font-size: 20px;
-      
+
         // Iconos de About Me
-        > svg {
+        >svg {
           width: 2em;
           height: 2em;
         }
@@ -185,12 +209,12 @@
     margin-bottom: 20px;
     opacity: 0;
     font-size: 14px;
-    display:none;
+    display: none;
 
     @media (max-width: 900px) {
       margin-left: 4%;
       margin-right: 2%;
-      display:block;
+      display: block;
     }
 
   }
@@ -206,7 +230,7 @@
     cursor: pointer;
     min-width: 235px;
 
-    > svg {
+    >svg {
       fill: white;
     }
 
@@ -231,13 +255,13 @@
 //esto bloque solo se ve en desktop
 
 
-.about_Page-repBlock{
+.about_Page-repBlock {
   display: block;
-    font-size:0.5em;
-    color:#c7e0ff7d;
+  font-size: 0.5em;
+  color: #c7e0ff7d;
 
   @media (max-width: 900px) {
     display: none;
-  
+
   }
 }
