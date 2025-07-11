@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 //@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Roboto+Slab:wght@100..900&family=Sofadi+One&display=swap');
 html,
 body,
@@ -67,7 +68,7 @@ body::-webkit-scrollbar-thumb:hover {
   outline: none;
   color: white;
   font-family: "Sofadi One", system-ui;
- // font-family: "Nunito", sans-serif;
+  // font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -114,12 +115,19 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 .skills {
-  margin-top: 10vh;
-  margin-bottom: 30vh;
+
+  margin-top: 45vh;
+  margin-bottom: 60vh;
   padding-top: 23vh;
 
-  @media (max-width: 900px) {}
+  @media (max-width: 900px) {
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+    padding-top: 23vh;
+
+  }
 }
+
 
 .skills .container-texto {
   text-align: center;
@@ -160,7 +168,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sol {
-  
+
 
   width: 300px;
   height: 300px;
@@ -235,16 +243,16 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: url("../public/svg/reactRouter-icon.svg");
 }
 
-.circulo .items:nth-child(11){
-  background-image:url("../public/svg/tailwindcss-color.svg")
+.circulo .items:nth-child(11) {
+  background-image: url("../public/svg/tailwindcss-color.svg")
 }
 
-.circulo .items:nth-child(12){
-  background-image:url("../public/svg/graphql-color.svg")
+.circulo .items:nth-child(12) {
+  background-image: url("../public/svg/graphql-color.svg")
 }
 
-.circulo .items:nth-child(13)  {
-  background-image:url("../public/svg/shopify-color.svg")
+.circulo .items:nth-child(13) {
+  background-image: url("../public/svg/shopify-color.svg")
 }
 
 
@@ -288,11 +296,9 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   right: 0;
   height: 180px;
   width: 30px;
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgb(153 153 153 / 21%),
-    #04040429 40%
-  );
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      rgb(153 153 153 / 21%),
+      #04040429 40%);
   animation: bordes 8s ease infinite;
   z-index: 1;
 }
@@ -510,11 +516,11 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   border: 2px solid rgb(0 82 150);
 }
 
-.message_5-contact{
-  height:20px;
-  width:100%;
-  text-align:center;
-  margin-bottom:10px;
+.message_5-contact {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 
@@ -629,7 +635,6 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   display: flex;
   flex-direction: column;
   justify-content: center
-
 }
 
 .container-alerta .alerta .top {
