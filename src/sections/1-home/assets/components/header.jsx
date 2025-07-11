@@ -1,7 +1,8 @@
 import { useContext, useEffect } from "react"
 import { ContextGlobal } from "../../../../App.jsx"
 import "./header.scss"
-import perfilImage from "../images/jaymeAlejoLino.jpeg"
+import MobileNavHeader from "./header/mobile/header.jsx";
+import DesktopNavHeader from "./header/desktop/header.jsx";
 
 
 
@@ -121,9 +122,7 @@ function HeaderMenu() {
 function Header() {
     const { openMenu, setOpenMenu } = useContext(ContextGlobal);
 
-    const clickBotonMenu = () => {
-        setOpenMenu(!openMenu);
-    };
+
 
     useEffect(() => {
         const span1 = document.querySelector(
@@ -150,9 +149,9 @@ function Header() {
 
             setTimeout(() => {
                 //aqui animamos cada 0.x segundos su span osea las bolitas de hamburger
-             /*   const itemMenu1 = document.querySelector(
-                    "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(1) > a > span"
-                );*/
+                /*   const itemMenu1 = document.querySelector(
+                       "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(1) > a > span"
+                   );*/
                 const itemMenu2 = document.querySelector(
                     "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(2) > a > span"
                 );
@@ -168,8 +167,8 @@ function Header() {
                     "#jaymePortfolio > div > div.vista1 > div.header > div.botonHeader > div.headerMenu > ul > li:nth-child(5) > a > span"
                 );
 
-            /*    itemMenu1.style.cssText =
-                    "animation:fade-li 900ms cubic-bezier(.39,.11,.18,1.51) forwards reverse";*/
+                /*    itemMenu1.style.cssText =
+                        "animation:fade-li 900ms cubic-bezier(.39,.11,.18,1.51) forwards reverse";*/
 
                 itemMenu2.style.cssText =
                     "animation:fade-li 900ms 180ms cubic-bezier(.39,.11,.18,1.51) forwards";
@@ -323,35 +322,15 @@ function Header() {
 
     return (
         <div className="header">
-            <div className="perfilContainer">
-                <img 
-                src={perfilImage}
-                alt="error" className="perfil"></img>
-            </div>
-            <div className="nav">
-                <ul>
-                    {items.map((item, index) => {
-                        return (
-                            <li key={index} onClick={(event) => clickScrollInto(item.id, event)} className="icon-headerDesktop_header">
-                                <span>
-                                    {item.icon}
-                                </span>
-                                <a href={item.scrollTo} id={item.id}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </div>
-            <div className="botonHeader">
-                <div className="botonReal" onClick={clickBotonMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                {openMenu ? <HeaderMenu></HeaderMenu> : ""}
-            </div>
+
+
+
+           <DesktopNavHeader></DesktopNavHeader>
+            <MobileNavHeader></MobileNavHeader>
+
+
+
+
         </div>
     );
 
