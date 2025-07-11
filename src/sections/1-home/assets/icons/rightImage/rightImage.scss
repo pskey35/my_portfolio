@@ -1,0 +1,34 @@
+.home .right .right-image {
+    background: url("../../images/animated_jaymeAlejoLino.png") no-repeat center;
+    animation: profile ease-in 8s infinite 1s, toIzq ease-in 500ms forwards 500ms;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    filter: grayscale(85%);
+    transition: all 1s;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    opacity: 0;
+
+
+    @media screen and (max-width: 650px) {
+        .home .right .right-image {
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+}
+
+.home .right .right-image:hover {
+    filter: grayscale(0%);
+}
+
+
+
+@media screen and (min-width: 650px) {
+
+    .home .right .right-image {
+        width: 300px;
+        height: 300px;
+    }
+}

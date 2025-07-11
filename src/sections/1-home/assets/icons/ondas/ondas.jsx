@@ -1,3 +1,5 @@
+import "./ondas.scss"
+
 function Ondas() {
   //esto ya no se usa
   return (
