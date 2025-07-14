@@ -1,4 +1,4 @@
-const HomeIcon = ({ index, clickScrollInto }) => (
+const HomeIcon = ({ index, clickScrollInto,width,height }) => (
   <li key={index} onClick={(event) => clickScrollInto("home-a", event)} className="icon-headerDesktop_header">
     <span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="estate">
@@ -12,7 +12,7 @@ const HomeIcon = ({ index, clickScrollInto }) => (
   </li>
 );
 
-const AboutIcon = ({ index, clickScrollInto }) => (
+const AboutIcon = ({ index, clickScrollInto,width,height }) => (
   <li key={index} onClick={(event) => clickScrollInto("about-a", event)} className="icon-headerDesktop_header">
     <span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="user">
@@ -26,7 +26,7 @@ const AboutIcon = ({ index, clickScrollInto }) => (
   </li>
 );
 
-const SkillsIcon = ({ index, clickScrollInto }) => (
+const SkillsIcon = ({ index, clickScrollInto,width,height }) => (
   <li key={index} onClick={(event) => clickScrollInto("skills-a", event)} className="icon-headerDesktop_header">
     <span>
       <svg width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@ const SkillsIcon = ({ index, clickScrollInto }) => (
   </li>
 );
 
-const PortfolioIcon = ({ index, clickScrollInto }) => (
+const PortfolioIcon = ({ index, clickScrollInto,width,height }) => (
   <li key={index} onClick={(event) => clickScrollInto("portfolio-a", event)} className="icon-headerDesktop_header">
     <span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="bag-alt">
@@ -54,10 +54,10 @@ const PortfolioIcon = ({ index, clickScrollInto }) => (
   </li>
 );
 
-const ContactIcon = ({ index, clickScrollInto }) => (
+const ContactIcon = ({ index, clickScrollInto,width,height }) => (
   <li key={index} onClick={(event) => clickScrollInto("contact-a", event)} className="icon-headerDesktop_header">
     <span>
-      <svg fill="lightgray" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="message">
+      <svg fill="lightgray"  width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="message">
         <path
           fill="#undefined"
           d="M20.34,9.32l-14-7a3,3,0,0,0-4.08,3.9l2.4,5.37h0a1.06,1.06,0,0,1,0,.82l-2.4,5.37A3,3,0,0,0,5,22a3.14,3.14,0,0,0,1.35-.32l14-7a3,3,0,0,0,0-5.36Zm-.89,3.57-14,7a1,1,0,0,1-1.35-1.3l2.39-5.37A2,2,0,0,0,6.57,13h6.89a1,1,0,0,0,0-2H6.57a2,2,0,0,0-.08-.22L4.1,5.41a1,1,0,0,1,1.35-1.3l14,7a1,1,0,0,1,0,1.78Z"

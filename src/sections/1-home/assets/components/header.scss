@@ -70,7 +70,7 @@
   gap: 10px;
   justify-content: center;
 
-  @media(max-width: 900px) {}
+
 
   &>span {
     width: 25px;
@@ -94,5 +94,13 @@
 
   &:hover>span svg path {
     fill: rgb(3, 142, 255);
+  }
+
+  @media(max-width: 900px) {
+    display: none;
+  }
+
+  @media(max-width: 800px) {
+    display:none;
   }
 }
