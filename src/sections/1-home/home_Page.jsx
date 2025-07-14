@@ -10,8 +10,7 @@ import Button_Github from "./assets/Buttons/Button_github.jsx";
 import Button_Linkedin from "./assets/Buttons/Button_linkedin.jsx";
 import Button_Whatsapp from "./assets/Buttons/Button_whatsapp.jsx";
 import IconKnowMore from "./assets/icons/know_more.jsx";
-import IconSaludo from "./assets/icons/saludo.jsx";
-
+import {IconSaludoMobile, IconSaludoDesktop} from "./assets/icons/saludo.jsx";
 
 import RightImage from "./assets/icons/rightImage/rightImage.jsx";
 
@@ -72,7 +71,8 @@ function HomeContent() {
         <div className="right-texto">
           <p className="texto-nombre">
             <span>Jayme Ln</span>
-            <IconSaludo></IconSaludo>
+            <IconSaludoDesktop width="36px" height="36px"></IconSaludoDesktop> 
+            <IconSaludoMobile width="36px" height="36px"></IconSaludoMobile>
           </p>
           <div className="texto-dev">
             <span className="linea"></span>

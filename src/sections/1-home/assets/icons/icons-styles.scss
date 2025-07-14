@@ -3,7 +3,14 @@
   display: inline-block;
   animation: icon-hand-wave 805ms infinite cubic-bezier(.36,.07,.19,.97) alternate;
   transform-origin: 70% 80%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
+
+
 @keyframes icon-hand-wave {
   0% {
     transform: rotate(-0deg);
@@ -13,3 +20,11 @@
   }
 }
 
+
+
+.iconHandMobile{
+  display:none;
+  @media (max-width: 768px) {
+    display:block;
+  }
+}
