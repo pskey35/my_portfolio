@@ -24,34 +24,22 @@ export default function View({ boleano }) {
     //console.log(borrarVentana);
 
  
-    anim("#home > div.right > div.right-texto > a","abajo .5s ease-in forwards")
-
-    anim(".header", "abajo 400ms ease-in forwards");
-    anim(".right-texto > .texto-nombre", "abajo .5s ease-in forwards");
-    anim(
-      "#home > div.left > div:nth-child(1)",
-      "toRight 500ms ease-in forwards"
-    );
-    anim(
-      "#home > div.left > div:nth-child(2)",
-      "toRight 500ms ease-in 200ms forwards"
-    );
-    anim(
-      "#home > div.left > div:nth-child(3)",
-      "toRight 500ms ease-in 400ms forwards"
-    );
-    anim(
-      "#home > div.right > div.right-texto > div.texto-dev",
-      "abajo 500ms ease-in 400ms forwards"
-    );
-    anim(
-      "#home > div.right > div.right-texto > p.texto-dev2",
-      "abajo 500ms ease-in 800ms forwards"
-    );
-    anim(
-      "#home > div.right > div.right-texto > a ",
-      "aparecer 400ms ease-in 900ms forwards"
-    );
+    // Optimizado: lista simple y bucle for
+    const animList = [
+      ["#home > div.right > div.right-texto > a", "abajo .5s ease-in forwards"],
+      [".header", "abajo 400ms ease-in forwards"],
+      [".right-texto > .texto-nombre", "abajo .5s ease-in forwards"],
+      ["#home > div.left > div:nth-child(1)", "toRight 500ms ease-in forwards"],
+      ["#home > div.left > div:nth-child(2)", "toRight 500ms ease-in 200ms forwards"],
+      ["#home > div.left > div:nth-child(3)", "toRight 500ms ease-in 400ms forwards"],
+      ["#home > div.right > div.right-texto > div.texto-dev", "abajo 500ms ease-in 400ms forwards"],
+      ["#home > div.right > div.right-texto > p.texto-dev2", "abajo 500ms ease-in 800ms forwards"],
+      ["#home > div.right > div.right-texto > a ", "aparecer 400ms ease-in 900ms forwards"],
+    ];
+    for (let i = 0; i < animList.length; i++) {
+      const [selector, animation] = animList[i];
+      anim(selector, animation);
+    }
 
 
 
@@ -61,110 +49,91 @@ export default function View({ boleano }) {
   useEffect(() => {
     //console.log(borrarVentana);
     function scrollVentana() {
-      //console.log(borrarVentana);
-      // console.log("scroll")
-      
+    
 
-      anim("#about > div.titulo > h3", "abajo 500ms ease-in forwards");
-      anim("#about > div.titulo > p", "abajo 800ms forwards");
-      anim(
-        "#about > div.about-container > div.container-left",
-        "aparecer 400ms ease-in 500ms forwards"
-      );
-      anim(
-        "#about > div.about-container > div.container-right > div.iconos > div:nth-child(1)",
-        "abajo 500ms ease-in 200ms forwards"
-      );
-      anim(
-        "#about > div.about-container > div.container-right > div.iconos > div:nth-child(2)",
-        "abajo 500ms ease-in forwards"
-      );
-      anim(
-        "#about > div.about-container > div.container-right > div.iconos > div:nth-child(3)",
-        "abajo 500ms ease-in 200ms forwards"
-      );
-      anim(
-        "#about > div.about-container > div.container-right > div.right-texto",
-        "arriba 500ms ease-in forwards"
-      );
-      anim(
-        "#about > div.about-container > div.container-right > a",
-        "arriba 500ms ease-in 500ms forwards"
-      );
-      anim(
-        "#skills > span > div.container-texto",
-        "abajo 500ms ease-in forwards"
-      );
-      anim("#skills > span", "aparecer 500ms ease forwards");
-      anim("#skills > span > div.sol", "aparecer 500ms ease 500ms forwards");
-      anim(
-        "#skills > span > div:nth-child(3)",
-        "aparecer 500ms ease 800ms forwards"
-      );
-      anim("#portfolio > h1", "abajo 500ms ease forwards");
-      anim(
-        "#portfolio > div > div:nth-child(1)",
-        "aparecer 500ms ease 200ms forwards"
-      );
-      anim(
-        "#portfolio > div > div:nth-child(2)",
-        "aparecer 500ms ease 400ms forwards"
-      );
-      anim(
-        "#portfolio > div > div:nth-child(3)",
-        "aparecer 500ms ease 600ms forwards"
-      );
-      anim(
-        "#portfolio > div > div:nth-child(4)",
-        "aparecer 500ms ease 800ms forwards"
-      );
-      anim("#portfolio > div > div:nth-child(5)", "aparecer 500ms ease 1000ms forwards")
-     
-      anim("#portfolio > div > div:nth-child(6)", "aparecer 500ms ease 1000ms forwards")
 
-      anim("#contact h1", "abajo 500ms ease forwards");
-      anim("#contact h6", "abajo 500ms ease 300ms forwards");
-      anim(
-        "#contact > div > div.contact-left > p",
-        "aparecer 500ms ease forwards"
-      );
-      anim(
-        "#contact > div > div.contact-left > div.email",
-        "toRight 1200ms ease forwards"
-      );
-      anim(
-        "#contact > div > div.contact-left > div.whatsapp",
-        "toRight 1200ms ease 500ms forwards"
-      );
-      anim(
-        "#contact > div > div.contact-right > p",
-        "aparecer 500ms ease forwards"
-      );
-      anim(
-        "#contact > div > div.contact-right > div.mail-input",
-        "toIzq 1200ms ease forwards "
-      );
-      anim(
-        "#contact > div > div.contact-right > div.textarea-input",
-        "toIzq 1200ms ease 500ms forwards"
-      );
-      anim(
-        "#contact > div > div.contact-right > div.botonEnviar",
-        "arriba 500ms ease 1300ms forwards"
-      );
-      anim(".footer > p.footer-name", "aparecer 500ms ease forwards");
-      anim(
-        ".footer > div > div:nth-child(1)",
-        "arriba 500ms ease 300ms forwards"
-      );
-      anim(
-        ".footer > div > div:nth-child(2)",
-        "arriba 500ms ease 600ms forwards"
-      );
-      anim(
-        ".footer > div > div:nth-child(3)",
-        "arriba 500ms ease 800ms forwards"
-      );
+      const animList = [
+        // About section
+        [
+          ["#about > div.titulo > h3", "abajo 500ms ease-in forwards"],
+          ["#about > div.titulo > p", "abajo 800ms forwards"],
+          ["#about > div.about-container > div.container-left", "aparecer 400ms ease-in 500ms forwards"],
+          ["#about > div.about-container > div.container-right > div.right-texto", "arriba 500ms ease-in forwards"],
+          ["#about > div.about-container > div.container-right > a", "arriba 500ms ease-in 500ms forwards"],
+        ],
+        // About icons
+        // Skills section
+        [
+          ["#skills > span > div.container-texto", "abajo 500ms ease-in forwards"],
+          ["#skills > span", "aparecer 500ms ease forwards"],
+          ["#skills > span > div.sol", "aparecer 500ms ease 500ms forwards"],
+          ["#skills > span > div:nth-child(3)", "aparecer 500ms ease 800ms forwards"],
+        ],
+        // Portfolio section
+        [
+          ["#portfolio > h1", "abajo 500ms ease forwards"],
+        ],
+        // Contact section
+        [
+          ["#contact h1", "abajo 500ms ease forwards"],
+          ["#contact h6", "abajo 500ms ease 300ms forwards"],
+          ["#contact > div > div.contact-left > p", "aparecer 500ms ease forwards"],
+          ["#contact > div > div.contact-left > div.email", "toRight 1200ms ease forwards"],
+          ["#contact > div > div.contact-left > div.whatsapp", "toRight 1200ms ease 500ms forwards"],
+          ["#contact > div > div.contact-right > p", "aparecer 500ms ease forwards"],
+          ["#contact > div > div.contact-right > div.mail-input", "toIzq 1200ms ease forwards "],
+          ["#contact > div > div.contact-right > div.textarea-input", "toIzq 1200ms ease 500ms forwards"],
+          ["#contact > div > div.contact-right > div.botonEnviar", "arriba 500ms ease 1300ms forwards"],
+        ],
+        // Footer section
+        [
+          [".footer > p.footer-name", "aparecer 500ms ease forwards"],
+        ],
+      ].flat();
+
+      animList.forEach(([selector, animation]) => {
+        anim(selector, animation);
+      });
+    }
+    function scrollVentana() {
+      const animList = [
+        ["#about > div.titulo > h3", "abajo 500ms ease-in forwards"],
+        ["#about > div.titulo > p", "abajo 800ms forwards"],
+        ["#about > div.about-container > div.container-left", "aparecer 400ms ease-in 500ms forwards"],
+        ["#about > div.about-container > div.container-right > div.right-texto", "arriba 500ms ease-in forwards"],
+        ["#about > div.about-container > div.container-right > a", "arriba 500ms ease-in 500ms forwards"],
+        ["#about > div.about-container > div.container-right > div.iconos > div:nth-child(1)", "abajo 500ms ease-in 200ms forwards"],
+        ["#about > div.about-container > div.container-right > div.iconos > div:nth-child(2)", "abajo 500ms ease-in forwards"],
+        ["#about > div.about-container > div.container-right > div.iconos > div:nth-child(3)", "abajo 500ms ease-in 200ms forwards"],
+        ["#skills > span > div.container-texto", "abajo 500ms ease-in forwards"],
+        ["#skills > span", "aparecer 500ms ease forwards"],
+        ["#skills > span > div.sol", "aparecer 500ms ease 500ms forwards"],
+        ["#skills > span > div:nth-child(3)", "aparecer 500ms ease 800ms forwards"],
+        ["#portfolio > h1", "abajo 500ms ease forwards"],
+        ["#portfolio > div > div:nth-child(1)", "aparecer 500ms ease 200ms forwards"],
+        ["#portfolio > div > div:nth-child(2)", "aparecer 500ms ease 400ms forwards"],
+        ["#portfolio > div > div:nth-child(3)", "aparecer 500ms ease 600ms forwards"],
+        ["#portfolio > div > div:nth-child(4)", "aparecer 500ms ease 800ms forwards"],
+        ["#portfolio > div > div:nth-child(5)", "aparecer 500ms ease 1000ms forwards"],
+        ["#portfolio > div > div:nth-child(6)", "aparecer 500ms ease 1000ms forwards"],
+        ["#contact h1", "abajo 500ms ease forwards"],
+        ["#contact h6", "abajo 500ms ease 300ms forwards"],
+        ["#contact > div > div.contact-left > p", "aparecer 500ms ease forwards"],
+        ["#contact > div > div.contact-left > div.email", "toRight 1200ms ease forwards"],
+        ["#contact > div > div.contact-left > div.whatsapp", "toRight 1200ms ease 500ms forwards"],
+        ["#contact > div > div.contact-right > p", "aparecer 500ms ease forwards"],
+        ["#contact > div > div.contact-right > div.mail-input", "toIzq 1200ms ease forwards "],
+        ["#contact > div > div.contact-right > div.textarea-input", "toIzq 1200ms ease 500ms forwards"],
+        ["#contact > div > div.contact-right > div.botonEnviar", "arriba 500ms ease 1300ms forwards"],
+        [".footer > p.footer-name", "aparecer 500ms ease forwards"],
+        [".footer > div > div:nth-child(1)", "arriba 500ms ease 300ms forwards"],
+        [".footer > div > div:nth-child(2)", "arriba 500ms ease 600ms forwards"],
+        [".footer > div > div:nth-child(3)", "arriba 500ms ease 800ms forwards"],
+      ];
+      for (let i = 0; i < animList.length; i++) {
+        const [selector, animation] = animList[i];
+        anim(selector, animation);
+      }
     }
 
     let intervalo;
