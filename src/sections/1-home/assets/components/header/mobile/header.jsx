@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ContextGlobal } from "../../../../../../App.jsx";
 import "./header.scss"
 import { HomeIcon, AboutIcon, SkillsIcon, PortfolioIcon, ContactIcon } from "../icons/icons.jsx";
-
+import { IconPerfil } from "./iconPerfil/iconPerfil.jsx";
 
 
 const MobileNavItems_for_Header = ({ data }) => {
@@ -90,6 +90,9 @@ function HeaderMenu() {
 }
 
 
+
+
+
 function MobileNavHeader() {
     const { openMenu, setOpenMenu } = useContext(ContextGlobal);
 
@@ -102,6 +105,9 @@ function MobileNavHeader() {
     return (
 
         <div className="navMobile botonHeader">
+
+            <IconPerfil />
+
             <div className="botonReal" onClick={clickBotonMenu}>
                 <span></span>
                 <span></span>
