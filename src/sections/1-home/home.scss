@@ -73,7 +73,9 @@ div.about-container>div.container-right>.cv {
 .right-texto .texto-nombre {
   font-size: 60px;
 
-  @media (max-width: 900px) {}
+  @media (max-width: 900px) {
+    font-size:40px;
+  }
 }
 
 .texto-dev {
