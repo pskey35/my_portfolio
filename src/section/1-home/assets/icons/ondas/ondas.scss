@@ -1,0 +1,211 @@
+
+
+
+.ondas {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.ondas svg {
+  fill: rgb(30, 135, 255);
+  width: 100%;
+  transform: rotate(180deg);
+  display: block;
+  height: 270px;
+
+  @media(max-width:900px) {
+    height: 220px;
+
+  }
+}
+
+
+/*-------------------------CIRCLES---------------------*/
+//Esto se importa en home_Page.jsx
+.circles {
+  background: rgb(16, 17, 19);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120%;
+  width: 100%;
+  z-index: 1;
+}
+
+.circles li {
+  background: rgb(0, 174, 255);
+  width: 40px;
+}
+
+.circles li:nth-child(1) {
+  height: 150px;
+  width: 150px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  animation: anim1 15s linear infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  filter: blur(10px);
+  opacity: 0;
+}
+
+.circles li:nth-child(2) {
+  height: 30px;
+  width: 30px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 30vw;
+  animation: anim1 10s ease-in infinite;
+  animation-delay: 3s;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  filter: blur(10px);
+  opacity: 0;
+}
+
+.circles li:nth-child(3) {
+  height: 120px;
+  width: 120px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 45vw;
+  animation: anim1 7s linear infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  filter: blur(10px);
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+.circles li:nth-child(4) {
+  height: 100px;
+  width: 100px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 90vw;
+  animation-delay: 15s;
+  animation: anim1 20s linear infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  filter: blur(10px);
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+.circles li:nth-child(5) {
+  height: 50px;
+  width: 50px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 80vw;
+  animation-delay: 3s;
+  animation: anim1 10s linear infinite;
+  border-radius: 60% 40%;
+  filter: blur(10px);
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.circles li:nth-child(6) {
+  height: 75px;
+  width: 75px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 70vw;
+  animation-delay: 3s;
+  animation: anim1 15s linear infinite;
+  border-radius: 60% 40%;
+  filter: blur(10px);
+  animation-delay: 25s;
+  opacity: 0;
+}
+
+.circles li:nth-child(7) {
+  height: 125px;
+  width: 125px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 10vw;
+  animation-delay: 3s;
+  animation: anim1 30s linear infinite;
+  border-radius: 60% 40%;
+  filter: blur(10px);
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+.circles li:nth-child(8) {
+  height: 80px;
+  width: 80px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 60vw;
+  animation-delay: 3s;
+  animation: anim1 30s linear infinite;
+  border-radius: 60% 40%;
+  filter: blur(10px);
+  animation-delay: 10s;
+  opacity: 0;
+}
+
+.circles li:nth-child(9) {
+  height: 25px;
+  width: 25px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 10vw;
+  animation-delay: 3s;
+  animation: anim1 30s linear infinite;
+  border-radius: 60% 40%;
+  filter: blur(10px);
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.circles li:nth-child(10) {
+  height: 35px;
+  width: 35px;
+  background: rgb(0, 174, 255);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 90vw;
+  animation-delay: 3s;
+  animation: anim1 30s linear infinite;
+  border-radius: 60% 40%;
+  filter: blur(10px);
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+
+@keyframes profile {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 40%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}

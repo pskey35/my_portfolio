@@ -1,0 +1,96 @@
+$images: (
+    image1: url('../images/css3.svg'),
+    image2: url('../images/flask.png'),
+    image3: url('../images/github.svg'),
+    image4: url('../images/graphql.svg'),
+    image5: url('../images/js.svg'),
+    image6: url('../images/mysql.svg'),
+    image7: url('../images/nextjs.svg'),
+    image8: url('../images/react.svg'),
+    image9: url('../images/sass.svg'),
+    image10: url('../images/shopify.svg'),
+    image11:url("../images/tailwind.svg"),
+    image12:url("../images/AWS.png"),
+    image13:url("../images/Kubernetes.png"),
+    image14:url("../images/v8.png"),
+    image15:url("../images/linux.svg")
+);
+
+
+#skills>span>div.circulo>span {
+    @for $i from 1 through length($images) {
+        $key: image#{$i}; // genera image1, image2...
+        background-image: null; // previene fallback
+
+        &:nth-child(#{$i}) {
+            background-image: map-get($images, $key);
+        }
+    }
+
+
+
+    @media (min-width: 768px) {
+        width: 85px;
+        height: 80px;
+        border-radius: 20%;
+    }
+
+    @media (min-width: 1280px) {
+        width: 105px;
+        height: 125px;
+        border-radius: 20%;
+    }
+}
+
+#skills>span>div.sol {
+    @media (min-width: 768px) {
+        width: 570px;
+        height: 570px;
+        background: radial-gradient(circle at center, rgb(0, 0, 0) 0%, rgba(27, 27, 27, 0.137) 40%, rgb(219, 210, 255) 100%);
+        box-shadow:  inset 5px 6px 65px #ffffff,
+  inset 36px 109px 61px #ff00ff,
+  inset 152px 0 27px #4dcbcb9e,
+  inset 20px 0 300px #ff00ff,
+  182px 0 250px #00ffffb8,
+  0 0 23px #ffffff,
+  26px 35px 139px #ff00ff,
+  59px 0 -48px #00ffff;
+    }
+
+
+}
+
+
+
+#skills>span>div.circulo {
+
+    @media (min-width:768px) {
+        background: radial-gradient(circle at center, #437fd9a1 0%,
+                /* Núcleo morado profundo */
+                #a73ab329 30%,
+                /* Fusión morado claro */
+                #6d00ff59 55%,
+                /* Iones violeta */
+                #00ffff1f 75%,
+                /* Iones azul */
+                rgba(255, 255, 255, 0.1) 95%
+                /* Espejismo neblinoso */
+            );
+        circle-path: circle(50% at 50% 50%);
+        border-radius: 50%;
+        width: 170px !important;
+        height: 180px !important;
+    }
+
+}
+
+
+#skills>span>div.container-texto {
+    @media (min-width: 768px) {
+
+        position: relative;
+        top: -22vh;
+        font-size: 55px;
+
+    }
+}

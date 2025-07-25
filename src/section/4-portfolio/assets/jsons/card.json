@@ -1,0 +1,50 @@
+[
+  {
+    "id": "card-1",
+    "linkWeb": "https://eccomerce-jayme.vercel.app",
+    "title": "Ecommerce Leaf",
+    "image": "/images-portfolio/eccomerce.png",
+    "github": null,
+    "description": "Leaft is your online destination for purchasing electronics, accessories, etc. We focus on offering high quality products at competitive prices, with a fast, safe and simple purchasing experience. For this application I have used Next js as a development environment"
+  },
+  {
+    "id": "card-2",
+    "linkWeb": "https://lebasi-client.vercel.app/",
+    "title": "Lebasi suplementos",
+    "image": "/images-portfolio/lebasi.png",
+    "github": "https://github.com/pskey35/lebasi.git",
+    "description": "Lebasi is a website that offers a wide variety of nutritional supplements, including proteins, vitamins, minerals, amino acids, and more. The site is designed to provide users with an easy and convenient way to purchase high-quality supplements"
+  },
+  {
+    "id": "card-3",
+    "linkWeb": "https://youtube-clone-ruddy-iota.vercel.app",
+    "title": "Youtube Clone",
+    "image": "/images-portfolio/youtube.png",
+    "github": "https://github.com/pskey35/youtubeClone",
+    "description": "It's an incredible platform that will allow you to enjoy your favorite videos, discover new content, and connect with a passionate community of creators. It is a perfect option if you are looking for a simple and direct experience to watch your favorite videos and discover new content. This application is a clone of YouTube made in react js"
+  },
+  {
+    "id": "card-4",
+    "linkWeb": "https://galy.vercel.app/",
+    "title": "Galy social media",
+    "image": "/images-portfolio/galy.png",
+    "github": null,
+    "description": "This website simulates the experience of being a real hacker, where each letter you type executes commands as if you were in a terminal. On this website, users will be able to immerse themselves in the exciting world of computer hacking safely and legally. The interface has been designed to simulate a command line terminal, with a retro style and visual elements that evoke the atmosphere of a hacker environment"
+  },
+  {
+    "id": "card-5",
+    "linkWeb": "https://hacker-simulator.vercel.app",
+    "title": "Hacker parody",
+    "image": "/images-portfolio/dog-parody.png",
+    "github": "https://github.com/pskey35/hacker-simulator",
+    "description": "This website simulates the experience of being a real hacker, where each letter you type executes commands as if you were in a terminal. On this website, users will be able to immerse themselves in the exciting world of computer hacking safely and legally. The interface has been designed to simulate a command line terminal, with a retro style and visual elements that evoke the atmosphere of a hacker environment"
+  },
+  {
+    "id": "card-6",
+    "linkWeb": "https://www.muebleslaliz.com/",
+    "title": "Laliz web",
+    "github": "https://www.muebleslaliz.com/",
+    "image": "/images-portfolio/laliz-muebles.png",
+    "description": "I designed and developed a modern online store for Muebles LaLiz, focused on delivering a visually appealing and highly functional user experience. The goal was to create an intuitive platform where customers could easily discover and purchase high-quality furniture The website stands out for its clean design, strategic use of color, bold typography, and a well-structured layout."
+  }
+]
