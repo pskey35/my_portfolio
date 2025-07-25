@@ -1,7 +1,9 @@
+//esto aun no lo usare
 import "./rightContent.scss"
 import { IconSaludoMobile, IconSaludoDesktop } from "../assets/icons/saludo.jsx";
 import RightImage from "../assets/icons/rightImage/rightImage.jsx";
 import IconKnowMore from "../assets/icons/know_more.jsx";
+import { useEffect } from "react";
 
 
 const Button_Redirecto_to_About = () => {
@@ -19,6 +21,7 @@ const Button_Redirecto_to_About = () => {
 }
 
 export default function RightContent() {
+ 
     return (
         <div className="right">
             <div className="right-texto">

@@ -9,29 +9,12 @@ import OndasCircles from "./assets/icons/ondas/ondas.jsx";
 import Button_Github from "./assets/Buttons/Button_github.jsx";
 import Button_Linkedin from "./assets/Buttons/Button_linkedin.jsx";
 import Button_Whatsapp from "./assets/Buttons/Button_whatsapp.jsx";
-import IconKnowMore from "./assets/icons/know_more.jsx";
-import {IconSaludoMobile, IconSaludoDesktop} from "./assets/icons/saludo.jsx";
 
-import RightImage from "./assets/icons/rightImage/rightImage.jsx";
+import RightContent from "./rightContent/rightContent.jsx";
 
 
 
 
-
-
-const Button_Redirecto_to_About = () => {
-
-  return (
-    <a href="#about">
-      <div className="texto-boton">
-        <span className="more">Know more</span>
-        <span className="icon">
-          <IconKnowMore></IconKnowMore>
-        </span>
-      </div>
-    </a>
-  )
-}
 
 
 
@@ -40,6 +23,8 @@ function HomeContent() {
 
   return (
     <div className="home" id="home">
+
+      {/* aqui en left solo van los de left*/}
       <div className="left">
 
         <Button_Github height="30px" width="30px"
@@ -67,34 +52,15 @@ function HomeContent() {
 
 
       </div>
-      <div className="right">
-        <div className="right-texto">
-          <p className="texto-nombre">
-            <span>Jayme Ln</span>
-            <IconSaludoDesktop width="36px" height="36px"></IconSaludoDesktop> 
-            <IconSaludoMobile width="36px" height="36px"></IconSaludoMobile>
-          </p>
-          <div className="texto-dev">
-            <span className="linea"></span>
-            <span className="front">Front-end Developer</span>
-          </div>
-          <p className="texto-dev2">
-            Hey there! im jayme Ln, a Front-end Developer
-          </p>
+      <RightContent></RightContent>
 
-          <Button_Redirecto_to_About></Button_Redirecto_to_About>
-
-        </div>
-
-        <RightImage></RightImage>
-      </div>
     </div>
   )
 }
 
 
 export default function Home() {
- 
+
 
   return (
     <>
