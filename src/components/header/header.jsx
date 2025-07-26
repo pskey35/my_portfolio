@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react"
-import { ContextGlobal } from "../../../../App.jsx"
+import { ContextGlobal } from "../../App.jsx"
 import "./header.scss"
 import MobileNavHeader from "./mobile/header.jsx";
 import DesktopNavHeader from "./desktop/header.jsx";

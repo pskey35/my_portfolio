@@ -1,4 +1,4 @@
-import Header from "./assets/header/header.jsx"
+import Header from "../../components/header/header.jsx"
 import "./assets/icons/ondas/ondas.scss";
 import "./home.scss";
 

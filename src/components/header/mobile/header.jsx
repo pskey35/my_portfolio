@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ContextGlobal } from "../../../../../App.jsx";
+import { ContextGlobal } from "../../../App.jsx";
 import "./header.scss"
 import { HomeIcon, AboutIcon, SkillsIcon, PortfolioIcon, ContactIcon } from "../icons/icons.jsx";
 import { IconPerfil } from "./iconPerfil/iconPerfil.jsx";
