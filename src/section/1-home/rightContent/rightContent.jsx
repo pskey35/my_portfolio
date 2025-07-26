@@ -2,23 +2,8 @@
 import "./rightContent.scss"
 import { IconSaludoMobile, IconSaludoDesktop } from "../assets/icons/saludo.jsx";
 import RightImage from "../assets/icons/rightImage/rightImage.jsx";
-import IconKnowMore from "../assets/icons/know_more.jsx";
-import { useEffect } from "react";
-
-
-const Button_Redirecto_to_About = () => {
-
-  return (
-    <a href="#about">
-      <div className="texto-boton">
-        <span className="more">Know more</span>
-        <span className="icon">
-          <IconKnowMore></IconKnowMore>
-        </span>
-      </div>
-    </a>
-  )
-}
+import KnowMoreButton from "../../../components/KnowMoreButton.jsx";
+import { motion } from "framer-motion";
 
 export default function RightContent() {
  
@@ -38,11 +23,11 @@ export default function RightContent() {
                     Hey there! im jayme Ln, a Front-end Developer
                 </p>
 
-                <Button_Redirecto_to_About></Button_Redirecto_to_About>
+                <KnowMoreButton />
 
             </div>
 
-            <RightImage></RightImage>
+            <RightImage />
         </div>
     )
 }
