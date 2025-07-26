@@ -1,4 +1,4 @@
-import "./assets/styles/styles.scss"
+import "./portfolio_Page.scss"
 import GitHub_Icon from "./assets/icons/github";
 import Cards from "./assets/jsons/card.json";
 

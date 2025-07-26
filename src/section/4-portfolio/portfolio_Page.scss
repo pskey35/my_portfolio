@@ -4,7 +4,6 @@
 }
 
 .portfolio-container h1 {
-    opacity: 0;
     margin-bottom: 20px;
 }
 
@@ -28,9 +27,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    opacity: 0;
     background: #2a2c2f;
-    opacity: 0;
 
 
     &>.caja-content {

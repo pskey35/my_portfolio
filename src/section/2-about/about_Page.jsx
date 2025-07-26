@@ -1,10 +1,11 @@
 import React from 'react';
-import "./assets/about_Page.scss";
-import ExperienceBlock from "./components/About/ExperienceBlock";
-import WorkBlock from "./components/About/WorkBlock";
-import CarryBlock from "./components/About/CarryBlock";
-import ViewCVButton from "./components/About/ViewCVButton";
-import AboutImage from "./components/About/AboutImage";
+import "./about_Page.scss";
+import ExperienceBlock from "./components/ExperienceBlock";
+import WorkBlock from "./components/WorkBlock";
+import CarryBlock from "./components/CarryBlock";
+import ViewCVButton from "./components/ViewCVButton";
+import AboutImage from "./components/AboutImage";
+import CvModal from "./CV-modal";
 
 const About = () => {
   return (

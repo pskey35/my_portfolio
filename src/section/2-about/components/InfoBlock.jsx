@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 const InfoBlock = ({ icon, title, subtitle, description, className = '' }) => {
@@ -18,12 +18,5 @@ const InfoBlock = ({ icon, title, subtitle, description, className = '' }) => {
   );
 };
 
-InfoBlock.propTypes = {
-  icon: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  className: PropTypes.string
-};
 
 export default InfoBlock;

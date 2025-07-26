@@ -28,7 +28,8 @@ body {
   background: rgb(16, 17, 19);
   width: 100%;
   position: relative;
-  height: 100%;
+  min-height: 100%; /* Cambiado de height a min-height para permitir que el contenido se expanda */
+  overflow: visible; /* Asegura que el contenido que se desborda sea visible */
 }
 
 body::-webkit-scrollbar {
@@ -37,12 +38,14 @@ body::-webkit-scrollbar {
 }
 
 .foot {
-  position: fixed;
+  /* Comentado temporalmente para probar si es lo que está cubriendo las secciones */
+  /* position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
+  z-index: 1000; */
+  display: none; /* Ocultar temporalmente para probar */
 }
 
 body::-webkit-scrollbar-button {
@@ -102,11 +105,11 @@ body::-webkit-scrollbar-thumb:hover {
 .about .titulo h3 {
   color: rgb(251, 255, 255);
   font-size: 40px;
-  opacity: 0;
+  
 }
 
 .about .titulo p {
-  opacity: 0;
+ 
 
   @media (max-width: 900px) {
     display: none;
@@ -134,7 +137,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 40px;
   position: relative;
   bottom: 70px;
-  opacity: 0;
+  
 }
 
 
@@ -164,7 +167,7 @@ body::-webkit-scrollbar-thumb:hover {
   left: 0;
   right: 0;
   margin: auto;
-  opacity: 0;
+  
 }
 
 .sol {
@@ -183,12 +186,10 @@ body::-webkit-scrollbar-thumb:hover {
   left: 0;
   right: 0;
   margin: auto;
-  opacity: 0;
+
 }
 
-.circulo {
-  opacity: 0;
-}
+
 
 .circulo .items {
   background-repeat: no-repeat;
@@ -331,13 +332,9 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   padding-top: 80px;
 }
 
-.contact-container h1 {
-  opacity: 0;
-}
 
-.contact-container h6 {
-  opacity: 0;
-}
+
+
 
 .contact {
   display: flex;
@@ -350,7 +347,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 .contact .contact-left>p {
   margin-bottom: 20px;
-  opacity: 0;
+ 
 }
 
 .contact .contact-left .email {
@@ -363,7 +360,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   border-radius: 10px;
   border: 2px solid rgb(0 82 150);
   margin-bottom: 20px;
-  opacity: 0;
+  
 }
 
 .contact .contact-left .email .email-image {
@@ -406,7 +403,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   border-radius: 10px;
   border: 2px solid rgb(0 82 150);
   margin-bottom: 20px;
-  opacity: 0;
+
 }
 
 .contact .contact-left .whatsapp .whatsapp-image {
@@ -454,7 +451,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 .contact-right>p {
   margin-bottom: 20px;
-  opacity: 0;
+
 }
 
 .contact-right .mail-input {
@@ -464,7 +461,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   width: 300px;
   margin-bottom: 20px;
   width: 340px;
-  opacity: 0;
+
 
   background: rgb(17 17 17);
   border: 2px solid rgb(0 82 150);
@@ -491,7 +488,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 .contact-right .textarea-input {
   position: relative;
-  opacity: 0;
+
   margin-bottom: 40px;
 }
 
@@ -530,7 +527,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   border-radius: 10px;
   transition: background-color 0.7s ease;
   cursor: pointer;
-  opacity: 0;
+
   width: 207px;
   height: 57px;
   display: flex;
@@ -583,7 +580,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     left: 26px;
     width: 0;
     height: 0;
-    opacity: 0;
+  
   }
 
   4.9% {
@@ -591,7 +588,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     left: 26px;
     width: 0;
     height: 0;
-    opacity: 0;
+  
   }
 
   5% {
@@ -607,7 +604,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     left: 0px;
     width: 52px;
     height: 52px;
-    opacity: 0;
+  
   }
 }
 
@@ -675,7 +672,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   z-index: 10;
   font-size: 30px;
   font-weight: 800;
-  opacity: 0;
+
 }
 
 .footer-list {
@@ -691,7 +688,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0;
+
 }
 
 .footer .copyright {
@@ -762,7 +759,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes fade-li {
   0% {
-    opacity: 0;
+  
     top: -3px;
   }
 
@@ -779,7 +776,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 /*animaciones para mostrar al hacer scroll*/
 @keyframes arriba {
   0% {
-    opacity: 0;
+  
     transform: translateY(50%);
   }
 
@@ -791,7 +788,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes abajo {
   0% {
-    opacity: 0;
+  
     transform: translateY(-50%);
   }
 
@@ -803,7 +800,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes toRight {
   0% {
-    opacity: 0;
+  
     transform: translateX(-50%);
   }
 
@@ -815,7 +812,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes toIzq {
   0% {
-    opacity: 0;
+  
     transform: translateX(30%);
   }
 
@@ -827,7 +824,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes aparecer {
   0% {
-    opacity: 0;
+  
   }
 
   100% {
@@ -837,7 +834,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes anim1 {
   0% {
-    opacity: 0;
+  
     transform: rotate(0deg);
     bottom: 0;
   }
@@ -983,7 +980,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
     height: 95%;
     max-height: 600px;
     position: relative;
-    opacity: 0;
+  
     transform: scale(0.5);
     border-radius: 15px;
     // overflow: hidden;
@@ -1160,7 +1157,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
 
 @keyframes fadeCV {
   0% {
-    opacity: 0;
+  
     transform: scale(0.5);
     // border-radius: 15px;
     //   overflow: hidden;
@@ -1181,35 +1178,7 @@ div.iconos>div:nth-child(3)>p:nth-child(3) {
   }
 
   80% {
-    opacity: 0;
+  
     transform: scale(0.95);
   }
-}
-
-/*----segundo portafolio---------*/
-#otro {}
-
-#otro .header {
-  opacity: 1;
-}
-
-
-
-
-::selection {
-  background: #0072ff;
-  color: #ececec
-}
-
-
-
-//esto bloquea todo la ventana en caso de que abra
-//la devtools de google
-.what_are_you_doing {
-  z-index: 99999;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
 }

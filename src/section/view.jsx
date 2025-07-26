@@ -1,8 +1,3 @@
-import { useState, useContext,useEffect} from "react"
-import { ContextGlobal } from "../App.jsx";
-import {anim} from "./1-home/animacion.jsx"
-import { homeAnimList } from "./page/homeAnimations.js";
-import { scrollAnimList } from "./page/scrollAnimations.js";
 
 
 import Home from "./1-home/home_Page.jsx";
@@ -13,9 +8,9 @@ import Skills from "./3-skills/skills_Page.jsx";
 import Portfolio from "./4-portfolio/portfolio_Page.jsx";
 import Contact from "./5-contact/contact_Page.jsx";
 import Footer from "./6-footer/footer_Page.jsx";
-import { useHomeAnimations } from "./hooks/useHomeAnimations.js";
-import { useScrollAnimations } from "./hooks/useScrollAnimations.js";
-
+import { useHomeAnimations } from "./hooks/useHomeAnimation.js";
+import { useScrollAnimations } from "./hooks/useScrollAnimation.js";
+import "./view.scss"
   //aqui solo se muestra la vista 1
 
 export default function View({ boleano }) {

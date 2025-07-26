@@ -1,4 +1,4 @@
-import { IconWork } from "./icons";
+import { IconWork } from "../assets/icons";
 import InfoBlock from "./InfoBlock";
 
 const WorkBlock = () => {
