@@ -5,7 +5,6 @@ import WorkBlock from "./components/WorkBlock";
 import CarryBlock from "./components/CarryBlock";
 import ViewCVButton from "./components/ViewCVButton";
 import AboutImage from "./components/AboutImage";
-import CvModal from "./CV-modal";
 
 const About = () => {
   return (

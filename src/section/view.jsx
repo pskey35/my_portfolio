@@ -2,7 +2,7 @@
 
 import Home from "./1-home/home_Page.jsx";
 import About from "./2-about/about_Page.jsx";
-import CvModal from "./2-about/CV-modal.jsx";
+import CvModal from "../components/CV-modal/CV-modal__init.jsx";
 import Skills from "./3-skills/skills_Page.jsx";
 
 import Portfolio from "./4-portfolio/portfolio_Page.jsx";
