@@ -1,0 +1,78 @@
+/* Base styles for the modal */
+.cv-modal {
+  --modal-bg: rgba(255, 255, 255, 0.1);
+  --modal-backdrop: rgba(0, 0, 0, 0.8);
+  --modal-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+/* Print styles */
+@media print {
+  .cv-modal * {
+    display: none !important;
+  }
+  
+  .cv-modal .cv-image {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cv-modal .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .cv-modal .modal-actions {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Smooth scrolling for modal content */
+.cv-modal .modal-scroll-content {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.cv-modal *:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading state */
+.cv-modal .loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Error state */
+.cv-modal .error-message {
+  color: #ef4444;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+}
