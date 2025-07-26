@@ -6,6 +6,9 @@ import "./home.scss";
 //icons - buttons
 //import OndasCircles from "./assets/icons/ondas.jsx";
 import OndasCircles from "./assets/icons/ondas/ondas.jsx";
+
+
+//mira aqui hay 3 botones agregales bonitos diseños con framer motion
 import Button_Github from "./assets/Buttons/Button_github.jsx";
 import Button_Linkedin from "./assets/Buttons/Button_linkedin.jsx";
 import Button_Whatsapp from "./assets/Buttons/Button_whatsapp.jsx";
