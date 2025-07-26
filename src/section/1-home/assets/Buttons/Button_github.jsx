@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import "./buttons.scss";
+
 const Button_Github = ({ height = '30px', width = '30px', to }) => {
   const [isHovered, setIsHovered] = useState(false);
 
