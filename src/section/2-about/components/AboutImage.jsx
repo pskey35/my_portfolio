@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import perfilImage from "../assets/image/jaymeAlejoLino.jpg";
-import './AboutImage.css';
+import './AboutImage.scss';
 
 const AboutImage = () => {
   const imageRef = useRef(null);
@@ -48,7 +48,7 @@ const AboutImage = () => {
       </div>
       <div className="about__info">
         <h3 className="about__name">Jayme Ln</h3>
-        <p className="about__role">Full Stack Developer</p>
+        <p className="about__role">Developer</p>
       </div>
     </div>
   );

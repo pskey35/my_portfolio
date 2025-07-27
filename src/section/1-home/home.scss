@@ -126,24 +126,19 @@ div.about-container>div.container-right>.cv {
   transition: background-color 0.3s;
   position: relative;
   overflow: hidden;
+  text-decoration:none;
 
+  .more {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .icon {
+    position: relative;
+    z-index: 10;
+  }
 }
 
-/*
-  .right-texto .texto-boton::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
-    height: 180px;
-    width: 30px;
-    background: linear-gradient(lightblue, white);
-    animation: bordes 4s ease-in infinite;
-    z-index: 1;
-  }*/
 
 .right-texto .texto-boton::after {
   content: "";
@@ -165,15 +160,6 @@ div.about-container>div.container-right>.cv {
   }
 }
 
-.texto-boton .more {
-  position: relative;
-  z-index: 10;
-}
-
-.texto-boton .icon {
-  position: relative;
-  z-index: 10;
-}
 
 .right-texto .texto-boton .icon {
   margin-left: 4px;

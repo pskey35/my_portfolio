@@ -4,6 +4,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
+// WhatsApp brand colors
+const whatsappGreen = '#25D366';
+const whatsappDarkGreen = '#128C7E';
+
 
 const WhatsAppSVG = ({ isHovered, fill, width, height }) => {
   return (
@@ -52,9 +56,7 @@ const Button_WhatsApp = ({ width = '45px', height = '45px', fill = 'currentColor
   const [isHovered, setIsHovered] = useState(false);
   const [ripples, setRipples] = useState([]);
 
-  // WhatsApp brand color
-  const whatsappGreen = '#25D366';
-  const whatsappDarkGreen = '#128C7E';
+  // WhatsApp brand colors are now defined at the top of the file
 
   // Handle ripple effect on click
   const handleClick = (e) => {

@@ -1,10 +1,9 @@
 // Main About Section
 .about {
   padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   color: #fff;
-  margin-top:12rem;
+  margin-top: 12rem;
+  width: 100%;
 
   &__header {
     text-align: center;
@@ -32,6 +31,7 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  width: 100%;
   margin-top: 2rem;
 
   @media (max-width: 768px) {
@@ -48,7 +48,7 @@
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
 }
-
+/*
 .about__image-wrapper {
   width: 100%;
   height: 480px;
@@ -56,21 +56,21 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 30px rgba(11, 131, 255, 0.3);
-  
+
   @media (max-width: 768px) {
     height: 300px;
     max-width: 300px;
     margin: 0 auto;
   }
 }
-
+*/
 .about__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: scale(1.02);
   }
@@ -85,6 +85,8 @@
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: #fff;
+
+
 }
 
 .about__role {
@@ -96,7 +98,7 @@
 // Details Section
 .about__details {
   flex: 1;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 .about__stats {
@@ -104,7 +106,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -115,6 +117,11 @@
   line-height: 1.7;
   margin-bottom: 2rem;
   color: #d1d5db;
+  margin: 0 10%;
+
+  @media (max-width:700px) {
+    margin: 0;
+  }
 }
 
 .about__actions {
@@ -131,12 +138,12 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(11, 131, 255, 0.2);
   }
-  
+
   &__icon {
     width: 50px;
     height: 50px;
@@ -147,19 +154,19 @@
     background: rgba(11, 131, 255, 0.1);
     border-radius: 50%;
   }
-  
+
   &__title {
     font-size: 1.1rem;
     margin: 0.5rem 0;
     color: #fff;
   }
-  
+
   &__subtitle {
     font-size: 0.9rem;
     color: #8f9ba8;
     margin: 0.25rem 0;
   }
-  
+
   &__description {
     font-size: 0.9rem;
     color: #d1d5db;
@@ -185,13 +192,13 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    
+
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(11, 131, 255, 0.4);
       padding-right: 2rem;
     }
-    
+
     &::after {
       content: '→';
       position: absolute;
@@ -199,13 +206,13 @@
       opacity: 0;
       transition: all 0.3s ease;
     }
-    
+
     &:hover::after {
       opacity: 1;
       right: 1rem;
     }
   }
-  
+
   &__icon {
     width: 24px;
     height: 24px;
@@ -220,6 +227,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -231,6 +239,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

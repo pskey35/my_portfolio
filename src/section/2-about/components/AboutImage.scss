@@ -20,19 +20,19 @@
 @keyframes bubble {
   0% {
     border-radius: 50% 50% 30% 70%/60% 40% 60% 40%;
-    outline-color: rgb(85, 113, 255); /* Sky blue */
+    outline-color: rgb(29, 67, 255); /* Sky blue */
   }
   33% {
     border-radius: 40% 60% 40% 60%/60% 40% 60% 40%;
-    outline-color: #B0E0E6; /* Powder blue */
+    outline-color: rgb(51, 74, 188); /* Powder blue */
   }
   66% {
     border-radius: 60% 40% 60% 40%/50% 50% 50% 50%;
-    outline-color: #077dff; /* Light blue */
+    outline-color: rgb(0, 42, 255); /* Light blue */
   }
   100% {
     border-radius: 50% 50% 30% 70%/60% 40% 60% 40%;
-    outline-color: #077dff; /* Sky blue */
+    outline-color: rgb(44, 74, 221); /* Sky blue */
   }
 }
 
@@ -49,13 +49,18 @@
 
 /* Ensure the image container is circular */
 .about__image-wrapper {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   padding: 5px; /* Add some space for the outline */
+
+  @media(max-width:700px){
+    width:170px;
+    height:170px;
+  }
 }
 
 /* Add a subtle glow effect */
