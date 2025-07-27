@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react';
 import perfilImage from "../assets/image/jaymeAlejoLino.jpg";
+import './AboutImage.css';
 
 const AboutImage = () => {
   const imageRef = useRef(null);
+  const bubbleRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -10,6 +12,10 @@ const AboutImage = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.style.animation = "goUp 140ms ease forwards";
+            // Start bubble animation when image is in view
+            if (bubbleRef.current) {
+              bubbleRef.current.style.animation = "bubble 6s ease-in-out infinite";
+            }
           } else {
             entry.target.style.opacity = "1";
           }
@@ -32,11 +38,13 @@ const AboutImage = () => {
   return (
     <div className="about__image-container">
       <div className="about__image-wrapper" ref={imageRef}>
-        <img 
-          src={perfilImage} 
-          alt="Jayme Alejo Lino" 
-          className="about__image"
-        />
+        <div className="bubble-effect" ref={bubbleRef}>
+          <img 
+            src={perfilImage} 
+            alt="Jayme Alejo Lino" 
+            className="about__image"
+          />
+        </div>
       </div>
       <div className="about__info">
         <h3 className="about__name">Jayme Ln</h3>

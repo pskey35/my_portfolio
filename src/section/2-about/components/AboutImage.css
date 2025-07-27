@@ -1,0 +1,73 @@
+.bubble-effect {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 5px solid #077dff; /* Sky blue outline */
+  transition: transform 0.3s ease, outline-color 0.3s ease;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Enhanced Bubble animation */
+@keyframes bubble {
+  0% {
+    border-radius: 50% 50% 30% 70%/60% 40% 60% 40%;
+    outline-color: rgb(85, 113, 255); /* Sky blue */
+  }
+  33% {
+    border-radius: 40% 60% 40% 60%/60% 40% 60% 40%;
+    outline-color: #B0E0E6; /* Powder blue */
+  }
+  66% {
+    border-radius: 60% 40% 60% 40%/50% 50% 50% 50%;
+    outline-color: #077dff; /* Light blue */
+  }
+  100% {
+    border-radius: 50% 50% 30% 70%/60% 40% 60% 40%;
+    outline-color: #077dff; /* Sky blue */
+  }
+}
+
+/* Hover effects */
+.about__image-wrapper:hover .bubble-effect {
+  transform: scale(1.05);
+  outline-width: 3px;
+  outline-color: #00BFFF; /* Deeper sky blue on hover */
+}
+
+.about__image-wrapper:hover .about__image {
+  transform: scale(1.02);
+}
+
+/* Ensure the image container is circular */
+.about__image-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 5px; /* Add some space for the outline */
+}
+
+/* Add a subtle glow effect */
+.about__image-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0.4;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
