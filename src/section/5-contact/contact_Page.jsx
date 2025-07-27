@@ -23,8 +23,8 @@ function Contact_CONTEXT() {
     return (
         <div className="contact-container" id="contact">
 
-            <h1>Contact me</h1>
-            <h6>get in touch</h6>
+            <h2>Contact me</h2>
+            <h7>get in touch</h7>
 
 
             <div className="contact">

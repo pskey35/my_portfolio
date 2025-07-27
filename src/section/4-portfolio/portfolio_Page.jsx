@@ -54,7 +54,8 @@ function Portfolio() {
 
   return (
     <div className="portfolio-container" id="portfolio">
-      <h1>Portfolio</h1>
+      <h2>Portfolio</h2>
+      <h7>My projects</h7>
       <div className="portfolio">
         {Cards && Cards.map((dataUnidad) => (
           <Card dataUnidad={dataUnidad}></Card>
