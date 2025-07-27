@@ -53,7 +53,12 @@ export default function Skills() {
   return (
     <div className="skills" id="skills">
       <span className="container">
-        <div className="container-texto">Skills</div>
+        <div className="container-texto">
+
+          <h2>Skills</h2>
+          <h7>My technologies</h7>
+        </div>
+
         <div className="sol"></div>
       </span>
     </div>

@@ -85,12 +85,29 @@ $images: (
 }
 
 
-#skills>span>div.container-texto {
+.container-texto {
+    position:relative;
+    z-index:100;
     @media (min-width: 768px) {
 
         position: relative;
         top: -22vh;
         font-size: 55px;
+    }
 
+    h2{
+        font-size: 2.5rem;
+       
+        color: #0b83ff;
+        
+    }
+
+    h7{
+        font-size: 1.1rem;
+        color: #8f9ba8;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    
     }
 }
