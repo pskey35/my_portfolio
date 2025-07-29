@@ -83,31 +83,40 @@ $images: (
     }
 
 }
+.skills  {
+   
 
-
-.container-texto {
-    position:relative;
-    z-index:100;
-    @media (min-width: 768px) {
-
-        position: relative;
-        top: -22vh;
-        font-size: 55px;
-    }
-
-    h2{
-        font-size: 2.5rem;
-       
-        color: #af85ff;
-        
-    }
-
-    h7{
-        font-size: 1.1rem;
-        color: #99a0ab;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom:   1.5rem;
     
+    .container-texto {
+        position:relative;
+        z-index:100;
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        bottom: 70px;
+        @media (min-width: 768px) {
+    
+            position: relative;
+            top: -22vh;
+            font-size: 55px;
+        }
+    
+        h2{
+            font-size: 2.5rem;
+           
+            color: #2e92e9;
+            
+        }
+    
+        h7{
+            font-size: 1.1rem;
+            color: rgb(157, 167, 177);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom:   1.5rem;
+        
+        }
     }
-}
+
+  }
+

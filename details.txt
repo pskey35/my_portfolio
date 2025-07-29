@@ -1,0 +1,4 @@
+paleta de colores
+
+azul               subtitulo
+#2e92e9             rgb(157, 167, 177)
