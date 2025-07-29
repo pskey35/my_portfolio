@@ -10,14 +10,68 @@
   --transition: all 0.3s ease;
 }
 
-// Reset and base styles
+// Layout general y responsive
 .contact-container {
   max-width: 1200px;
   margin: 100px auto 0;
   padding: 0 2rem 4rem;
   color: var(--text-color);
-  
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+  color: #64ffda;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #64ffda, #1e90ff);
+    border-radius: 3px;
   }
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  .contact-info,
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+}
+
+// Reset and base styles
+.contact-info {
+  padding: 40px;
+  color: #e6f1ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .section-title {
     text-align: center;
@@ -421,3 +475,5 @@
   }
 }
 
+
+}

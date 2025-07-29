@@ -1,3 +1,4 @@
+import './Alert.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useContact } from '../../context/ContactContext';
 

@@ -1,0 +1,44 @@
+// Estilos para Alert
+.message {
+  padding: 1.2rem 1.5rem;
+  border-radius: 6px;
+  margin: 1.5rem 0 0;
+  font-size: 1rem;
+  text-align: left;
+  animation: fadeIn 0.3s ease forwards;
+  background: rgba(100, 255, 218, 0.05);
+  border-left: 3px solid #64ffda;
+  color: #ccd6f6;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateX(5px);
+  }
+  &.success {
+    background: rgba(46, 204, 113, 0.05);
+    border-left: 3px solid #2ecc71;
+    color: #2ecc71;
+  }
+  &.error {
+    background: rgba(231, 76, 60, 0.05);
+    border-left: 3px solid #e74c3c;
+    color: #e74c3c;
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    opacity: 0.7;
+    cursor: pointer;
+    float: right;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0.25rem;
+    margin-left: 1rem;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

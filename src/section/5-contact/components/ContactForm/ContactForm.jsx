@@ -1,3 +1,4 @@
+import './ContactForm.scss';
 import { useRef, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { ContactContext } from '../../context/ContactContext';
@@ -44,7 +45,7 @@ const ContactForm = () => {
 
       const data = {
         email_from: emailRef.current.value.trim(),
-        message_body: messageRef.current.value.trim()
+        email_body: messageRef.current.value.trim()
       };
 
       const response = await fetch(`${import.meta.env.VITE_API}/data`, {

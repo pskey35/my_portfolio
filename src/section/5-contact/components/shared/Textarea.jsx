@@ -1,3 +1,4 @@
+import './Textarea.scss';
 import { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 

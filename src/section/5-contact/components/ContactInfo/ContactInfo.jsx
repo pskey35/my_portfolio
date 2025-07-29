@@ -1,3 +1,4 @@
+import './ContactInfo.scss';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
