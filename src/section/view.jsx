@@ -6,7 +6,7 @@ import CvModal from "../components/CV-modal/CV-modal__init.jsx";
 import Skills from "./3-skills/skills_Page.jsx";
 
 import Portfolio from "./4-portfolio/portfolio_Page.jsx";
-import Contact from "./5-contact/contact_Page.jsx";
+import Contact from "./5-contact/ContactPage.jsx";
 import Footer from "./6-footer/footer_Page.jsx";
 import { useHomeAnimations } from "./hooks/useHomeAnimation.js";
 import { useScrollAnimations } from "./hooks/useScrollAnimation.js";
