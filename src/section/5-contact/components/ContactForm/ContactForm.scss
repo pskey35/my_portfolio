@@ -6,11 +6,11 @@
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 3rem;
-  background: #0a192f;
+
+
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid #1e2a4a;
+
   h3 {
     color: #ccd6f6;
     margin: 0 0 2rem 0;
@@ -22,7 +22,92 @@
   .form-group {
     position: relative;
     margin-bottom: 2rem;
+
+
   }
+
+  .send-button {
+    position: relative;
+    background: transparent;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    border-radius: 5px;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 200px;
+    align-self: flex-start;
+    margin:0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: rgba(100, 255, 218, 0.1);
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover, &:focus {
+      color: #0a192f;
+      background: #64ffda;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+
+      &::before {
+        width: 100%;
+      }
+
+      .send-icon {
+        transform: translateX(3px) translateY(-3px);
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+      background: transparent;
+      color: #64ffda;
+    }
+
+    .loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1rem;
+    }
+
+    .send-icon {
+      transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      font-size: 1.1rem;
+    }
+
+    
+  }
+
+
+
+
   label {
     display: block;
     margin-bottom: 8px;
@@ -32,8 +117,8 @@
   input, textarea {
     width: 100%;
     padding: 1.2rem 1.5rem;
-    background: #112240;
-    border: 2px solid #233554;
+    background: #141d1d;
+    border: 2px solid #1b312d;
     border-radius: 6px;
     color: #e6f1ff;
     font-size: 1.1rem;

@@ -19,10 +19,7 @@ const Alert = () => {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
         >
-          <span>{message.text}</span>
-          <button className="close-btn" onClick={handleClose}>
-            &times;
-          </button>
+          
         </motion.div>
       )}
     </AnimatePresence>

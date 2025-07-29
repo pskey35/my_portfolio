@@ -114,7 +114,7 @@ const ContactForm = () => {
           rows="5"
         />
       </div>
-      <motion.button
+      <motion.button 
         type="submit"
         className="send-button"
         disabled={isSubmitting}
