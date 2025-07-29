@@ -1,5 +1,6 @@
 import Circles from "./circles.jsx"
 import Github_Icon from "./icons/github.jsx"
+import "./footer.scss";
 export default function Footer() {
     return (
       <div className="footer">

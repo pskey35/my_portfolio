@@ -17,6 +17,24 @@ $images: (
 );
 
 
+
+
+.skills {
+
+    margin-top: 45vh;
+    margin-bottom: 60vh;
+    padding-top: 23vh;
+  
+    @media (max-width: 900px) {
+      margin-top: 10vh;
+      margin-bottom: 30vh;
+      padding-top: 23vh;
+  
+    }
+  }
+  
+  
+
 #skills>span>div.circulo>span {
     @for $i from 1 through length($images) {
         $key: image#{$i}; // genera image1, image2...
@@ -120,3 +138,70 @@ $images: (
 
   }
 
+
+
+  
+
+
+
+
+@keyframes estr {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-1500px);
+    }
+  }
+  
+  .container {
+    position: relative;
+    display: block;
+    height: 400px;
+  }
+  
+  .circulo {
+    height: 100%;
+    width: 300px !important;
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+  }
+  
+  .sol {
+  
+  
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+      0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  
+  }
+  
+  
+  
+  .circulo .items {
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    background-size: 100%;
+    background-size: 65%;
+    background-color: #ffffffd6;
+    border-radius: 12px;
+    height: 60px;
+    width: 60px;
+  }

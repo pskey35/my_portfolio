@@ -43,7 +43,7 @@ const ContactContent = () => {
         transition={{ duration: 0.5 }}
       >
         <h2>Contact Me</h2>
-        <p className="subtitle">Get in touch</p>
+        <h7 className="subtitle">Get in touch</h7>
       </motion.div>
 
       <div className="contact-content">
